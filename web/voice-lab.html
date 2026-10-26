@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>语音对比 · 陪伴测试台</title>
+    <link rel="stylesheet" href="/voice-lab.css" />
+    <script src="/voice-lab.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>听听哪一种更像她</h1>
+          <p>同一个「甜妹」，同一句话，四组声音对比。</p>
+        </div>
+        <a href="/" target="_blank" rel="noopener">打开聊天测试台</a>
+      </header>
+      <section aria-label="对比条件" class="conditions">
+        <p id="voice-identity">正在连接语音服务…</p>
+        <blockquote id="sample-text"></blockquote>
+        <details>
+          <summary>查看共同参数与指令</summary>
+          <pre id="parameters"></pre>
+          <p>
+            原始组不加指令；温柔组只加 soft
+            tone，分别使用模型对应的括号语法。生成具有随机性，单次结果用于初筛。
+          </p>
+        </details>
+      </section>
+      <div class="toolbar">
+        <button id="generate-all" disabled>生成四组，稍后试听</button
+        ><button id="stop" disabled>停止生成与播放</button
+        ><button id="clear">清除本页音频</button>
+      </div>
+      <p id="status" role="status">正在加载…</p>
+      <p class="help">
+        点击生成会调用 Fish
+        Audio。生成完成后「重听」使用本页内存，不再次合成；刷新会清空。支持的浏览器边接收边播放；兼容模式收齐后播放。本页的标记不会改变聊天配置。
+      </p>
+      <section id="variants" aria-label="四组试听"></section>
+      <p id="preference" class="preference">听完可以标记你喜欢的一组。</p>
+      <footer>
+        甜软感、自然度和延迟都可以一起比较。播放耗时是浏览器开始播放事件，不能代替扬声器实际出声测量。
+      </footer>
+    </main>
+  </body>
+</html>

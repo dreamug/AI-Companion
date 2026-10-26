@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "scope": "prospective_internal_check_same_author_frozen_before_v1_prompt_changes_not_external_or_independent",
+  "facts": [
+    {
+      "id": "u-work",
+      "text": "用户目前的职业是城市照明设计师，为公共空间设计灯光方案。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "u-language",
+      "text": "用户能读懂意大利语的新闻。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "u-address",
+      "text": "用户希望平时被称呼为小满。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "c-name",
+      "text": "用户的同事叫临川。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "c-city",
+      "text": "用户的同事住在格拉斯哥。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "c-skill",
+      "text": "用户的同事会制作皮影。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "s-alias",
+      "text": "用户把自建的观测站称作远帆。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "s-place",
+      "text": "用户自建的观测站位于东岭。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "u-skill",
+      "text": "用户也会给手工书做装帧。",
+      "bot": "a",
+      "status": "active"
+    }
+  ],
+  "queries": [
+    {
+      "id": "work-colloquial",
+      "query": "我现在靠什么工作谋生？",
+      "expected": [
+        "u-work"
+      ],
+      "answer": "城市照明设计师",
+      "kind": "prospective",
+      "split": "test"
+    },
+    {
+      "id": "work-formal",
+      "query": "我合同里的正式职级是什么？",
+      "expected": [],
+      "answer": null,
+      "kind": "prospective",
+      "split": "test"
+    },
+    {
+      "id": "skill-adjacent",
+      "query": "我能胜任意大利语的同声传译吗？",
+      "expected": [],
+      "answer": null,
+      "kind": "prospective",
+      "split": "test"
+    },
+    {
+      "id": "skill-positive",
+      "query": "我也会给手工书做装帧吗？",
+      "expected": [
+        "u-skill"
+      ],
+      "answer": "装帧",
+      "kind": "prospective",
+      "split": "test"
+    },
+    {
+      "id": "address",
+      "query": "平常怎么叫我合适？",
+      "expected": [
+        "u-address"
+      ],
+      "answer": "小满",
+      "kind": "prospective",
+      "split": "test"
+    },
+    {
+      "id": "named-city",
+      "query": "临川住在哪里？",
+      "expected": [
+        "c-name",
+        "c-city"
+      ],
+      "answer": "格拉斯哥",
+      "kind": "prospective",
+      "split": "test"
+    },
+    {
+      "id": "relation-city",
+      "query": "我的同事住在哪里？",
+      "expected": [
+        "c-city"
+      ],
+      "answer": "格拉斯哥",
+      "kind": "prospective",
+      "split": "test"
+    },
+    {
+      "id": "named-pair",
+      "query": "临川住哪里，会什么手艺？",
+      "expected": [
+        "c-name",
+        "c-city",
+        "c-skill"
+      ],
+      "answer": "格拉斯哥",
+      "kind": "prospective",
+      "split": "test"
+    },
+    {
+      "id": "nonperson",
+      "query": "远帆位于哪里？",
+      "expected": [
+        "s-alias",
+        "s-place"
+      ],
+      "answer": "东岭",
+      "kind": "prospective",
+      "split": "test"
+    },
+    {
+      "id": "unknown-extra",
+      "query": "同事会制作皮影，我也会制作皮影吗？",
+      "expected": [],
+      "answer": null,
+      "kind": "prospective",
+      "split": "test"
+    },
+    {
+      "id": "scope-unknown",
+      "query": "我的员工编号是什么？",
+      "expected": [],
+      "answer": null,
+      "kind": "prospective",
+      "split": "test"
+    },
+    {
+      "id": "partial",
+      "query": "我的职业是什么，员工编号又是多少？",
+      "expected": [
+        "u-work"
+      ],
+      "answer": "城市照明设计师",
+      "kind": "prospective",
+      "split": "test",
+      "requiredUnknown": true
+    }
+  ]
+}

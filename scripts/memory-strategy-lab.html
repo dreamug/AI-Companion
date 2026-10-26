@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>长期记忆 · 三组真实对照</title><style>
+*{box-sizing:border-box}body{font:16px/1.65 system-ui,sans-serif;color:#182126;margin:0;background:#f6f7f8}main{max-width:1480px;margin:auto;padding:28px}h1{font-size:27px;margin:0 0 8px}p{margin:8px 0 18px}.note{color:#56636a}.controls{background:white;border:1px solid #cbd1d5;padding:18px;margin:20px 0}textarea{font:inherit;width:100%;padding:12px;border:1px solid #9ba7af;resize:vertical;min-height:86px}button{font:inherit;background:white;color:#182126;border:1px solid #85939c;padding:8px 14px;margin:8px 8px 0 0;cursor:pointer}button:disabled{opacity:.45;cursor:wait}.primary{background:#224d43;color:white;border-color:#224d43}#cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}article{background:white;border:1px solid #cbd1d5;padding:20px;min-width:0}h2{font-size:20px;margin:0 0 12px}.answer{white-space:pre-wrap;overflow-wrap:anywhere;min-height:150px}.meta{font-size:14px;color:#56636a;border-top:1px solid #ddd;padding-top:12px}details{margin-top:16px}li{margin-bottom:8px}#status{min-height:28px}.history{margin-top:26px;border-top:1px solid #ccd2d6;padding-top:12px}small{font-size:13px} @media(max-width:980px){main{padding:18px}article{padding:12px}.meta{font-size:12px}h2{font-size:18px}}@media(max-width:600px){#cards{grid-template-columns:1fr}.answer{min-height:60px}}
+</style></head><body><main>
+<h1>长期记忆 · 三组真实对照</h1>
+<p class="note">独立副本 · 同一批事实与问题 · 未交付旧聊天或摘要 · 无工具补查 · 正式服务与向量开关未改</p>
+<p id="scale"></p>
+<div class="controls"><label for="question">换一种说法，询问已保存的事实</label><textarea id="question">我做手工的那个地方叫什么来着？</textarea><div><button class="primary" id="ask">同时问三组</button><button id="batch">运行固定的 30 道题</button></div><div id="examples"></div><p id="status" role="status">正在连接隔离实验……</p></div>
+<h2 id="current-question">等待提问</h2><div id="cards"></div>
+<p class="note"><small>全量组是更多上下文的参考上限，允许最多 12000 token 的记忆；另两组均使用现有 2000 token 记忆预算。三组生成模型和提示相同。答案按原文显示；合成样例不能代表所有真实聊天。</small></p>
+<details class="history"><summary>已完成的对照记录</summary><div id="history"></div></details>
+</main><script>
+const $=id=>document.getElementById(id);let state,currentQuestion='',waiting=false;
+const titles={all:'全量读取',keyword:'纯关键词',e5:'E5 混合召回'};
+function node(tag,text,cls){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;}
+function draw(rows,question){$('current-question').textContent=question?'本轮问题：'+question:'等待提问';$('cards').replaceChildren();for(const strategy of ['all','keyword','e5']){const r=rows?.find(r=>r.strategy===strategy);const a=node('article');a.append(node('h2',titles[strategy]));a.append(node('div',r?r.answer||(r.status==='failed'?'回复未完成：'+r.reason:'等待回复……'):'等待同一个问题……','answer'));if(r){const read=r.reads?.[0];a.append(node('p',`本轮交付 ${r.selected.length} 条事实 · 取回用时 ${Math.round(read?.elapsedMs??0)} ms · 回复完成 ${Math.round(r.elapsedMs/100)/10} 秒`,'meta'));a.append(node('p',`实际读取路径：${read?.mode??'未知'}${read?.reasons?.length?'；状态：'+read.reasons.join('、'):''}`,'meta'));const d=node('details');d.append(node('summary','查看实际交付的记忆'));const ul=node('ul');for(const f of r.selectedFacts??[])ul.append(node('li',f.text));if(!(r.selectedFacts??[]).length)ul.append(node('li','本轮没有交付事实'));d.append(ul);a.append(d);} $('cards').append(a);}}
+async function refresh(){state=await fetch('/experiment/state').then(r=>r.json());$('scale').textContent=`同源副本：${state.manifest.eligibleCount} 条合格事实，含相似干扰项与无资格记录。E5 已就绪并建好 ${state.indexReady} 条索引。`;
+if(!$('examples').children.length)for(const [i,q]of state.demo.entries()){const b=node('button',['自然改述','多项问题','无答案问题'][i]);b.onclick=()=>{$('question').value=q.query;};$('examples').append(b);}
+if(!waiting&&!currentQuestion){const last=state.results.filter(r=>r.phase==='browser').at(-1);if(last){currentQuestion=last.question;draw(state.results.filter(r=>r.phase==='browser'&&r.question===currentQuestion).slice(-3),currentQuestion);}}
+if(waiting){const rows=state.results.filter(r=>r.phase==='browser'&&r.question===currentQuestion).slice(-3);if(rows.length)draw(rows,currentQuestion);}
+else if(state.batch.status==='running'||!state.results.some(r=>r.phase==='browser')){const last=state.results.filter(r=>r.phase==='batch').at(-1);if(last)draw(state.results.filter(r=>r.phase==='batch'&&r.queryId===last.queryId),last.question);}
+if(state.batch.status==='running')$('status').textContent=`固定题集进行中：${state.batch.completed} / ${state.batch.total} 个回答已完成`;
+else if(!waiting)$('status').textContent=state.batch.status==='completed'?'固定题集已完成。可以继续做浏览器对照。':'已连接。点击一次，同时交给三个独立副本。';
+$('ask').disabled=state.busy||waiting;$('batch').disabled=state.busy||state.batch.completed>0;
+$('history').replaceChildren();for(const r of state.results.slice(-15).reverse())$('history').append(node('p',`${titles[r.strategy]} · ${r.question}\n${r.answer}`));}
+$('ask').onclick=async()=>{waiting=true;currentQuestion=$('question').value;draw(undefined,currentQuestion);$('status').textContent='三组正在用各自真正取回的记忆回答……';$('ask').disabled=true;try{const response=await fetch('/experiment/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:currentQuestion,requestId:crypto.randomUUID()})});const rows=await response.json();if(!response.ok)throw Error(rows.error);draw(rows,currentQuestion);$('status').textContent='三组均已完成。可展开查看各组实际读到了哪些记忆。';}catch(e){$('status').textContent='未完成：'+e.message;}finally{waiting=false;await refresh();}};
+$('batch').onclick=async()=>{await fetch('/experiment/batch',{method:'POST'});await refresh();};draw();refresh();setInterval(()=>refresh().catch(()=>{}),1500);
+</script></body></html>

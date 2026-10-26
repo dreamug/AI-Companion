@@ -1,0 +1,15 @@
+{
+  "provenance": "工程作者预先编写的合成回归，不是独立人工 benchmark；包含原始失败及其他话题、句法、开关和查询对照。预期不提供给模型，完整正文保留。",
+  "cases": [
+    { "id": "original-incident", "input": "我的摄影项目一直叫作“苔原灯塔-696774”。请记住这个项目名。", "autoExtract": true, "explicit": true, "expected": ["苔原灯塔-696774"] },
+    { "id": "address", "input": "请记住，我希望你称呼我为阿芦。", "autoExtract": true, "explicit": true, "expected": ["阿芦"] },
+    { "id": "hobby", "input": "帮我记下，我周末习惯去打壁球。", "autoExtract": true, "explicit": true, "expected": ["壁球"] },
+    { "id": "negative-preference", "input": "请保存我的口味偏好：我不喜欢太甜的点心。", "autoExtract": true, "explicit": true, "expected": ["甜"] },
+    { "id": "disabled-auto", "input": "请记住，我每天晚饭后散步二十分钟。", "autoExtract": false, "explicit": true, "expected": ["散步"] },
+    { "id": "mixed-question", "input": "我最近学的是陶笛，请记住这个爱好。也说说每天练十分钟可以怎么安排？", "autoExtract": true, "explicit": true, "expected": ["陶笛"] },
+    { "id": "ba-request", "input": "麻烦你把我偏爱的桌游记下来：卡卡颂。", "autoExtract": false, "explicit": true, "expected": ["卡卡颂"] },
+    { "id": "polite-request", "input": "能帮我记住我的猫叫麦片吗？", "autoExtract": false, "explicit": true, "expected": ["麦片"] },
+    { "id": "status-inquiry", "input": "你记住我最常用的昵称了吗？", "autoExtract": false, "explicit": false, "expected": [] },
+    { "id": "quoted-command", "input": "我在改台词，请评价“请记住，我住在云杉街”的语气。", "autoExtract": false, "explicit": false, "expected": [] }
+  ]
+}

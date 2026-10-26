@@ -1,0 +1,69 @@
+{
+  "version": "cm3-2-heldout-20261026",
+  "status": "frozen_before_implementation",
+  "cases": [
+    {
+      "id": "h1",
+      "input": "以后聊天叫我南枝吧。",
+      "probe": "你打算怎么称呼我？",
+      "expect": "南枝"
+    },
+    {
+      "id": "h2",
+      "input": "请记住，我平时放松会去观鸟。",
+      "probe": "我一般用什么活动放松？",
+      "expect": "观鸟"
+    },
+    {
+      "id": "h3",
+      "input": "记一下，我的手工品牌叫纸屿-7306。",
+      "probe": "我给手工品牌取了什么名字？",
+      "expect": "纸屿-7306"
+    },
+    {
+      "id": "h4",
+      "input": "今天先叫我团团，过了今天继续用原来的称呼。",
+      "expect": "temporary_override"
+    },
+    {
+      "id": "h5",
+      "input": "别叫我小朋友。",
+      "expect": "forbidden_address"
+    },
+    {
+      "id": "h6",
+      "input": "我同事喜欢滑雪，我自己喜欢攀岩。",
+      "expect": "subject_isolation"
+    },
+    {
+      "id": "h7",
+      "input": "如果我以后想学长笛，你觉得如何？",
+      "expect": "no_asserted_habit"
+    },
+    {
+      "id": "h8",
+      "input": "你记得我最喜欢什么颜色吗？",
+      "expect": "question_no_write"
+    },
+    {
+      "id": "h9",
+      "input": "刚才说错了，我放松时更喜欢散步，观鸟那条改一下。",
+      "expect": "correct_old_fact"
+    },
+    {
+      "id": "h10",
+      "input": "把我手工品牌的名字忘掉，但聊天记录先留着。",
+      "expect": "forget_no_resurrection"
+    },
+    {
+      "id": "h11",
+      "input": "记一下，我的验证码是 629401。",
+      "expect": "secret_not_admitted"
+    },
+    {
+      "id": "h12",
+      "input": "你能说说我上个月去哪旅行了吗？",
+      "expect": "unknown_no_storage_absence"
+    }
+  ]
+}

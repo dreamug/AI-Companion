@@ -1,0 +1,497 @@
+{
+  "version": 1,
+  "scope": "synthetic_new_query_generalization_fixture_frozen_before_evaluation",
+  "facts": [
+    {
+      "id": "work-new",
+      "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "address-new",
+      "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "sister-work",
+      "text": "用户的姐姐是一名航天工程师。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "sister-name",
+      "text": "用户姐姐希望被称呼为蓝老师。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "pet-new",
+      "text": "用户养的鹦鹉叫松子。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "book-new",
+      "text": "用户最喜欢的书是《野渡》。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-0",
+      "text": "合成角色0从事不同的工作研究，读过编号0的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-1",
+      "text": "合成角色1从事不同的工作研究，读过编号1的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-2",
+      "text": "合成角色2从事不同的工作研究，读过编号2的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-3",
+      "text": "合成角色3从事不同的工作研究，读过编号3的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-4",
+      "text": "合成角色4从事不同的工作研究，读过编号4的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-5",
+      "text": "合成角色5从事不同的工作研究，读过编号5的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-6",
+      "text": "合成角色6从事不同的工作研究，读过编号6的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-7",
+      "text": "合成角色7从事不同的工作研究，读过编号7的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-8",
+      "text": "合成角色8从事不同的工作研究，读过编号8的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-9",
+      "text": "合成角色9从事不同的工作研究，读过编号9的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-10",
+      "text": "合成角色10从事不同的工作研究，读过编号10的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-11",
+      "text": "合成角色11从事不同的工作研究，读过编号11的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-12",
+      "text": "合成角色12从事不同的工作研究，读过编号12的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-13",
+      "text": "合成角色13从事不同的工作研究，读过编号13的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-14",
+      "text": "合成角色14从事不同的工作研究，读过编号14的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-15",
+      "text": "合成角色15从事不同的工作研究，读过编号15的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-16",
+      "text": "合成角色16从事不同的工作研究，读过编号16的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-17",
+      "text": "合成角色17从事不同的工作研究，读过编号17的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-18",
+      "text": "合成角色18从事不同的工作研究，读过编号18的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-19",
+      "text": "合成角色19从事不同的工作研究，读过编号19的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-20",
+      "text": "合成角色20从事不同的工作研究，读过编号20的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-21",
+      "text": "合成角色21从事不同的工作研究，读过编号21的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-22",
+      "text": "合成角色22从事不同的工作研究，读过编号22的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-23",
+      "text": "合成角色23从事不同的工作研究，读过编号23的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-24",
+      "text": "合成角色24从事不同的工作研究，读过编号24的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-25",
+      "text": "合成角色25从事不同的工作研究，读过编号25的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-26",
+      "text": "合成角色26从事不同的工作研究，读过编号26的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-27",
+      "text": "合成角色27从事不同的工作研究，读过编号27的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-28",
+      "text": "合成角色28从事不同的工作研究，读过编号28的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-29",
+      "text": "合成角色29从事不同的工作研究，读过编号29的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-30",
+      "text": "合成角色30从事不同的工作研究，读过编号30的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-31",
+      "text": "合成角色31从事不同的工作研究，读过编号31的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-32",
+      "text": "合成角色32从事不同的工作研究，读过编号32的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-33",
+      "text": "合成角色33从事不同的工作研究，读过编号33的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-34",
+      "text": "合成角色34从事不同的工作研究，读过编号34的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-35",
+      "text": "合成角色35从事不同的工作研究，读过编号35的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-36",
+      "text": "合成角色36从事不同的工作研究，读过编号36的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-37",
+      "text": "合成角色37从事不同的工作研究，读过编号37的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-38",
+      "text": "合成角色38从事不同的工作研究，读过编号38的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "noise-39",
+      "text": "合成角色39从事不同的工作研究，读过编号39的书，喜欢散步。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "wrong-role",
+      "text": "仅在虚构设定中，用户是机甲指挥官，称呼为长官。",
+      "bot": "a",
+      "status": "active",
+      "realityScope": "roleplay"
+    },
+    {
+      "id": "expired",
+      "text": "用户以前是园林设计师。",
+      "bot": "a",
+      "status": "active",
+      "validTo": "2020-01-01T00:00:00Z"
+    },
+    {
+      "id": "stale",
+      "text": "用户职业是外科医生，称呼为博士。",
+      "bot": "a",
+      "status": "active",
+      "sourceValid": false
+    }
+  ],
+  "queries": [
+    {
+      "id": "work-0",
+      "query": "我的职业是做什么的？",
+      "expected": ["work-new"],
+      "answer": "陶瓷修复师",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "work-1",
+      "query": "我现在做什么工作？",
+      "expected": ["work-new"],
+      "answer": "陶瓷修复师",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "work-2",
+      "query": "我从事的工作是哪类？",
+      "expected": ["work-new"],
+      "answer": "陶瓷修复师",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "work-3",
+      "query": "我现在干哪一行？",
+      "expected": ["work-new"],
+      "answer": "陶瓷修复师",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "work-4",
+      "query": "靠什么工作谋生？",
+      "expected": ["work-new"],
+      "answer": "陶瓷修复师",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "work-5",
+      "query": "我的工作岗位是什么？",
+      "expected": ["work-new"],
+      "answer": "陶瓷修复师",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "address-0",
+      "query": "你该怎么叫我才合我心意？",
+      "expected": ["address-new"],
+      "answer": "小栖",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "address-1",
+      "query": "怎么称呼我比较合适？",
+      "expected": ["address-new"],
+      "answer": "小栖",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "address-2",
+      "query": "我希望你怎么叫我？",
+      "expected": ["address-new"],
+      "answer": "小栖",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "address-3",
+      "query": "我的昵称是什么？",
+      "expected": ["address-new"],
+      "answer": "小栖",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "address-4",
+      "query": "平时叫我什么好？",
+      "expected": ["address-new"],
+      "answer": "小栖",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "address-5",
+      "query": "我不喜欢被叫老板，那该叫我什么？",
+      "expected": ["address-new"],
+      "answer": "小栖",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "family-work-0",
+      "query": "我姐姐是什么职业？",
+      "expected": ["sister-work"],
+      "answer": "航天工程师",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "family-work-1",
+      "query": "姐姐从事哪一行？",
+      "expected": ["sister-work"],
+      "answer": "航天工程师",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "family-address-0",
+      "query": "我姐姐想让别人怎么称呼她？",
+      "expected": ["sister-name"],
+      "answer": "蓝老师",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "family-address-1",
+      "query": "姐姐喜欢怎样的称呼？",
+      "expected": ["sister-name"],
+      "answer": "蓝老师",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "pet-0",
+      "query": "我养的鹦鹉叫什么？",
+      "expected": ["pet-new"],
+      "answer": "松子",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "book-0",
+      "query": "我最喜欢哪本书？",
+      "expected": ["book-new"],
+      "answer": "野渡",
+      "kind": "generalization",
+      "split": "test"
+    },
+    {
+      "id": "unknown-0",
+      "query": "我的工号是多少？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    },
+    {
+      "id": "unknown-1",
+      "query": "你知道我公司的具体地址吗？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    },
+    {
+      "id": "unknown-2",
+      "query": "我正式证件上的姓名是什么？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    },
+    {
+      "id": "unknown-3",
+      "query": "我姐姐的工号是什么？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    },
+    {
+      "id": "unknown-4",
+      "query": "我入职的具体日期是哪天？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    },
+    {
+      "id": "unknown-5",
+      "query": "鹦鹉的生日是哪天？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "version": "memory-answer-rubric-v3",
+  "datasetHash": "d4018ded84b469f80a38ee084668af58ba630087b673850054448f2049d73c49",
+  "facts": [
+    {
+      "id": "work-new",
+      "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+      "subject": "user",
+      "primary": [
+        "(?:现在|目前)?(?:的)?(?:职业|工作|岗位|工作岗位)?(?:是|为|就是)?(?:一名)?陶瓷(?:文物)?修复(?:师|工作)?(?:这一行)?",
+        "(?:现在|目前)?在博物馆(?:做|从事)?陶瓷(?:文物)?修复(?:工作)?",
+        "(?:现在|目前)?(?:靠)?(?:博物馆的)?陶瓷(?:文物)?修复工作(?:谋生)?",
+        "(?:具体说就是)?(?:在博物馆)?修复陶瓷文物"
+      ],
+      "supporting": [
+        "(?:属于)?文物修复(?:类工作|这一行|工作|类)",
+        "在博物馆(?:工作)?"
+      ]
+    },
+    {
+      "id": "address-new",
+      "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+      "subject": "user",
+      "primary": [
+        "(?:希望|想|喜欢)?(?:被)?(?:称呼为|称呼|叫|叫作|叫做|昵称是|平时叫)(?:自己为)?小栖(?:比较合适|就好)?",
+        "小栖",
+        "(?:平时)?叫小栖(?:就好)?"
+      ],
+      "supporting": [
+        "不喜欢被叫老板"
+      ],
+      "vocatives": [
+        "小栖"
+      ]
+    },
+    {
+      "id": "sister-work",
+      "text": "用户的姐姐是一名航天工程师。",
+      "subject": "sister",
+      "primary": [
+        "(?:的)?(?:职业|工作)?(?:是|为|就是)?(?:一名)?航天工程师",
+        "航天工程"
+      ],
+      "supporting": []
+    },
+    {
+      "id": "sister-name",
+      "text": "用户姐姐希望被称呼为蓝老师。",
+      "subject": "sister",
+      "primary": [
+        "(?:希望|想|喜欢)?(?:被)?(?:称呼为|称呼|叫|叫作|叫做)蓝老师",
+        "蓝老师"
+      ],
+      "supporting": []
+    },
+    {
+      "id": "pet-new",
+      "text": "用户养的鹦鹉叫松子。",
+      "subject": "pet",
+      "primary": [
+        "(?:的名字)?(?:是|叫|叫作|叫做)?松子"
+      ],
+      "supporting": []
+    },
+    {
+      "id": "book-new",
+      "text": "用户最喜欢的书是《野渡》。",
+      "subject": "user",
+      "primary": [
+        "(?:最喜欢的书)?(?:是|叫)?野渡"
+      ],
+      "supporting": []
+    },
+    {
+      "id": "additional-aerospace",
+      "text": "用户除陶瓷修复之外，也从事航天工程的兼职研究。",
+      "subject": "user",
+      "primary": [
+        "(?:也)?(?:从事|做)?航天工程(?:的)?(?:兼职研究|研究)?"
+      ],
+      "supporting": []
+    },
+    {
+      "id": "additional-lecturer",
+      "text": "用户兼任讲师，教授文物修复课程。",
+      "subject": "user",
+      "primary": [
+        "(?:还|也)?(?:兼任|是)?(?:一名)?讲师",
+        "教授文物修复课程"
+      ],
+      "supporting": []
+    },
+    {
+      "id": "additional-making",
+      "text": "用户会制作陶瓷。",
+      "subject": "user",
+      "primary": [
+        "(?:还|也)?(?:会|能|可以)?制作陶瓷"
+      ],
+      "supporting": []
+    }
+  ],
+  "subjects": [
+    {
+      "subject": "sister",
+      "prefix": "(?:你(?:的)?姐姐|用户(?:的)?姐姐|姐姐)(?:的)?"
+    },
+    {
+      "subject": "pet",
+      "prefix": "(?:你(?:养的)?鹦鹉|你养的鹦鹉|鹦鹉)(?:的)?"
+    },
+    {
+      "subject": "user",
+      "prefix": "(?:你|用户)(?:的)?"
+    }
+  ],
+  "queries": {
+    "sibling-coemployment": {
+      "subject": "user"
+    },
+    "unrecorded-secondary-job": {
+      "subject": "user"
+    },
+    "adjacent-skill": {
+      "subject": "user"
+    }
+  }
+}

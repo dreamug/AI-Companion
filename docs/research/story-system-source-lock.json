@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "research_date": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "purpose": "Supplemental story, proactive expression and segmented messaging research; no upstream deployment or tests executed",
+  "scope_note": "Downloaded files are integrity checked; only selected relevant source regions and tests were read, not a full repository audit. Existing upstream evidence remains in source-lock.json.",
+  "verified_cached_files": 28,
+  "upstreams": [
+    {
+      "repo": "AstrBotDevs/AstrBot",
+      "sha": "0cd42bd4dd216d8810da4e3f5fb2e381d3c6817e",
+      "commit_date": "2026-10-22T08:45:35Z",
+      "license_metadata": "AGPL-3.0",
+      "source_url": "https://github.com/AstrBotDevs/AstrBot/tree/0cd42bd4dd216d8810da4e3f5fb2e381d3c6817e",
+      "cached_files": [
+        {
+          "path": "astrbot/core/config/default.py",
+          "bytes": 245478,
+          "git_blob_sha": "dd1b088bde5594c85b69562c17155e40f2f493d0",
+          "verified_against_tree": true,
+          "url": "https://github.com/AstrBotDevs/AstrBot/blob/0cd42bd4dd216d8810da4e3f5fb2e381d3c6817e/astrbot/core/config/default.py"
+        },
+        {
+          "path": "astrbot/core/pipeline/respond/stage.py",
+          "bytes": 16656,
+          "git_blob_sha": "fa90ec70e41f02e13487b4a49b7430181146579e",
+          "verified_against_tree": true,
+          "url": "https://github.com/AstrBotDevs/AstrBot/blob/0cd42bd4dd216d8810da4e3f5fb2e381d3c6817e/astrbot/core/pipeline/respond/stage.py"
+        },
+        {
+          "path": "docs/zh/use/proactive-agent.md",
+          "bytes": 8342,
+          "git_blob_sha": "0cd321ff2a2cb49b316221108914d4418df63ba0",
+          "verified_against_tree": true,
+          "url": "https://github.com/AstrBotDevs/AstrBot/blob/0cd42bd4dd216d8810da4e3f5fb2e381d3c6817e/docs/zh/use/proactive-agent.md"
+        }
+      ]
+    },
+    {
+      "repo": "Mai-with-u/MaiBot",
+      "sha": "c602a2780f4f4dda4a6be46d67abc1cfb1ad420c",
+      "commit_date": "2026-10-21T18:31:57Z",
+      "license_metadata": "GPL-3.0",
+      "source_url": "https://github.com/Mai-with-u/MaiBot/tree/c602a2780f4f4dda4a6be46d67abc1cfb1ad420c",
+      "cached_files": [
+        {
+          "path": "pytests/chat_test/test_llm_sentence_splitter.py",
+          "bytes": 4999,
+          "git_blob_sha": "622111d03d4a2a611a7a418bd17c9a88f87001a4",
+          "verified_against_tree": true,
+          "url": "https://github.com/Mai-with-u/MaiBot/blob/c602a2780f4f4dda4a6be46d67abc1cfb1ad420c/pytests/chat_test/test_llm_sentence_splitter.py"
+        },
+        {
+          "path": "src/chat/message_receive/uni_message_sender.py",
+          "bytes": 13639,
+          "git_blob_sha": "ecfee68abe3310814afb0646b7bebb95e337b18f",
+          "verified_against_tree": true,
+          "url": "https://github.com/Mai-with-u/MaiBot/blob/c602a2780f4f4dda4a6be46d67abc1cfb1ad420c/src/chat/message_receive/uni_message_sender.py"
+        },
+        {
+          "path": "src/chat/utils/llm_sentence_splitter.py",
+          "bytes": 6202,
+          "git_blob_sha": "7f5ac93db5a1f5b0122ca0fe70ff22d2b97fee0b",
+          "verified_against_tree": true,
+          "url": "https://github.com/Mai-with-u/MaiBot/blob/c602a2780f4f4dda4a6be46d67abc1cfb1ad420c/src/chat/utils/llm_sentence_splitter.py"
+        },
+        {
+          "path": "src/config/official_configs.py",
+          "bytes": 188040,
+          "git_blob_sha": "f6fc94a9b47fd5780fae23ade9b70b76d8591a72",
+          "verified_against_tree": true,
+          "url": "https://github.com/Mai-with-u/MaiBot/blob/c602a2780f4f4dda4a6be46d67abc1cfb1ad420c/src/config/official_configs.py"
+        },
+        {
+          "path": "src/maisaka/builtin_tool/reply.py",
+          "bytes": 30913,
+          "git_blob_sha": "91ca32e2a02f233033e0e5f2853d474c105b32d2",
+          "verified_against_tree": true,
+          "url": "https://github.com/Mai-with-u/MaiBot/blob/c602a2780f4f4dda4a6be46d67abc1cfb1ad420c/src/maisaka/builtin_tool/reply.py"
+        }
+      ]
+    },
+    {
+      "repo": "Yuralume/yuralume-core",
+      "sha": "6996b152604e83a1cf6344cd236a9b9456f47bba",
+      "commit_date": "2026-08-28T09:49:00Z",
+      "license_metadata": "NOASSERTION",
+      "source_url": "https://github.com/Yuralume/yuralume-core/tree/6996b152604e83a1cf6344cd236a9b9456f47bba",
+      "cached_files": [
+        {
+          "path": "LICENSE",
+          "bytes": 5066,
+          "git_blob_sha": "74934c81839e54bef24377fbb9300366aee56538",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/LICENSE"
+        },
+        {
+          "path": "pyproject.toml",
+          "bytes": 1917,
+          "git_blob_sha": "2146222f823a3bf4f7cb4f66f005184bdc1bcb7e",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/pyproject.toml"
+        },
+        {
+          "path": "src/kokoro_link/api/routes/story_arc.py",
+          "bytes": 11397,
+          "git_blob_sha": "22245139d12bf6caf3d9e626350ecc825b549a4b",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/src/kokoro_link/api/routes/story_arc.py"
+        },
+        {
+          "path": "src/kokoro_link/application/dto/story_arc.py",
+          "bytes": 6450,
+          "git_blob_sha": "dd395e8af65e9bad10363ad409370b557c1da9b5",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/src/kokoro_link/application/dto/story_arc.py"
+        },
+        {
+          "path": "src/kokoro_link/application/services/outbound_message_segments.py",
+          "bytes": 3630,
+          "git_blob_sha": "63369c3dbfedc2fe4d1796361c731a509fcc9d38",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/src/kokoro_link/application/services/outbound_message_segments.py"
+        },
+        {
+          "path": "src/kokoro_link/application/services/proactive_dispatcher.py",
+          "bytes": 170243,
+          "git_blob_sha": "ad2e29bb44e1ccebd689cb031520ba94426838ae",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/src/kokoro_link/application/services/proactive_dispatcher.py"
+        },
+        {
+          "path": "src/kokoro_link/application/services/proactive_scheduler.py",
+          "bytes": 46749,
+          "git_blob_sha": "08250bfed4af183bd61250eb7e6a55a23e67b949",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/src/kokoro_link/application/services/proactive_scheduler.py"
+        },
+        {
+          "path": "src/kokoro_link/application/services/schedule_memorializer.py",
+          "bytes": 24608,
+          "git_blob_sha": "db5970225ea57bb8f4342c9d7f439a652782226f",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/src/kokoro_link/application/services/schedule_memorializer.py"
+        },
+        {
+          "path": "src/kokoro_link/application/services/schedule_service.py",
+          "bytes": 78320,
+          "git_blob_sha": "cecfb60b2cf4c411072bd448c8ea978553cbc52f",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/src/kokoro_link/application/services/schedule_service.py"
+        },
+        {
+          "path": "src/kokoro_link/application/services/story_arc_service.py",
+          "bytes": 80711,
+          "git_blob_sha": "ca0a8bcef4d1f088719465785d2a4418672fcb8c",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/src/kokoro_link/application/services/story_arc_service.py"
+        },
+        {
+          "path": "src/kokoro_link/contracts/activity_aftermath.py",
+          "bytes": 5017,
+          "git_blob_sha": "8dff03ae7c0c02e7879821bd0b558765224bf80e",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/src/kokoro_link/contracts/activity_aftermath.py"
+        },
+        {
+          "path": "src/kokoro_link/contracts/schedule_planner.py",
+          "bytes": 9460,
+          "git_blob_sha": "0136dc5d2a3b924945637ce9a3ee0197c90f4df0",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/src/kokoro_link/contracts/schedule_planner.py"
+        },
+        {
+          "path": "src/kokoro_link/contracts/story_arc.py",
+          "bytes": 14958,
+          "git_blob_sha": "316b86b2d00daf56d8a466c4710d56c41492352d",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/src/kokoro_link/contracts/story_arc.py"
+        },
+        {
+          "path": "src/kokoro_link/domain/entities/story_arc.py",
+          "bytes": 33752,
+          "git_blob_sha": "11ed28e6918bcd1d511e0860c4577d2b21a93307",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/src/kokoro_link/domain/entities/story_arc.py"
+        },
+        {
+          "path": "tests/unit/test_outbound_message_segments.py",
+          "bytes": 4593,
+          "git_blob_sha": "8c6641fe7e39bbc8a50e5893609fd4ff84136183",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/tests/unit/test_outbound_message_segments.py"
+        },
+        {
+          "path": "tests/unit/test_proactive_unanswered_streak.py",
+          "bytes": 3280,
+          "git_blob_sha": "b0aae94ba9efdf426be0191e37446fae533f8658",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/tests/unit/test_proactive_unanswered_streak.py"
+        },
+        {
+          "path": "tests/unit/test_schedule_memorializer_aftermath.py",
+          "bytes": 9860,
+          "git_blob_sha": "dbef9bb5c1b48e330e7b05ae42d0de4af55578ec",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/tests/unit/test_schedule_memorializer_aftermath.py"
+        },
+        {
+          "path": "tests/unit/test_schedule_memorializer_shared_activity.py",
+          "bytes": 11051,
+          "git_blob_sha": "581278c75556e9c507aef0b1d4f629ee9e5b1f2b",
+          "verified_against_tree": true,
+          "url": "https://github.com/Yuralume/yuralume-core/blob/6996b152604e83a1cf6344cd236a9b9456f47bba/tests/unit/test_schedule_memorializer_shared_activity.py"
+        }
+      ],
+      "license_from_file": "BUSL-1.1 with non-commercial production Additional Use Grant"
+    },
+    {
+      "repo": "a16z-infra/ai-town",
+      "sha": "8e05997f2409275669c8344b84a51692e83f3f33",
+      "commit_date": "2026-08-26T00:34:11Z",
+      "license_metadata": "MIT",
+      "source_url": "https://github.com/a16z-infra/ai-town/tree/8e05997f2409275669c8344b84a51692e83f3f33",
+      "cached_files": [
+        {
+          "path": "convex/agent/memory.ts",
+          "bytes": 14974,
+          "git_blob_sha": "25994567b544c0a3e957f6ec6dd73979e7d38d69",
+          "verified_against_tree": true,
+          "url": "https://github.com/a16z-infra/ai-town/blob/8e05997f2409275669c8344b84a51692e83f3f33/convex/agent/memory.ts"
+        },
+        {
+          "path": "convex/aiTown/agent.ts",
+          "bytes": 13440,
+          "git_blob_sha": "ae49157d5b363e6f51dcf884aa01a499037022fd",
+          "verified_against_tree": true,
+          "url": "https://github.com/a16z-infra/ai-town/blob/8e05997f2409275669c8344b84a51692e83f3f33/convex/aiTown/agent.ts"
+        }
+      ]
+    },
+    {
+      "repo": "joonspk-research/generative_agents",
+      "sha": "fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4",
+      "commit_date": "2023-08-11T07:07:21Z",
+      "license_metadata": "Apache-2.0",
+      "source_url": "https://github.com/joonspk-research/generative_agents/tree/fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4",
+      "cached_files": [],
+      "review_scope": "Repository metadata and official paper; recursive tree incomplete for backend paths; no claim of source audit"
+    }
+  ],
+  "papers": [
+    "https://arxiv.org/abs/2304.03442",
+    "https://arxiv.org/abs/2501.00383"
+  ],
+  "target_verification": {
+    "command": "npm test -- tests/concern.test.ts tests/schedule.test.ts tests/runtime.test.ts",
+    "passed": 47,
+    "failed": 0,
+    "upstream_tests_run": false
+  }
+}

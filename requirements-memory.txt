@@ -1,0 +1,4 @@
+# Dedicated local environment; no remote code or runtime downloads.
+torch==2.9.1
+transformers==4.57.5
+numpy==1.26.4

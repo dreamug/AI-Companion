@@ -1,0 +1,5 @@
+# Separate experiment environment, compatible with existing system Torch 2.9.1.
+sqlite-vec==0.1.9
+transformers==4.57.5
+numpy==1.26.4
+psutil==7.2.1

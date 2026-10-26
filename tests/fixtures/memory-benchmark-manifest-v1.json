@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "authority": "internal_agent_authored_synthetic_regression_not_external_benchmark",
+  "independentHumanGold": false,
+  "strictGate": {
+    "allRequired": true,
+    "failBlocks": true,
+    "reviewBlocks": true,
+    "semanticCanOffsetProtocol": false
+  },
+  "inputs": [
+    {
+      "path": "memory-query-regression.json",
+      "sha256": "e7083d576e73cc2cab0881aa99891a3eff4dd9061398011bbdd695d2807473af",
+      "role": "known_regression"
+    },
+    {
+      "path": "memory-answer-boundaries.json",
+      "sha256": "35f25618c585df280254f21d00e8d9de2941ddc85aecb06965b2f2ee90c232b4",
+      "role": "known_regression"
+    },
+    {
+      "path": "memory-open-world.json",
+      "sha256": "a53016a3dfc91bdd4e7ba666593601db1df73d704b78904f5b0fe72168fd4185",
+      "role": "known_regression"
+    },
+    {
+      "path": "memory-positive-attributes.json",
+      "sha256": "d4018ded84b469f80a38ee084668af58ba630087b673850054448f2049d73c49",
+      "role": "known_regression"
+    },
+    {
+      "path": "memory-citation-generalization.json",
+      "sha256": "cefa7f6776d86afadb91a244fae64d7d963e99723fa9cd614c9780665e3b1adb",
+      "role": "known_regression"
+    },
+    {
+      "path": "memory-acceptance-v1.json",
+      "sha256": "5ff72122a06a3447ac6d08a734a5d37bd58935915906abf879141feba3668725",
+      "role": "prospective_same_author_check"
+    },
+    {
+      "path": "memory-judge-calibration-v1.json",
+      "sha256": "4e56c16c4a35371eb7d68028b096b78f83c1416ccee330c681d1a9ba16863908",
+      "role": "historical_calibration_with_annotation_ambiguity"
+    },
+    {
+      "path": "memory-judge-calibration-v1.1.json",
+      "sha256": "ea6e653c00e4ed2179daebc451ed529ea357eff4bd7648f84a5573072695a4ef",
+      "role": "corrected_calibration"
+    },
+    {
+      "path": "memory-benchmark-frozen-diagnosis-v1.json",
+      "sha256": "94f485c0a48177a5da330d1bf78023e826fb43a138d24e9a30774c267d83f2a8",
+      "role": "agent_static_diagnosis_not_independent_gold"
+    },
+    {
+      "path": "memory-judge-calibration-v1.2.json",
+      "sha256": "49401d65d7fddb78445e02523a5b93b0d51c339b7b434b9807cf9a43a09b4aa0",
+      "role": "corrected_calibration_target_answerability_metadata"
+    }
+  ],
+  "metrics": {
+    "completeSourceRecall": "known questions whose every required source was actually delivered / known questions",
+    "rankedRecallAt5": "macro mean of relevant source fraction among first 5 ranked results; all mode excluded",
+    "strictAcceptance": "automatic protocol/evidence workflow acceptance, not factual accuracy",
+    "judgeCalibration": "expected positive/negative dispositions matched; failed reviewer task is not a correct negative"
+  },
+  "generation": {
+    "freshRepeatsPerProfile": 1,
+    "sameProviderJudgeIsFallible": true,
+    "rawAnswerCorrectionDuringReplay": false
+  },
+  "guardrails": [
+    "No reference answers or expected IDs passed to the judge",
+    "No modification of reported unknown flag or citations to match gold",
+    "No semantic retry until success",
+    "Changed inputs require explicit versioned artifact and retained previous evidence"
+  ]
+}

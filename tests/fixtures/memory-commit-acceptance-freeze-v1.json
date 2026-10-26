@@ -1,0 +1,26 @@
+{
+  "createdAt": "2026-10-25T04:22:08.493886+00:00",
+  "fixture": "tests/fixtures/memory-commit-acceptance-v1.json",
+  "sha256": "623f45ede6710d0598616e632303d096b530c79e3cab2a23c85c4d536ec82d5d",
+  "cases": 40,
+  "protocol": {
+    "normalHarness": true,
+    "autoExtract": false,
+    "vectors": true,
+    "historyAndSummariesHidden": true,
+    "naturalFirstDraft": true,
+    "runtimeGuardUnchanged": true,
+    "noOperatorRetry": true,
+    "auditAllOutputs": true,
+    "expectedNotSent": true
+  },
+  "runtimeBefore": {
+    "src/harness.ts": "dc3a2ff55e4703cc0811e1bb6873e27599e3d34b8d6eaf861e922bb5cb8b0a84",
+    "src/memory/reply-contract.ts": "6c1af3685d9d6bf88d95596b592041bc0d97e690577c16ff89e271d31812564a",
+    "src/memory/capture.ts": "65015efccdca9302c80416d988490bc06749187a448b68732b9b1cef1d00d28d"
+  },
+  "sourceFrozenSets": [
+    "c4bde615930d87feed33e4da9c866fe84d1f3592931d47513aae6948a6eb617a",
+    "01826bd385e27c0a0da4a8e5963158d44842d0af6efc73202c7e2010b58caa9e"
+  ]
+}

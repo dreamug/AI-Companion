@@ -1,0 +1,1494 @@
+{
+  "version": 1,
+  "scope": "agent_authored_static_diagnosis_of_frozen_nonaccepted_responses_not_independent_human_ground_truth_not_sent_to_model",
+  "answerSourceHash": "197f218cf50207e776baa29f574fa9d999e9cdc24a3fb2d3301e2b72bcdecb7b",
+  "oldReplayHash": "024bb3f4a9da7814ff9833cc41062cc117b25938e89e50c033e3a111661f5b99",
+  "criteria": "旧严格口径不变，静态诊断不覆盖自动结果。预期fail为7条，预期pass为18条。仅针对原25条，不推断其余25条必定正确。",
+  "rows": [
+    {
+      "file": "query-regression.json",
+      "id": "work-4",
+      "oldVerdict": "fail",
+      "primaryCause": "answer_semantics",
+      "query": "靠什么工作谋生？",
+      "rawAnswer": {
+        "answer": "资料里没有直接写明用户“靠什么谋生”。有一条记录说用户现在是陶瓷修复师、在博物馆修复陶瓷文物，这可能是收入来源，但记录没写是否以此谋生。",
+        "abstain": true,
+        "memoryIds": [
+          "a3017f82-d00c-4deb-99ca-d4d19f350b91"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "资料里没有直接写明用户“靠什么谋生”。有一条记录说用户现在是陶瓷修复师、在博物馆修复陶瓷文物，这可能是收入来源，但记录没写是否以此谋生。",
+        "abstain": true,
+        "memoryIds": [
+          "work-new"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "a3017f82-d00c-4deb-99ca-d4d19f350b91",
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "via": "context"
+        },
+        {
+          "actualId": "0cdfd3a0-a92e-4f1e-8a0a-26c0de7e1893",
+          "id": "noise-4",
+          "text": "合成角色4从事不同的工作研究，读过编号4的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "7605bf64-fc83-4bf3-ae11-b81fd0633d2b",
+          "id": "noise-12",
+          "text": "合成角色12从事不同的工作研究，读过编号12的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "d0fbfc82-35db-4bfd-b010-c54bf9b82c04",
+          "id": "noise-14",
+          "text": "合成角色14从事不同的工作研究，读过编号14的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "13de967e-e2d6-4950-bb7c-9ea06050dafa",
+          "id": "noise-30",
+          "text": "合成角色30从事不同的工作研究，读过编号30的书，喜欢散步。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "fail",
+      "analysis": "把职业同义问法当作收入证明，过度弃答；原abstain保持true并判失败。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "query-regression.json",
+      "id": "address-1",
+      "oldVerdict": "fail",
+      "primaryCause": "reviewer_misjudgment",
+      "query": "怎么称呼我比较合适？",
+      "rawAnswer": {
+        "answer": "叫你小栖最合适，你也说过不喜欢被叫老板。",
+        "abstain": false,
+        "memoryIds": [
+          "1e62ef3c-4623-4707-9f60-f35d40163e08"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "叫你小栖最合适，你也说过不喜欢被叫老板。",
+        "abstain": false,
+        "memoryIds": [
+          "address-new"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "1e62ef3c-4623-4707-9f60-f35d40163e08",
+          "id": "address-new",
+          "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+          "via": "context"
+        },
+        {
+          "actualId": "c6f1afee-6d23-4307-a8c6-cd69f4d3ec85",
+          "id": "sister-name",
+          "text": "用户姐姐希望被称呼为蓝老师。",
+          "via": "context"
+        },
+        {
+          "actualId": "89971e26-a9e2-4973-b371-c1687b5edf57",
+          "id": "noise-0",
+          "text": "合成角色0从事不同的工作研究，读过编号0的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "c979aa44-a522-4eec-9485-02e4a0a9c26a",
+          "id": "noise-17",
+          "text": "合成角色17从事不同的工作研究，读过编号17的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "8414d06a-2814-485d-b9c8-bd253fa446ef",
+          "id": "noise-37",
+          "text": "合成角色37从事不同的工作研究，读过编号37的书，喜欢散步。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "资料支持偏好称呼；覆盖评审又要求把“最合适”拆成新的独立个人属性。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "query-regression.json",
+      "id": "address-3",
+      "oldVerdict": "fail",
+      "primaryCause": "reviewer_misjudgment",
+      "query": "我的昵称是什么？",
+      "rawAnswer": {
+        "answer": "你让我平时称呼你为小栖。",
+        "abstain": false,
+        "memoryIds": [
+          "1e62ef3c-4623-4707-9f60-f35d40163e08"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "你让我平时称呼你为小栖。",
+        "abstain": false,
+        "memoryIds": [
+          "address-new"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "1e62ef3c-4623-4707-9f60-f35d40163e08",
+          "id": "address-new",
+          "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+          "via": "context"
+        },
+        {
+          "actualId": "c6f1afee-6d23-4307-a8c6-cd69f4d3ec85",
+          "id": "sister-name",
+          "text": "用户姐姐希望被称呼为蓝老师。",
+          "via": "context"
+        },
+        {
+          "actualId": "a3017f82-d00c-4deb-99ca-d4d19f350b91",
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "via": "context"
+        },
+        {
+          "actualId": "c979aa44-a522-4eec-9485-02e4a0a9c26a",
+          "id": "noise-17",
+          "text": "合成角色17从事不同的工作研究，读过编号17的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "1bf35dd9-536c-4c78-a26f-8c541647eaab",
+          "id": "noise-7",
+          "text": "合成角色7从事不同的工作研究，读过编号7的书，喜欢散步。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "原文和来源均表达用户要求平时这样称呼；focus未重复请求措辞被覆盖评审误当遗漏。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "query-regression.json",
+      "id": "family-address-0",
+      "oldVerdict": "fail",
+      "primaryCause": "citation",
+      "query": "我姐姐想让别人怎么称呼她？",
+      "rawAnswer": {
+        "answer": "你姐姐希望别人称呼她为蓝老师。",
+        "abstain": false,
+        "memoryIds": [
+          "c6f1afee-6d23-4307-a8c6-cd69f4d3ec85",
+          "1c13763c-0b31-4e2c-9f84-e468ae310fbf"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "你姐姐希望别人称呼她为蓝老师。",
+        "abstain": false,
+        "memoryIds": [
+          "sister-name",
+          "sister-work"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "c6f1afee-6d23-4307-a8c6-cd69f4d3ec85",
+          "id": "sister-name",
+          "text": "用户姐姐希望被称呼为蓝老师。",
+          "via": "context"
+        },
+        {
+          "actualId": "1e62ef3c-4623-4707-9f60-f35d40163e08",
+          "id": "address-new",
+          "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+          "via": "context"
+        },
+        {
+          "actualId": "1c13763c-0b31-4e2c-9f84-e468ae310fbf",
+          "id": "sister-work",
+          "text": "用户的姐姐是一名航天工程师。",
+          "via": "context"
+        },
+        {
+          "actualId": "c979aa44-a522-4eec-9485-02e4a0a9c26a",
+          "id": "noise-17",
+          "text": "合成角色17从事不同的工作研究，读过编号17的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "1bf35dd9-536c-4c78-a26f-8c541647eaab",
+          "id": "noise-7",
+          "text": "合成角色7从事不同的工作研究，读过编号7的书，喜欢散步。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "fail",
+      "analysis": "只回答姐姐的称呼，却附加未用于任何事实的职业引用。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "query-regression.json",
+      "id": "unknown-0",
+      "oldVerdict": "fail",
+      "primaryCause": "reviewer_misjudgment",
+      "query": "我的工号是多少？",
+      "rawAnswer": {
+        "answer": "我不知道你的工号——本轮提供的记忆里没有关于工号的记录，我只能看到几个合成角色的工作研究和散步偏好。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "answerForDiagnostic": {
+        "answer": "我不知道你的工号——本轮提供的记忆里没有关于工号的记录，我只能看到几个合成角色的工作研究和散步偏好。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "delivered": [
+        {
+          "actualId": "0c35cd36-869b-489d-8f9b-b0b9521bdc84",
+          "id": "noise-25",
+          "text": "合成角色25从事不同的工作研究，读过编号25的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "7605bf64-fc83-4bf3-ae11-b81fd0633d2b",
+          "id": "noise-12",
+          "text": "合成角色12从事不同的工作研究，读过编号12的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "d6e971f1-41c5-43d9-aadf-6f222da8ca69",
+          "id": "noise-18",
+          "text": "合成角色18从事不同的工作研究，读过编号18的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "d7a8bdee-b9da-48ab-b627-dfb3f76246ac",
+          "id": "noise-15",
+          "text": "合成角色15从事不同的工作研究，读过编号15的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "8db0f372-7ab1-4a19-90a5-4bcf646a2f8a",
+          "id": "noise-26",
+          "text": "合成角色26从事不同的工作研究，读过编号26的书，喜欢散步。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "上一轮用全库职业事实误判本轮范围；实际交付只有5条干扰资料。该原回答的范围概括有据，应修评审而非判为用户回答越界。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "query-regression.json",
+      "id": "unknown-1",
+      "oldVerdict": "fail",
+      "primaryCause": "reviewer_misjudgment",
+      "query": "你知道我公司的具体地址吗？",
+      "rawAnswer": {
+        "answer": "不知道。本轮没有你公司地址的相关记录。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "answerForDiagnostic": {
+        "answer": "不知道。本轮没有你公司地址的相关记录。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "delivered": [
+        {
+          "actualId": "1c13763c-0b31-4e2c-9f84-e468ae310fbf",
+          "id": "sister-work",
+          "text": "用户的姐姐是一名航天工程师。",
+          "via": "context"
+        },
+        {
+          "actualId": "a3017f82-d00c-4deb-99ca-d4d19f350b91",
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "via": "context"
+        },
+        {
+          "actualId": "aea93f9a-baf9-4d51-ae9f-16fcca0c25ed",
+          "id": "noise-16",
+          "text": "合成角色16从事不同的工作研究，读过编号16的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "d7a8bdee-b9da-48ab-b627-dfb3f76246ac",
+          "id": "noise-15",
+          "text": "合成角色15从事不同的工作研究，读过编号15的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "c979aa44-a522-4eec-9485-02e4a0a9c26a",
+          "id": "noise-17",
+          "text": "合成角色17从事不同的工作研究，读过编号17的书，喜欢散步。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "未知声明的subject是所问属性所属用户，不应被理解成用户自己不知道。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "query-regression.json",
+      "id": "unknown-3",
+      "oldVerdict": "review",
+      "primaryCause": "reviewer_execution_or_proof",
+      "query": "我姐姐的工号是什么？",
+      "rawAnswer": {
+        "answer": "你姐姐的工号我这边没有记录，只记到她是一名航天工程师、希望被称呼为蓝老师。",
+        "abstain": true,
+        "memoryIds": [
+          "1c13763c-0b31-4e2c-9f84-e468ae310fbf",
+          "c6f1afee-6d23-4307-a8c6-cd69f4d3ec85"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "你姐姐的工号我这边没有记录，只记到她是一名航天工程师、希望被称呼为蓝老师。",
+        "abstain": true,
+        "memoryIds": [
+          "sister-work",
+          "sister-name"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "1c13763c-0b31-4e2c-9f84-e468ae310fbf",
+          "id": "sister-work",
+          "text": "用户的姐姐是一名航天工程师。",
+          "via": "context"
+        },
+        {
+          "actualId": "c6f1afee-6d23-4307-a8c6-cd69f4d3ec85",
+          "id": "sister-name",
+          "text": "用户姐姐希望被称呼为蓝老师。",
+          "via": "context"
+        },
+        {
+          "actualId": "d6e971f1-41c5-43d9-aadf-6f222da8ca69",
+          "id": "noise-18",
+          "text": "合成角色18从事不同的工作研究，读过编号18的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "0bdc21ce-c37a-4aaa-aa1e-b79b49a64d14",
+          "id": "noise-9",
+          "text": "合成角色9从事不同的工作研究，读过编号9的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "aea93f9a-baf9-4d51-ae9f-16fcca0c25ed",
+          "id": "noise-16",
+          "text": "合成角色16从事不同的工作研究，读过编号16的书，喜欢散步。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "来源核对解释承认姐姐职业有据，但主体证明的指称未统一，missing_subject_bridge；不是实际漏召回。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "query-regression.json",
+      "id": "unknown-4",
+      "oldVerdict": "fail",
+      "primaryCause": "reviewer_misjudgment",
+      "query": "我入职的具体日期是哪天？",
+      "rawAnswer": {
+        "answer": "我这边没有你入职具体日期的记录，本轮记忆里也没有能支持的条目。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "answerForDiagnostic": {
+        "answer": "我这边没有你入职具体日期的记录，本轮记忆里也没有能支持的条目。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "delivered": [
+        {
+          "actualId": "a3017f82-d00c-4deb-99ca-d4d19f350b91",
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "via": "context"
+        },
+        {
+          "actualId": "858937a8-a073-4634-85a6-f9441ca64b0e",
+          "id": "noise-19",
+          "text": "合成角色19从事不同的工作研究，读过编号19的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "aea93f9a-baf9-4d51-ae9f-16fcca0c25ed",
+          "id": "noise-16",
+          "text": "合成角色16从事不同的工作研究，读过编号16的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "c979aa44-a522-4eec-9485-02e4a0a9c26a",
+          "id": "noise-17",
+          "text": "合成角色17从事不同的工作研究，读过编号17的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "3c2a03a3-8baf-4778-a924-cddad5e80b7f",
+          "id": "noise-20",
+          "text": "合成角色20从事不同的工作研究，读过编号20的书，喜欢散步。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "把本轮无该属性记录的未知说明误判为必须另有主体的否定性事实。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "query-regression.json",
+      "id": "unknown-5",
+      "oldVerdict": "fail",
+      "primaryCause": "reviewer_misjudgment",
+      "query": "鹦鹉的生日是哪天？",
+      "rawAnswer": {
+        "answer": "我查了当前提供的记忆，里面只记着用户养的鹦鹉叫松子，没有关于它生日的记录；所以鹦鹉生日是哪天，本轮记忆里未知。",
+        "abstain": true,
+        "memoryIds": [
+          "18aa6fac-ff34-4571-b1e2-f03c715a23d5"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "我查了当前提供的记忆，里面只记着用户养的鹦鹉叫松子，没有关于它生日的记录；所以鹦鹉生日是哪天，本轮记忆里未知。",
+        "abstain": true,
+        "memoryIds": [
+          "pet-new"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "18aa6fac-ff34-4571-b1e2-f03c715a23d5",
+          "id": "pet-new",
+          "text": "用户养的鹦鹉叫松子。",
+          "via": "context"
+        },
+        {
+          "actualId": "aea93f9a-baf9-4d51-ae9f-16fcca0c25ed",
+          "id": "noise-16",
+          "text": "合成角色16从事不同的工作研究，读过编号16的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "9ba5de8e-5dc7-4ece-a934-1d6cd359bf8a",
+          "id": "book-new",
+          "text": "用户最喜欢的书是《野渡》。",
+          "via": "context"
+        },
+        {
+          "actualId": "1e62ef3c-4623-4707-9f60-f35d40163e08",
+          "id": "address-new",
+          "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+          "via": "context"
+        },
+        {
+          "actualId": "d51fbf6f-d78d-49f4-a708-1f7af056d418",
+          "id": "noise-23",
+          "text": "合成角色23从事不同的工作研究，读过编号23的书，喜欢散步。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "只记录鹦鹉名字在上下文指向该动物的相关资料，不是声称整份上下文没有其他记录；生日未知未越界。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "answer-boundaries.json",
+      "id": "occupation-scope",
+      "oldVerdict": "fail",
+      "primaryCause": "synthetic_protocol_only",
+      "query": "说说我现在的职业和工作内容。",
+      "rawAnswer": {
+        "type": "json_object",
+        "answer": "你是陶瓷修复师，在博物馆修复陶瓷文物。",
+        "abstain": false,
+        "memoryIds": [
+          "764f97a2-56a7-42c3-ba18-597223a9f660"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "你是陶瓷修复师，在博物馆修复陶瓷文物。",
+        "abstain": false,
+        "memoryIds": [
+          "work-new"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "764f97a2-56a7-42c3-ba18-597223a9f660",
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "via": "context"
+        },
+        {
+          "actualId": "e0f03825-36b3-4ed4-982b-37452009e847",
+          "id": "noise-24",
+          "text": "合成角色24从事不同的工作研究，读过编号24的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "9d3ccc23-fe4a-42f1-b747-504a5759355a",
+          "id": "noise-14",
+          "text": "合成角色14从事不同的工作研究，读过编号14的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "572f8278-41d8-45d5-b04a-78d384a03759",
+          "id": "noise-4",
+          "text": "合成角色4从事不同的工作研究，读过编号4的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "f1736fc0-6ddd-4631-bed4-194cefa3df97",
+          "id": "noise-2",
+          "text": "合成角色2从事不同的工作研究，读过编号2的书，喜欢散步。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "fail",
+      "analysis": "原JSON多出type字段；旧投影漏报，现从raw重建后严格失败。",
+      "hasExtraJsonFields": true
+    },
+    {
+      "file": "answer-boundaries.json",
+      "id": "partial-title",
+      "oldVerdict": "fail",
+      "primaryCause": "reviewer_misjudgment",
+      "query": "我的工作做什么，正式合同职位名称也有记录吗？",
+      "rawAnswer": {
+        "answer": "你现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。正式合同上的职位名称本轮没有已提供的记录，我不能确定。",
+        "abstain": false,
+        "memoryIds": [
+          "764f97a2-56a7-42c3-ba18-597223a9f660"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "你现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。正式合同上的职位名称本轮没有已提供的记录，我不能确定。",
+        "abstain": false,
+        "memoryIds": [
+          "work-new"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "689d6de3-7c54-4e21-840a-0867a4ce3c70",
+          "id": "noise-0",
+          "text": "合成角色0从事不同的工作研究，读过编号0的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "f1736fc0-6ddd-4631-bed4-194cefa3df97",
+          "id": "noise-2",
+          "text": "合成角色2从事不同的工作研究，读过编号2的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "e2405a62-bcc9-411b-91d2-2ee35a627ac4",
+          "id": "noise-1",
+          "text": "合成角色1从事不同的工作研究，读过编号1的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "572f8278-41d8-45d5-b04a-78d384a03759",
+          "id": "noise-4",
+          "text": "合成角色4从事不同的工作研究，读过编号4的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "764f97a2-56a7-42c3-ba18-597223a9f660",
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "已分别回答职业已知与正式合同名未知；覆盖评审要求把无记录解释另拆为否定事实。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "answer-boundaries.json",
+      "id": "formal-title",
+      "oldVerdict": "review",
+      "primaryCause": "reviewer_execution_or_proof",
+      "query": "我合同上的正式职位全称是什么？",
+      "rawAnswer": {
+        "answer": "我这边没有记录你的合同正式职位全称；只知道你现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+        "abstain": true,
+        "memoryIds": [
+          "764f97a2-56a7-42c3-ba18-597223a9f660"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "我这边没有记录你的合同正式职位全称；只知道你现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+        "abstain": true,
+        "memoryIds": [
+          "work-new"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "689d6de3-7c54-4e21-840a-0867a4ce3c70",
+          "id": "noise-0",
+          "text": "合成角色0从事不同的工作研究，读过编号0的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "764f97a2-56a7-42c3-ba18-597223a9f660",
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "via": "context"
+        },
+        {
+          "actualId": "e2405a62-bcc9-411b-91d2-2ee35a627ac4",
+          "id": "noise-1",
+          "text": "合成角色1从事不同的工作研究，读过编号1的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "47677b98-b790-411d-9c4f-859c5c929887",
+          "id": "noise-5",
+          "text": "合成角色5从事不同的工作研究，读过编号5的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "68078a5e-7587-4ba7-a49a-8f6e28b77021",
+          "id": "noise-28",
+          "text": "合成角色28从事不同的工作研究，读过编号28的书，喜欢散步。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "原回答不重采样；评审输出截断，保留待复核。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "answer-boundaries.json",
+      "id": "grade",
+      "oldVerdict": "fail",
+      "primaryCause": "citation",
+      "query": "我的正式职级是多少？",
+      "rawAnswer": {
+        "answer": "关于你的正式职级，本轮记忆里没有相关资料；现有的记录只提到你的职业是博物馆陶瓷修复师。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "answerForDiagnostic": {
+        "answer": "关于你的正式职级，本轮记忆里没有相关资料；现有的记录只提到你的职业是博物馆陶瓷修复师。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "delivered": [
+        {
+          "actualId": "764f97a2-56a7-42c3-ba18-597223a9f660",
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "via": "context"
+        },
+        {
+          "actualId": "689d6de3-7c54-4e21-840a-0867a4ce3c70",
+          "id": "noise-0",
+          "text": "合成角色0从事不同的工作研究，读过编号0的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "ec8cba6a-d7f2-4854-80ba-42805af13932",
+          "id": "noise-15",
+          "text": "合成角色15从事不同的工作研究，读过编号15的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "4a1ef43f-b447-4c9e-92b3-e0d2fab84f8c",
+          "id": "noise-12",
+          "text": "合成角色12从事不同的工作研究，读过编号12的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "47677b98-b790-411d-9c4f-859c5c929887",
+          "id": "noise-5",
+          "text": "合成角色5从事不同的工作研究，读过编号5的书，喜欢散步。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "fail",
+      "analysis": "回答附带职业事实却没有任何引用。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "answer-boundaries.json",
+      "id": "employee-id",
+      "oldVerdict": "fail",
+      "primaryCause": "reviewer_misjudgment",
+      "query": "我的工号是多少？",
+      "rawAnswer": {
+        "answer": "你的工号我这边没有记录，本轮记忆里只有一些合成角色的工作研究信息，没有你的工号。可以告诉我吗？",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "answerForDiagnostic": {
+        "answer": "你的工号我这边没有记录，本轮记忆里只有一些合成角色的工作研究信息，没有你的工号。可以告诉我吗？",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "delivered": [
+        {
+          "actualId": "b73af8e5-5c79-41cd-bf8a-a113fc04f2a9",
+          "id": "noise-25",
+          "text": "合成角色25从事不同的工作研究，读过编号25的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "4a1ef43f-b447-4c9e-92b3-e0d2fab84f8c",
+          "id": "noise-12",
+          "text": "合成角色12从事不同的工作研究，读过编号12的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "5832f8d1-aa93-4802-ac77-b25d652a9fac",
+          "id": "noise-18",
+          "text": "合成角色18从事不同的工作研究，读过编号18的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "ec8cba6a-d7f2-4854-80ba-42805af13932",
+          "id": "noise-15",
+          "text": "合成角色15从事不同的工作研究，读过编号15的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "0d12dac8-7b79-4e74-9de9-fe14a597a6c0",
+          "id": "noise-26",
+          "text": "合成角色26从事不同的工作研究，读过编号26的书，喜欢散步。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "上一轮同样误用全库信息。实际交付只有合成角色资料；未知工号和本轮范围说明成立。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "answer-boundaries.json",
+      "id": "company-address",
+      "oldVerdict": "fail",
+      "primaryCause": "reviewer_misjudgment",
+      "query": "我公司的完整地址是什么？",
+      "rawAnswer": {
+        "answer": "本轮提供的记忆里没有你公司地址的记录，所以我不知道完整地址是什么。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "answerForDiagnostic": {
+        "answer": "本轮提供的记忆里没有你公司地址的记录，所以我不知道完整地址是什么。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "delivered": [
+        {
+          "actualId": "d7909ead-c2b5-47c0-a0ad-f87d36c5b29b",
+          "id": "sister-work",
+          "text": "用户的姐姐是一名航天工程师。",
+          "via": "context"
+        },
+        {
+          "actualId": "2a5cbac9-cc28-4f7f-9101-5828cb0be8c9",
+          "id": "address-new",
+          "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+          "via": "context"
+        },
+        {
+          "actualId": "764f97a2-56a7-42c3-ba18-597223a9f660",
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "via": "context"
+        },
+        {
+          "actualId": "68078a5e-7587-4ba7-a49a-8f6e28b77021",
+          "id": "noise-28",
+          "text": "合成角色28从事不同的工作研究，读过编号28的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "b73af8e5-5c79-41cd-bf8a-a113fc04f2a9",
+          "id": "noise-25",
+          "text": "合成角色25从事不同的工作研究，读过编号25的书，喜欢散步。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "把同一未知命题的无记录说明要求拆成新事实，并误解subject。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "answer-boundaries.json",
+      "id": "legal-name",
+      "oldVerdict": "fail",
+      "primaryCause": "reviewer_misjudgment",
+      "query": "我证件上的姓名是什么？",
+      "rawAnswer": {
+        "answer": "这件事我这边没有记录，没法回答——记忆里没有你证件上的姓名。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "answerForDiagnostic": {
+        "answer": "这件事我这边没有记录，没法回答——记忆里没有你证件上的姓名。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "delivered": [
+        {
+          "actualId": "764f97a2-56a7-42c3-ba18-597223a9f660",
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "via": "context"
+        },
+        {
+          "actualId": "d7909ead-c2b5-47c0-a0ad-f87d36c5b29b",
+          "id": "sister-work",
+          "text": "用户的姐姐是一名航天工程师。",
+          "via": "context"
+        },
+        {
+          "actualId": "5403ce91-2b6d-488e-b1ec-3aa5dcb52c41",
+          "id": "sister-name",
+          "text": "用户姐姐希望被称呼为蓝老师。",
+          "via": "context"
+        },
+        {
+          "actualId": "689d6de3-7c54-4e21-840a-0867a4ce3c70",
+          "id": "noise-0",
+          "text": "合成角色0从事不同的工作研究，读过编号0的书，喜欢散步。",
+          "via": "context"
+        },
+        {
+          "actualId": "b73af8e5-5c79-41cd-bf8a-a113fc04f2a9",
+          "id": "noise-25",
+          "text": "合成角色25从事不同的工作研究，读过编号25的书，喜欢散步。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "把助手承认未知的subject字段理解成用户行为，错误否定原文忠实性。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "open-world.json",
+      "id": "sibling-coemployment",
+      "oldVerdict": "fail",
+      "primaryCause": "synthetic_protocol_only",
+      "query": "我姐姐是航天工程师，我也从事航天工程吗？",
+      "rawAnswer": {
+        "type": "json_object",
+        "answer": "不知道。你姐姐是航天工程师这一点有记录，但你自己是否也从事航天工程，本轮记忆里没有相关信息。",
+        "abstain": true,
+        "memoryIds": [
+          "42617d4c-4503-4bd7-a71b-ad170020788d"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "不知道。你姐姐是航天工程师这一点有记录，但你自己是否也从事航天工程，本轮记忆里没有相关信息。",
+        "abstain": true,
+        "memoryIds": [
+          "sister-work"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "05a5ac4a-6e19-4f9f-acb5-030df43c8a4b",
+          "id": "sister-name",
+          "text": "用户姐姐希望被称呼为蓝老师。",
+          "via": "context"
+        },
+        {
+          "actualId": "27d16eb2-f24d-453d-aa38-0f43577abc04",
+          "id": "address-new",
+          "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+          "via": "context"
+        },
+        {
+          "actualId": "42617d4c-4503-4bd7-a71b-ad170020788d",
+          "id": "sister-work",
+          "text": "用户的姐姐是一名航天工程师。",
+          "via": "context"
+        },
+        {
+          "actualId": "4966d07f-f4b3-4396-9bc4-e13b59a1a2e9",
+          "id": "book-new",
+          "text": "用户最喜欢的书是《野渡》。",
+          "via": "context"
+        },
+        {
+          "actualId": "5ae48a2a-aa6c-4a4b-8ad5-b8d9774763f9",
+          "id": "pet-new",
+          "text": "用户养的鹦鹉叫松子。",
+          "via": "context"
+        },
+        {
+          "actualId": "86907361-e606-4e4f-904b-fd2ba79b0bbf",
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "fail",
+      "analysis": "内容正确区分姐姐与用户，但原JSON多出type字段；严格协议失败，旧截断评审也保留。",
+      "hasExtraJsonFields": true
+    },
+    {
+      "file": "open-world.json",
+      "id": "unrecorded-secondary-job",
+      "oldVerdict": "fail",
+      "primaryCause": "reviewer_misjudgment",
+      "query": "除了陶瓷修复，我还兼任讲师吗？",
+      "rawAnswer": {
+        "answer": "记忆里没有记载你兼任讲师这件事，只记录了你现在的职业是陶瓷修复师、在博物馆修复陶瓷文物。所以兼任讲师这一点，我这边没有依据。",
+        "abstain": true,
+        "memoryIds": [
+          "86907361-e606-4e4f-904b-fd2ba79b0bbf"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "记忆里没有记载你兼任讲师这件事，只记录了你现在的职业是陶瓷修复师、在博物馆修复陶瓷文物。所以兼任讲师这一点，我这边没有依据。",
+        "abstain": true,
+        "memoryIds": [
+          "work-new"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "05a5ac4a-6e19-4f9f-acb5-030df43c8a4b",
+          "id": "sister-name",
+          "text": "用户姐姐希望被称呼为蓝老师。",
+          "via": "context"
+        },
+        {
+          "actualId": "27d16eb2-f24d-453d-aa38-0f43577abc04",
+          "id": "address-new",
+          "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+          "via": "context"
+        },
+        {
+          "actualId": "42617d4c-4503-4bd7-a71b-ad170020788d",
+          "id": "sister-work",
+          "text": "用户的姐姐是一名航天工程师。",
+          "via": "context"
+        },
+        {
+          "actualId": "4966d07f-f4b3-4396-9bc4-e13b59a1a2e9",
+          "id": "book-new",
+          "text": "用户最喜欢的书是《野渡》。",
+          "via": "context"
+        },
+        {
+          "actualId": "5ae48a2a-aa6c-4a4b-8ad5-b8d9774763f9",
+          "id": "pet-new",
+          "text": "用户养的鹦鹉叫松子。",
+          "via": "context"
+        },
+        {
+          "actualId": "86907361-e606-4e4f-904b-fd2ba79b0bbf",
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "围绕职业资料的局部概括，后续明确讲师未知；不把只记录了当前职业扩大解释为全库无其他个人信息。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "open-world.json",
+      "id": "adjacent-skill",
+      "oldVerdict": "fail",
+      "primaryCause": "answer_semantics",
+      "query": "我还会制作陶瓷吗？",
+      "rawAnswer": {
+        "type": "json_object",
+        "answer": "会。你是陶瓷修复师，在博物馆修复陶瓷文物。",
+        "abstain": false,
+        "memoryIds": [
+          "86907361-e606-4e4f-904b-fd2ba79b0bbf"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "会。你是陶瓷修复师，在博物馆修复陶瓷文物。",
+        "abstain": false,
+        "memoryIds": [
+          "work-new"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "05a5ac4a-6e19-4f9f-acb5-030df43c8a4b",
+          "id": "sister-name",
+          "text": "用户姐姐希望被称呼为蓝老师。",
+          "via": "context"
+        },
+        {
+          "actualId": "27d16eb2-f24d-453d-aa38-0f43577abc04",
+          "id": "address-new",
+          "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+          "via": "context"
+        },
+        {
+          "actualId": "42617d4c-4503-4bd7-a71b-ad170020788d",
+          "id": "sister-work",
+          "text": "用户的姐姐是一名航天工程师。",
+          "via": "context"
+        },
+        {
+          "actualId": "4966d07f-f4b3-4396-9bc4-e13b59a1a2e9",
+          "id": "book-new",
+          "text": "用户最喜欢的书是《野渡》。",
+          "via": "context"
+        },
+        {
+          "actualId": "5ae48a2a-aa6c-4a4b-8ad5-b8d9774763f9",
+          "id": "pet-new",
+          "text": "用户养的鹦鹉叫松子。",
+          "via": "context"
+        },
+        {
+          "actualId": "86907361-e606-4e4f-904b-fd2ba79b0bbf",
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "fail",
+      "analysis": "从修复职业肯定制作技能，缺乏该技能证据；同时原JSON有额外type字段。",
+      "hasExtraJsonFields": true
+    },
+    {
+      "file": "positive-attributes.json",
+      "id": "sibling-coemployment",
+      "oldVerdict": "fail",
+      "primaryCause": "reviewer_misjudgment",
+      "query": "我姐姐是航天工程师，我也从事航天工程吗？",
+      "rawAnswer": {
+        "answer": "是，记忆里有：你除陶瓷修复之外，也从事航天工程的兼职研究。",
+        "abstain": false,
+        "memoryIds": [
+          "2034e3db-3386-4589-8d33-c0bdf11ee694"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "是，记忆里有：你除陶瓷修复之外，也从事航天工程的兼职研究。",
+        "abstain": false,
+        "memoryIds": [
+          "additional-aerospace"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "11f6389a-c680-4ceb-8c23-2066478ba49d",
+          "id": "sister-name",
+          "text": "用户姐姐希望被称呼为蓝老师。",
+          "via": "context"
+        },
+        {
+          "actualId": "2034e3db-3386-4589-8d33-c0bdf11ee694",
+          "id": "additional-aerospace",
+          "text": "用户除陶瓷修复之外，也从事航天工程的兼职研究。",
+          "via": "context"
+        },
+        {
+          "actualId": "3a1fe501-e735-4a37-8c81-74eaefc45410",
+          "id": "sister-work",
+          "text": "用户的姐姐是一名航天工程师。",
+          "via": "context"
+        },
+        {
+          "actualId": "3a530507-a0a0-4072-9198-4f0dc60848e8",
+          "id": "address-new",
+          "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+          "via": "context"
+        },
+        {
+          "actualId": "4cde6839-dfee-4b59-9baa-fd0d6d9ac6b7",
+          "id": "pet-new",
+          "text": "用户养的鹦鹉叫松子。",
+          "via": "context"
+        },
+        {
+          "actualId": "5b315b60-a3ba-4925-9e23-c4bde10a9a00",
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "via": "context"
+        },
+        {
+          "actualId": "81633dc3-7c46-48e6-acec-a99c8a14b6fc",
+          "id": "additional-making",
+          "text": "用户会制作陶瓷。",
+          "via": "context"
+        },
+        {
+          "actualId": "af3903dd-9276-4fde-83c9-61a2eb53932a",
+          "id": "additional-lecturer",
+          "text": "用户兼任讲师，教授文物修复课程。",
+          "via": "context"
+        },
+        {
+          "actualId": "d7dfd870-c2da-47f7-ae73-4b00fc0e2417",
+          "id": "book-new",
+          "text": "用户最喜欢的书是《野渡》。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "同一引用可支持两项属性；盲评为背景选择另一来源后，原调度跳过已用于主结论的候选。已新增跨领域单元回归并补调度，但本次保留旧模型证明的失败，没有人工补路径或再采样追分。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "positive-attributes.json",
+      "id": "unrecorded-secondary-job",
+      "oldVerdict": "fail",
+      "primaryCause": "citation",
+      "query": "除了陶瓷修复，我还兼任讲师吗？",
+      "rawAnswer": {
+        "answer": "是的，你兼任讲师，教授文物修复课程。",
+        "abstain": false,
+        "memoryIds": [
+          "af3903dd-9276-4fde-83c9-61a2eb53932a",
+          "5b315b60-a3ba-4925-9e23-c4bde10a9a00"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "是的，你兼任讲师，教授文物修复课程。",
+        "abstain": false,
+        "memoryIds": [
+          "additional-lecturer",
+          "work-new"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "11f6389a-c680-4ceb-8c23-2066478ba49d",
+          "id": "sister-name",
+          "text": "用户姐姐希望被称呼为蓝老师。",
+          "via": "context"
+        },
+        {
+          "actualId": "2034e3db-3386-4589-8d33-c0bdf11ee694",
+          "id": "additional-aerospace",
+          "text": "用户除陶瓷修复之外，也从事航天工程的兼职研究。",
+          "via": "context"
+        },
+        {
+          "actualId": "3a1fe501-e735-4a37-8c81-74eaefc45410",
+          "id": "sister-work",
+          "text": "用户的姐姐是一名航天工程师。",
+          "via": "context"
+        },
+        {
+          "actualId": "3a530507-a0a0-4072-9198-4f0dc60848e8",
+          "id": "address-new",
+          "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+          "via": "context"
+        },
+        {
+          "actualId": "4cde6839-dfee-4b59-9baa-fd0d6d9ac6b7",
+          "id": "pet-new",
+          "text": "用户养的鹦鹉叫松子。",
+          "via": "context"
+        },
+        {
+          "actualId": "5b315b60-a3ba-4925-9e23-c4bde10a9a00",
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "via": "context"
+        },
+        {
+          "actualId": "81633dc3-7c46-48e6-acec-a99c8a14b6fc",
+          "id": "additional-making",
+          "text": "用户会制作陶瓷。",
+          "via": "context"
+        },
+        {
+          "actualId": "af3903dd-9276-4fde-83c9-61a2eb53932a",
+          "id": "additional-lecturer",
+          "text": "用户兼任讲师，教授文物修复课程。",
+          "via": "context"
+        },
+        {
+          "actualId": "d7dfd870-c2da-47f7-ae73-4b00fc0e2417",
+          "id": "book-new",
+          "text": "用户最喜欢的书是《野渡》。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "fail",
+      "analysis": "讲师及授课资料足够；附加职业记录未支持额外回答属性。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "citation-generalization.json",
+      "id": "nonperson-location",
+      "oldVerdict": "review",
+      "primaryCause": "reviewer_execution_or_proof",
+      "query": "星穹位于哪里？",
+      "rawAnswer": {
+        "answer": "星穹是用户给自建温室起的名字，这座温室位于山谷农场。",
+        "abstain": false,
+        "memoryIds": [
+          "566fe212-db5c-4091-87e8-eedcff2f2797",
+          "0b273c85-1b0e-4816-ba0f-c07e56b43387"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "星穹是用户给自建温室起的名字，这座温室位于山谷农场。",
+        "abstain": false,
+        "memoryIds": [
+          "project-alias",
+          "project-place"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "0b273c85-1b0e-4816-ba0f-c07e56b43387",
+          "id": "project-place",
+          "text": "用户自建的温室位于山谷农场。",
+          "via": "context"
+        },
+        {
+          "actualId": "519f7756-b10c-4cf7-8833-936cde66774b",
+          "id": "partner-home",
+          "text": "用户的合伙人住在里斯本。",
+          "via": "context"
+        },
+        {
+          "actualId": "566fe212-db5c-4091-87e8-eedcff2f2797",
+          "id": "project-alias",
+          "text": "用户把自建的温室称作星穹。",
+          "via": "context"
+        },
+        {
+          "actualId": "5b5fc3c7-66e1-4830-aa87-7e92b6a94656",
+          "id": "user-like",
+          "text": "用户喜欢下雪。",
+          "via": "context"
+        },
+        {
+          "actualId": "61d1b93b-c5f8-427f-9536-6f8668e5f6e6",
+          "id": "partner-name",
+          "text": "用户的合伙人叫青岚。",
+          "via": "context"
+        },
+        {
+          "actualId": "bbb8f84e-4004-484c-9750-3545e64200a7",
+          "id": "partner-skill",
+          "text": "用户的合伙人会手语。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "非人物指称的subject路径未闭合，保留missing_subject_bridge而非认定模型回答错误。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "citation-generalization.json",
+      "id": "nonperson-name",
+      "oldVerdict": "review",
+      "primaryCause": "reviewer_execution_or_proof",
+      "query": "我怎么称呼自己建的温室？",
+      "rawAnswer": {
+        "answer": "你把它称作“星穹”，它位于山谷农场。",
+        "abstain": false,
+        "memoryIds": [
+          "566fe212-db5c-4091-87e8-eedcff2f2797",
+          "0b273c85-1b0e-4816-ba0f-c07e56b43387"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "你把它称作“星穹”，它位于山谷农场。",
+        "abstain": false,
+        "memoryIds": [
+          "project-alias",
+          "project-place"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "0b273c85-1b0e-4816-ba0f-c07e56b43387",
+          "id": "project-place",
+          "text": "用户自建的温室位于山谷农场。",
+          "via": "context"
+        },
+        {
+          "actualId": "519f7756-b10c-4cf7-8833-936cde66774b",
+          "id": "partner-home",
+          "text": "用户的合伙人住在里斯本。",
+          "via": "context"
+        },
+        {
+          "actualId": "566fe212-db5c-4091-87e8-eedcff2f2797",
+          "id": "project-alias",
+          "text": "用户把自建的温室称作星穹。",
+          "via": "context"
+        },
+        {
+          "actualId": "5b5fc3c7-66e1-4830-aa87-7e92b6a94656",
+          "id": "user-like",
+          "text": "用户喜欢下雪。",
+          "via": "context"
+        },
+        {
+          "actualId": "61d1b93b-c5f8-427f-9536-6f8668e5f6e6",
+          "id": "partner-name",
+          "text": "用户的合伙人叫青岚。",
+          "via": "context"
+        },
+        {
+          "actualId": "bbb8f84e-4004-484c-9750-3545e64200a7",
+          "id": "partner-skill",
+          "text": "用户的合伙人会手语。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "主体连接结构非法，保留invalid_subject_link，不自动补桥。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "citation-generalization.json",
+      "id": "parallel-entities",
+      "oldVerdict": "review",
+      "primaryCause": "reviewer_execution_or_proof",
+      "query": "青岚和星穹各自在哪里？",
+      "rawAnswer": {
+        "answer": "已知：你的合伙人青岚住在里斯本；星穹是你自建温室的名字，位于山谷农场。",
+        "abstain": false,
+        "memoryIds": [
+          "519f7756-b10c-4cf7-8833-936cde66774b",
+          "61d1b93b-c5f8-427f-9536-6f8668e5f6e6",
+          "566fe212-db5c-4091-87e8-eedcff2f2797",
+          "0b273c85-1b0e-4816-ba0f-c07e56b43387"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "已知：你的合伙人青岚住在里斯本；星穹是你自建温室的名字，位于山谷农场。",
+        "abstain": false,
+        "memoryIds": [
+          "partner-home",
+          "partner-name",
+          "project-alias",
+          "project-place"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "0b273c85-1b0e-4816-ba0f-c07e56b43387",
+          "id": "project-place",
+          "text": "用户自建的温室位于山谷农场。",
+          "via": "context"
+        },
+        {
+          "actualId": "519f7756-b10c-4cf7-8833-936cde66774b",
+          "id": "partner-home",
+          "text": "用户的合伙人住在里斯本。",
+          "via": "context"
+        },
+        {
+          "actualId": "566fe212-db5c-4091-87e8-eedcff2f2797",
+          "id": "project-alias",
+          "text": "用户把自建的温室称作星穹。",
+          "via": "context"
+        },
+        {
+          "actualId": "5b5fc3c7-66e1-4830-aa87-7e92b6a94656",
+          "id": "user-like",
+          "text": "用户喜欢下雪。",
+          "via": "context"
+        },
+        {
+          "actualId": "61d1b93b-c5f8-427f-9536-6f8668e5f6e6",
+          "id": "partner-name",
+          "text": "用户的合伙人叫青岚。",
+          "via": "context"
+        },
+        {
+          "actualId": "bbb8f84e-4004-484c-9750-3545e64200a7",
+          "id": "partner-skill",
+          "text": "用户的合伙人会手语。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "固定的有限结构修复后仍不符合证明合同，保持待复核。",
+      "hasExtraJsonFields": false
+    },
+    {
+      "file": "citation-generalization.json",
+      "id": "compound-relationship",
+      "oldVerdict": "fail",
+      "primaryCause": "reviewer_misjudgment",
+      "query": "我的合伙人住在哪里，有什么交流技能？",
+      "rawAnswer": {
+        "answer": "你的合伙人青岚住在里斯本，会手语。",
+        "abstain": false,
+        "memoryIds": [
+          "519f7756-b10c-4cf7-8833-936cde66774b",
+          "61d1b93b-c5f8-427f-9536-6f8668e5f6e6",
+          "bbb8f84e-4004-484c-9750-3545e64200a7"
+        ]
+      },
+      "answerForDiagnostic": {
+        "answer": "你的合伙人青岚住在里斯本，会手语。",
+        "abstain": false,
+        "memoryIds": [
+          "partner-home",
+          "partner-name",
+          "partner-skill"
+        ]
+      },
+      "delivered": [
+        {
+          "actualId": "0b273c85-1b0e-4816-ba0f-c07e56b43387",
+          "id": "project-place",
+          "text": "用户自建的温室位于山谷农场。",
+          "via": "context"
+        },
+        {
+          "actualId": "519f7756-b10c-4cf7-8833-936cde66774b",
+          "id": "partner-home",
+          "text": "用户的合伙人住在里斯本。",
+          "via": "context"
+        },
+        {
+          "actualId": "566fe212-db5c-4091-87e8-eedcff2f2797",
+          "id": "project-alias",
+          "text": "用户把自建的温室称作星穹。",
+          "via": "context"
+        },
+        {
+          "actualId": "5b5fc3c7-66e1-4830-aa87-7e92b6a94656",
+          "id": "user-like",
+          "text": "用户喜欢下雪。",
+          "via": "context"
+        },
+        {
+          "actualId": "61d1b93b-c5f8-427f-9536-6f8668e5f6e6",
+          "id": "partner-name",
+          "text": "用户的合伙人叫青岚。",
+          "via": "context"
+        },
+        {
+          "actualId": "bbb8f84e-4004-484c-9750-3545e64200a7",
+          "id": "partner-skill",
+          "text": "用户的合伙人会手语。",
+          "via": "context"
+        }
+      ],
+      "expectedStrictDisposition": "pass",
+      "analysis": "身份关系已由引用路径证明，覆盖评审又要求独立拆成一项身份事实；不覆写自动失败。",
+      "hasExtraJsonFields": false
+    }
+  ]
+}

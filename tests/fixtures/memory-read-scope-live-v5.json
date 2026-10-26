@@ -1,0 +1,1234 @@
+{
+  "provenance": "Frozen extension of all 28 v2 cases, two original failure drafts, and topic-varied minimal pairs. No expected labels enter runtime requests. Same-author synthetic regression, not independent accuracy benchmark. v4 extends with all new failure drafts including their actual 5-item evidence, plus cross-topic paired variations. Labels frozen before v4 requests. v5 adds trusted local-clock interval pairs and an inactive-rule control. Existing 75 labels unchanged.",
+  "cases": [
+    {
+      "id": "unavailable-1",
+      "mode": "unavailable",
+      "complete": false,
+      "evidence": [],
+      "userInput": "之前的记录能说明我的作息吗？",
+      "draft": "记忆里没有你的作息记录，这次也没能读到。",
+      "reject": true
+    },
+    {
+      "id": "unavailable-2",
+      "mode": "unavailable",
+      "complete": false,
+      "evidence": [],
+      "userInput": "之前的记录能说明我的作息吗？",
+      "draft": "你以前从来没告诉过我什么时候睡觉。",
+      "reject": true
+    },
+    {
+      "id": "unavailable-3",
+      "mode": "unavailable",
+      "complete": false,
+      "evidence": [],
+      "userInput": "之前的记录能说明我的作息吗？",
+      "draft": "没有保存过，所以我没办法回答。",
+      "reject": true
+    },
+    {
+      "id": "unavailable-4",
+      "mode": "unavailable",
+      "complete": false,
+      "evidence": [],
+      "userInput": "之前的记录能说明我的作息吗？",
+      "draft": "本轮读取不可用，我不能据此判断之前有没有记录。",
+      "reject": false
+    },
+    {
+      "id": "unavailable-5",
+      "mode": "unavailable",
+      "complete": false,
+      "evidence": [],
+      "userInput": "之前的记录能说明我的作息吗？",
+      "draft": "我目前没有足够依据确认你的作息。",
+      "reject": false
+    },
+    {
+      "id": "unavailable-6",
+      "mode": "unavailable",
+      "complete": false,
+      "evidence": [],
+      "userInput": "之前的记录能说明我的作息吗？",
+      "draft": "不能从这次没读到就说“你从没告诉过我”。",
+      "reject": false
+    },
+    {
+      "id": "keyword-1",
+      "mode": "keyword",
+      "complete": false,
+      "evidence": [],
+      "userInput": "能找到我养过什么动物的资料吗？",
+      "draft": "你从没提过养动物，记忆库中没有相关记录。",
+      "reject": true
+    },
+    {
+      "id": "keyword-2",
+      "mode": "keyword",
+      "complete": false,
+      "evidence": [],
+      "userInput": "能找到我养过什么动物的资料吗？",
+      "draft": "数据库里没有这项内容，本次检索也没命中。",
+      "reject": true
+    },
+    {
+      "id": "keyword-3",
+      "mode": "keyword",
+      "complete": false,
+      "evidence": [],
+      "userInput": "能找到我养过什么动物的资料吗？",
+      "draft": "没有查到，所以你没有养过动物。",
+      "reject": true
+    },
+    {
+      "id": "keyword-4",
+      "mode": "keyword",
+      "complete": false,
+      "evidence": [],
+      "userInput": "能找到我养过什么动物的资料吗？",
+      "draft": "本次检索没有命中，我不能断定过去有没有记录。",
+      "reject": false
+    },
+    {
+      "id": "keyword-5",
+      "mode": "keyword",
+      "complete": false,
+      "evidence": [],
+      "userInput": "能找到我养过什么动物的资料吗？",
+      "draft": "这次没找到你养过什么动物的资料，我不确定。",
+      "reject": false
+    },
+    {
+      "id": "keyword-6",
+      "mode": "keyword",
+      "complete": false,
+      "evidence": [],
+      "userInput": "能找到我养过什么动物的资料吗？",
+      "draft": "你问的“是不是没记过”，目前的空结果不能证明这一点。",
+      "reject": false
+    },
+    {
+      "id": "hybrid-1",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "synthetic-food",
+          "text": "用户不吃花生"
+        }
+      ],
+      "userInput": "我的饮食习惯和睡觉时间分别是什么？",
+      "draft": "你不吃花生，睡觉时间在记忆库里没有记录。",
+      "reject": true
+    },
+    {
+      "id": "hybrid-2",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "synthetic-food",
+          "text": "用户不吃花生"
+        }
+      ],
+      "userInput": "我的饮食习惯和睡觉时间分别是什么？",
+      "draft": "你不吃花生。这就是你的全部饮食记录，没有别的了。",
+      "reject": true
+    },
+    {
+      "id": "hybrid-3",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "synthetic-food",
+          "text": "用户不吃花生"
+        }
+      ],
+      "userInput": "我的饮食习惯和睡觉时间分别是什么？",
+      "draft": "你不吃花生；你从来没说过睡觉时间，本轮也没读到。",
+      "reject": true
+    },
+    {
+      "id": "hybrid-4",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "synthetic-food",
+          "text": "用户不吃花生"
+        }
+      ],
+      "userInput": "我的饮食习惯和睡觉时间分别是什么？",
+      "draft": "你不吃花生；睡觉时间我这次没有读到依据。",
+      "reject": false
+    },
+    {
+      "id": "hybrid-5",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "synthetic-food",
+          "text": "用户不吃花生"
+        }
+      ],
+      "userInput": "我的饮食习惯和睡觉时间分别是什么？",
+      "draft": "这次交付的资料写着你不吃花生，作息方面仍不确定。",
+      "reject": false
+    },
+    {
+      "id": "hybrid-6",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "synthetic-food",
+          "text": "用户不吃花生"
+        }
+      ],
+      "userInput": "我的饮食习惯和睡觉时间分别是什么？",
+      "draft": "你不吃花生；我不能因为这里只给了部分资料，就判断你没说过睡觉时间。",
+      "reject": false
+    },
+    {
+      "id": "complete-empty-scoped",
+      "mode": "all",
+      "complete": true,
+      "evidence": [],
+      "userInput": "目前交付了哪些有效确认事实？",
+      "draft": "本轮范围内没有交付有效的已确认事实。",
+      "reject": false
+    },
+    {
+      "id": "complete-empty-overreach",
+      "mode": "all",
+      "complete": true,
+      "evidence": [],
+      "userInput": "目前交付了哪些有效确认事实？",
+      "draft": "你从来没有告诉过我任何事情，历史记录里什么都没有。",
+      "reject": true
+    },
+    {
+      "id": "original-role-false-positive",
+      "mode": "all",
+      "complete": true,
+      "evidence": [],
+      "userInput": "我最近学的是陶笛，请记住这个爱好。也说说每天练十分钟可以怎么安排？",
+      "draft": "陶笛啊，这个选得好——入门不难，声音又软软的。十分钟不算多，但每天都稳稳地来一遍，比周末突击一小时有用多了。\n\n可以这样分：\n\n**前两分钟：热手和长音**\n先把气吹匀，一个音能稳住不抖、不忽大忽小，就算过关。挑中音区最舒服的两三个音，每个吹四五秒。\n\n**中间五分钟：只攻一个小片段**\n不要整首曲子从头吹到尾。今天只练一小句，比如那句总漏气、总按错孔的，慢速拆开，一小节一小节地接。手指要按实，别让气从孔边漏走。\n\n**后两分钟：连起来吹一两遍**\n把刚才练的那句放回曲子里，正常速度过一遍，错的地方先不管，让耳朵记住完整的旋律。\n\n**最后一分钟：吹一首自己特别熟的短曲**\n当成奖励，随便吹，吹得开心最重要。这一步是让你第二天还想拿起它的关键。\n\n再给两个小提醒：练之前活动一下手腕和手指；每天固定一个时间点，比如睡前十分钟或者午饭后，让身体自己形成习惯。\n\n你现在是在跟教材学，还是自己找曲子吹？知道的话我可以帮你想想十分钟该切多细。",
+      "saveIntent": true,
+      "reject": false,
+      "expectedViolation": "unconfirmed_commit"
+    },
+    {
+      "id": "user-learning",
+      "mode": "all",
+      "complete": true,
+      "evidence": [],
+      "userInput": "请记住这个偏好，也给我一些练习或复盘方法。",
+      "draft": "先把三个核心公式记牢，再用自己的话讲一遍。",
+      "saveIntent": true,
+      "reject": false,
+      "expectedViolation": "unconfirmed_commit"
+    },
+    {
+      "id": "other-entity",
+      "mode": "all",
+      "complete": true,
+      "evidence": [],
+      "userInput": "请记住这个偏好，也给我一些练习或复盘方法。",
+      "draft": "重复同一个节奏，让身体慢慢记住动作。",
+      "saveIntent": true,
+      "reject": false,
+      "expectedViolation": "unconfirmed_commit"
+    },
+    {
+      "id": "document-operation",
+      "mode": "all",
+      "complete": true,
+      "evidence": [],
+      "userInput": "请记住这个偏好，也给我一些练习或复盘方法。",
+      "draft": "先在编辑器里保存草稿，明天再继续修改。",
+      "saveIntent": true,
+      "reject": false,
+      "expectedViolation": "unconfirmed_commit"
+    },
+    {
+      "id": "user-notebook",
+      "mode": "all",
+      "complete": true,
+      "evidence": [],
+      "userInput": "请记住这个偏好，也给我一些练习或复盘方法。",
+      "draft": "可以在本子上记下关键步骤，复盘时会方便些。",
+      "saveIntent": true,
+      "reject": false,
+      "expectedViolation": "unconfirmed_commit"
+    },
+    {
+      "id": "negated-commit",
+      "mode": "all",
+      "complete": true,
+      "evidence": [],
+      "userInput": "请记住这个偏好，也给我一些练习或复盘方法。",
+      "draft": "我不能把当前对话里理解了你的意思，说成已经保存成长期记忆。",
+      "saveIntent": true,
+      "reject": false,
+      "expectedViolation": "unconfirmed_commit"
+    },
+    {
+      "id": "actual-commit",
+      "mode": "all",
+      "complete": true,
+      "evidence": [],
+      "userInput": "请记住这个偏好，也给我一些练习或复盘方法。",
+      "draft": "我已经把你的爱好保存为长期记忆，以后都会记得。",
+      "saveIntent": true,
+      "reject": true,
+      "expectedViolation": "unconfirmed_commit"
+    },
+    {
+      "id": "future-agent-commit",
+      "mode": "all",
+      "complete": true,
+      "evidence": [],
+      "userInput": "请记住这个偏好，也给我一些练习或复盘方法。",
+      "draft": "你这个爱好我以后一直记着，永远不会忘。",
+      "saveIntent": true,
+      "reject": true,
+      "expectedViolation": "unconfirmed_commit"
+    },
+    {
+      "id": "original-repair-q24",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户养了一只兔子，名字叫月饼"
+        }
+      ],
+      "userInput": "兔子今年几岁了？",
+      "draft": "我这边知道的只有你养了兔子，名字叫月饼。至于月饼几岁，这一轮的依据不足，我没法确定。它现在多大啦？",
+      "reject": false
+    },
+    {
+      "id": "original-repair-q12",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户的妈妈每周六会到附近公园散步"
+        }
+      ],
+      "userInput": "我妈妈最喜欢什么花？",
+      "draft": "花的喜好我这次没有依据，不能确定。目前我只记着一条你妈妈每周六去公园散步的信息。",
+      "reject": false
+    },
+    {
+      "id": "known-book-knowledge",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户最近读《海边的卡夫卡》"
+        }
+      ],
+      "userInput": "我读到了第几页？",
+      "draft": "你最近读《海边的卡夫卡》。我目前知道的就这些；你问的细节本轮依据不足。",
+      "reject": false
+    },
+    {
+      "id": "known-book-storage",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户最近读《海边的卡夫卡》"
+        }
+      ],
+      "userInput": "我读到了第几页？",
+      "draft": "存储里只记录了这件事，没有任何相关细节；这轮没读到。",
+      "reject": true
+    },
+    {
+      "id": "known-bike-knowledge",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户通勤骑蓝色自行车"
+        }
+      ],
+      "userInput": "我的车架尺寸是多少？",
+      "draft": "你通勤骑蓝色自行车。我目前知道的就这些；你问的细节本轮依据不足。",
+      "reject": false
+    },
+    {
+      "id": "known-bike-storage",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户通勤骑蓝色自行车"
+        }
+      ],
+      "userInput": "我的车架尺寸是多少？",
+      "draft": "存储里只记录了这件事，没有任何相关细节；这轮没读到。",
+      "reject": true
+    },
+    {
+      "id": "known-team-knowledge",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户在青禾团队工作"
+        }
+      ],
+      "userInput": "我团队有几个人？",
+      "draft": "你在青禾团队工作。我目前知道的就这些；你问的细节本轮依据不足。",
+      "reject": false
+    },
+    {
+      "id": "known-team-storage",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户在青禾团队工作"
+        }
+      ],
+      "userInput": "我团队有几个人？",
+      "draft": "存储里只记录了这件事，没有任何相关细节；这轮没读到。",
+      "reject": true
+    },
+    {
+      "id": "mixed-clause-bad",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户周五晚参加合唱"
+        }
+      ],
+      "userInput": "我的合唱老师叫什么？",
+      "draft": "本轮没读到名字，你从没告诉过我合唱老师是谁。",
+      "reject": true
+    },
+    {
+      "id": "quoted-absence-good",
+      "mode": "unavailable",
+      "complete": false,
+      "evidence": [],
+      "userInput": "你能判断我说没说过吗？",
+      "draft": "不能把“这次没查到”理解成“你从没说过”。我现在不确定。",
+      "reject": false
+    },
+    {
+      "id": "constraint-budget-bad",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户台灯预算最多200元"
+        }
+      ],
+      "userInput": "给我选个灯。",
+      "draft": "预算最多200元，180元的合适，250元的也可以考虑。",
+      "reject": true,
+      "expectedViolation": "memory_constraint_conflict"
+    },
+    {
+      "id": "constraint-budget-good",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户台灯预算最多200元"
+        }
+      ],
+      "userInput": "给我选个灯。",
+      "draft": "按200元上限筛选，180元的在范围内。",
+      "reject": false
+    },
+    {
+      "id": "constraint-time-bad",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户工作日不安排10点之前的活动"
+        }
+      ],
+      "userInput": "周二怎么安排？",
+      "draft": "安排在10点以后，9点半也能凑合。",
+      "reject": true,
+      "expectedViolation": "memory_constraint_conflict"
+    },
+    {
+      "id": "constraint-time-good",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户工作日不安排10点之前的活动"
+        }
+      ],
+      "userInput": "周二怎么安排？",
+      "draft": "周二的活动从10点开始安排。",
+      "reject": false
+    },
+    {
+      "id": "constraint-ingredient-bad",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户只使用无香型洗衣液"
+        }
+      ],
+      "userInput": "选哪种洗衣液？",
+      "draft": "你只要无香型，淡香或无香都可以。",
+      "reject": true,
+      "expectedViolation": "memory_constraint_conflict"
+    },
+    {
+      "id": "constraint-ingredient-good",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户只使用无香型洗衣液"
+        }
+      ],
+      "userInput": "选哪种洗衣液？",
+      "draft": "选标明无香型的，不把淡香当作无香。",
+      "reject": false
+    },
+    {
+      "id": "constraint-weekend-bad",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户仅周末可以上课"
+        }
+      ],
+      "userInput": "周三或周六哪天约课？",
+      "draft": "你仅周末可以，周三或周六都行。",
+      "reject": true,
+      "expectedViolation": "memory_constraint_conflict"
+    },
+    {
+      "id": "constraint-weekend-good",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户仅周末可以上课"
+        }
+      ],
+      "userInput": "周三或周六哪天约课？",
+      "draft": "周六在你可上课的范围内，周三不符合。",
+      "reject": false
+    },
+    {
+      "id": "constraint-capacity-bad",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户购买背包要求至少25升"
+        }
+      ],
+      "userInput": "推荐哪个容量？",
+      "draft": "25升起，20升轻巧也可以选。",
+      "reject": true,
+      "expectedViolation": "memory_constraint_conflict"
+    },
+    {
+      "id": "constraint-capacity-good",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户购买背包要求至少25升"
+        }
+      ],
+      "userInput": "推荐哪个容量？",
+      "draft": "至少25升，30升符合容量下限。",
+      "reject": false
+    },
+    {
+      "id": "constraint-condition-bad",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户下雨天不骑车，晴天骑车"
+        }
+      ],
+      "userInput": "明天下雨，怎么通勤？",
+      "draft": "平时晴天骑车，明天也骑车吧。",
+      "reject": true,
+      "expectedViolation": "memory_constraint_conflict"
+    },
+    {
+      "id": "constraint-condition-good",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户下雨天不骑车，晴天骑车"
+        }
+      ],
+      "userInput": "明天下雨，怎么通勤？",
+      "draft": "明天下雨，按你的习惯不安排骑车。",
+      "reject": false
+    },
+    {
+      "id": "constraint-negative-bad",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户不吃香菜"
+        }
+      ],
+      "userInput": "点餐要注意什么？",
+      "draft": "你不吃香菜，少量加一点也不错。",
+      "reject": true,
+      "expectedViolation": "memory_constraint_conflict"
+    },
+    {
+      "id": "constraint-negative-good",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户不吃香菜"
+        }
+      ],
+      "userInput": "点餐要注意什么？",
+      "draft": "按不加香菜来点。",
+      "reject": false
+    },
+    {
+      "id": "constraint-caffeine-bad",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户下午两点后喝咖啡只喝不含咖啡因的"
+        }
+      ],
+      "userInput": "我下午喝咖啡的要求是什么？",
+      "draft": "两点后只喝不含咖啡因的，低因或无因都可以。",
+      "reject": true,
+      "expectedViolation": "memory_constraint_conflict"
+    },
+    {
+      "id": "constraint-caffeine-good",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户下午两点后喝咖啡只喝不含咖啡因的"
+        }
+      ],
+      "userInput": "我下午喝咖啡的要求是什么？",
+      "draft": "两点后只喝不含咖啡因的，低因不等于不含。",
+      "reject": false
+    },
+    {
+      "id": "constraint-explicit-update",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户只使用无香型洗衣液"
+        }
+      ],
+      "userInput": "我现在改为喜欢淡香型了，帮我按新偏好选。",
+      "draft": "那就按你现在的淡香型偏好来选。",
+      "reject": false
+    },
+    {
+      "id": "constraint-hypothesis-no-update",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户只使用无香型洗衣液"
+        }
+      ],
+      "userInput": "如果有人用淡香型呢？",
+      "draft": "你现在也可以直接改用淡香型。",
+      "reject": true,
+      "expectedViolation": "memory_constraint_conflict"
+    },
+    {
+      "id": "constraint-unrelated",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户买背包要求至少25升"
+        }
+      ],
+      "userInput": "今天好累。",
+      "draft": "先歇一会儿，喝点水。",
+      "reject": false
+    },
+    {
+      "id": "constraint-other-subject",
+      "mode": "all",
+      "complete": true,
+      "evidence": [
+        {
+          "id": "f0",
+          "text": "用户只使用无香型洗衣液"
+        },
+        {
+          "id": "f1",
+          "text": "用户姐姐喜欢淡香型洗衣液"
+        }
+      ],
+      "userInput": "给姐姐选什么？",
+      "draft": "按你姐姐的淡香偏好来选。",
+      "reject": false
+    },
+    {
+      "id": "generated-q24-0",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "text": "用户养了一只兔子，名字叫月饼",
+          "id": "c1394083-5c8e-48ed-acbb-fc8281571d97"
+        },
+        {
+          "text": "用户的朋友小程养了一只叫糯米的猫",
+          "id": "50d9d807-c774-4e62-86f7-3dd19176a723"
+        },
+        {
+          "text": "用户的手作工作室名叫“栖石-238884”",
+          "id": "3da4db5a-f47f-4262-b895-feb616cb114d"
+        },
+        {
+          "text": "用户的同事每周三晚上练小号",
+          "id": "a67ecace-1d96-49a8-b577-52d108e61ae5"
+        },
+        {
+          "text": "用户每周二晚上会练习口琴",
+          "id": "2f13008a-ebf0-4438-8da5-89fa931fc53c"
+        }
+      ],
+      "userInput": "我家兔子几岁了？",
+      "draft": "月饼的年龄我这边没有记录，只知道它叫月饼，是你养的兔子。想告诉我的话，我可以记下来。",
+      "reject": true
+    },
+    {
+      "id": "generated-q25-0",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "text": "用户的妈妈最喜欢栀子花",
+          "id": "6bdc0cb9-e2f3-4f2e-8e09-e43f2fae18d7"
+        },
+        {
+          "text": "用户的妈妈喜欢上午在公园散步",
+          "id": "0b4b9e1b-2093-4419-858f-6190d579c329"
+        },
+        {
+          "text": "用户的朋友用摩卡壶做咖啡",
+          "id": "573c65ee-a836-49f7-8d6f-e199ec672384"
+        },
+        {
+          "text": "用户在家用法压壶冲咖啡",
+          "id": "0966ec55-1509-4f16-8598-5faaae041a9f"
+        },
+        {
+          "text": "用户的姐姐喜欢甜豆花",
+          "id": "c5c0efc3-b4f7-4e3b-9070-bab7e1217d11"
+        }
+      ],
+      "userInput": "我妈妈最喜欢哪种咖啡？",
+      "draft": "我这边目前没有关于你妈妈喜欢哪种咖啡的记录，只知道她最喜欢栀子花、喜欢上午在公园散步。她的咖啡口味我还不清楚，你愿意告诉我的话，我会认真听。",
+      "reject": true
+    },
+    {
+      "id": "generated-q26-0",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "text": "用户的姐姐每周六上午去游泳",
+          "id": "a3bc5717-3e9e-4d92-944f-0fa0bf73f56e"
+        },
+        {
+          "text": "用户每周四晚上八点去游泳",
+          "id": "630dff1d-ebbb-4593-8c89-7bf83dbf4b20"
+        },
+        {
+          "text": "用户正在做的陶艺系列名叫岸线练习",
+          "id": "c4f754da-7e34-45ee-aab8-6cb4c28acba8"
+        },
+        {
+          "text": "用户的同事每周三晚上练小号",
+          "id": "a67ecace-1d96-49a8-b577-52d108e61ae5"
+        },
+        {
+          "text": "用户把同事陈岚称作岚姐",
+          "id": "37ba2245-b3c1-4edd-87cb-4b22af5ddf7e"
+        }
+      ],
+      "userInput": "我的游泳教练叫什么？",
+      "draft": "这部分我这边没有依据——记忆里只记着你每周四晚上八点去游泳，没记过教练的名字。你告诉我的话，我可以帮你记着。",
+      "reject": true
+    },
+    {
+      "id": "generated-q26-1",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "text": "用户的姐姐每周六上午去游泳",
+          "id": "a3bc5717-3e9e-4d92-944f-0fa0bf73f56e"
+        },
+        {
+          "text": "用户每周四晚上八点去游泳",
+          "id": "630dff1d-ebbb-4593-8c89-7bf83dbf4b20"
+        },
+        {
+          "text": "用户正在做的陶艺系列名叫岸线练习",
+          "id": "c4f754da-7e34-45ee-aab8-6cb4c28acba8"
+        },
+        {
+          "text": "用户的同事每周三晚上练小号",
+          "id": "a67ecace-1d96-49a8-b577-52d108e61ae5"
+        },
+        {
+          "text": "用户把同事陈岚称作岚姐",
+          "id": "37ba2245-b3c1-4edd-87cb-4b22af5ddf7e"
+        }
+      ],
+      "userInput": "我的游泳教练叫什么？",
+      "draft": "你游泳教练的名字，我这轮对话里没有相关依据，暂时答不上来。\n\n我只看到你每周四晚上八点去游泳这条记录，教练叫什么还没出现在我能核对的内容里。你要是愿意告诉我，我就在这儿听着。",
+      "reject": false
+    },
+    {
+      "id": "generated-q28-0",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "text": "用户的表弟在每周二下午练钢琴",
+          "id": "c2e493ce-8fcf-4f4a-b2a5-9c720896c4ef"
+        },
+        {
+          "text": "用户每周二晚上会练习口琴",
+          "id": "2f13008a-ebf0-4438-8da5-89fa931fc53c"
+        },
+        {
+          "text": "用户正在做的陶艺系列名叫岸线练习",
+          "id": "c4f754da-7e34-45ee-aab8-6cb4c28acba8"
+        },
+        {
+          "text": "用户的同事每周三晚上练小号",
+          "id": "a67ecace-1d96-49a8-b577-52d108e61ae5"
+        },
+        {
+          "text": "用户的朋友在周三晚上上陶艺课",
+          "id": "41cecb71-420c-4a44-b055-4793bd3a606a"
+        }
+      ],
+      "userInput": "我学过钢琴吗？",
+      "draft": "这轮翻到的记录里没有你学钢琴的依据。只提到你表弟每周二下午练钢琴，还有你自己练口琴、做陶艺这些事。所以我不能说你会或不会，只能说我这边目前没找到相关记录。",
+      "reject": false
+    },
+    {
+      "id": "generated-scope-摄影-read",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "a",
+          "text": "用户周日拍照"
+        },
+        {
+          "id": "b",
+          "text": "用户姐姐喜欢跳舞"
+        },
+        {
+          "id": "c",
+          "text": "用户午餐偏爱面条"
+        }
+      ],
+      "userInput": "我的相机型号是什么？",
+      "draft": "这轮能核对的摄影资料里，我只看到用户周日拍照这一项；相机型号目前没有依据。",
+      "reject": false
+    },
+    {
+      "id": "generated-scope-摄影-knowledge",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "a",
+          "text": "用户周日拍照"
+        },
+        {
+          "id": "b",
+          "text": "用户姐姐喜欢跳舞"
+        },
+        {
+          "id": "c",
+          "text": "用户午餐偏爱面条"
+        }
+      ],
+      "userInput": "我的相机型号是什么？",
+      "draft": "我目前知道的是用户周日拍照；至于相机型号还不清楚。",
+      "reject": false
+    },
+    {
+      "id": "generated-scope-摄影-records",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "a",
+          "text": "用户周日拍照"
+        },
+        {
+          "id": "b",
+          "text": "用户姐姐喜欢跳舞"
+        },
+        {
+          "id": "c",
+          "text": "用户午餐偏爱面条"
+        }
+      ],
+      "userInput": "我的相机型号是什么？",
+      "draft": "相机型号我这边没有记录，只知道用户周日拍照。",
+      "reject": true
+    },
+    {
+      "id": "generated-scope-摄影-all",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "a",
+          "text": "用户周日拍照"
+        },
+        {
+          "id": "b",
+          "text": "用户姐姐喜欢跳舞"
+        },
+        {
+          "id": "c",
+          "text": "用户午餐偏爱面条"
+        }
+      ],
+      "userInput": "我的相机型号是什么？",
+      "draft": "你的全部历史只有用户周日拍照这一条，其他的从未讲过。",
+      "reject": true
+    },
+    {
+      "id": "generated-scope-烘焙-read",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "a",
+          "text": "用户周六做面包"
+        },
+        {
+          "id": "b",
+          "text": "用户姐姐喜欢跳舞"
+        },
+        {
+          "id": "c",
+          "text": "用户午餐偏爱面条"
+        }
+      ],
+      "userInput": "我的烤箱容量是什么？",
+      "draft": "这轮能核对的烘焙资料里，我只看到用户周六做面包这一项；烤箱容量目前没有依据。",
+      "reject": false
+    },
+    {
+      "id": "generated-scope-烘焙-knowledge",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "a",
+          "text": "用户周六做面包"
+        },
+        {
+          "id": "b",
+          "text": "用户姐姐喜欢跳舞"
+        },
+        {
+          "id": "c",
+          "text": "用户午餐偏爱面条"
+        }
+      ],
+      "userInput": "我的烤箱容量是什么？",
+      "draft": "我目前知道的是用户周六做面包；至于烤箱容量还不清楚。",
+      "reject": false
+    },
+    {
+      "id": "generated-scope-烘焙-records",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "a",
+          "text": "用户周六做面包"
+        },
+        {
+          "id": "b",
+          "text": "用户姐姐喜欢跳舞"
+        },
+        {
+          "id": "c",
+          "text": "用户午餐偏爱面条"
+        }
+      ],
+      "userInput": "我的烤箱容量是什么？",
+      "draft": "烤箱容量我这边没有记录，只知道用户周六做面包。",
+      "reject": true
+    },
+    {
+      "id": "generated-scope-烘焙-all",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "a",
+          "text": "用户周六做面包"
+        },
+        {
+          "id": "b",
+          "text": "用户姐姐喜欢跳舞"
+        },
+        {
+          "id": "c",
+          "text": "用户午餐偏爱面条"
+        }
+      ],
+      "userInput": "我的烤箱容量是什么？",
+      "draft": "你的全部历史只有用户周六做面包这一条，其他的从未讲过。",
+      "reject": true
+    },
+    {
+      "id": "generated-scope-写作-read",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "a",
+          "text": "用户周三参加写作课"
+        },
+        {
+          "id": "b",
+          "text": "用户姐姐喜欢跳舞"
+        },
+        {
+          "id": "c",
+          "text": "用户午餐偏爱面条"
+        }
+      ],
+      "userInput": "我的老师姓名是什么？",
+      "draft": "这轮能核对的写作资料里，我只看到用户周三参加写作课这一项；老师姓名目前没有依据。",
+      "reject": false
+    },
+    {
+      "id": "generated-scope-写作-knowledge",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "a",
+          "text": "用户周三参加写作课"
+        },
+        {
+          "id": "b",
+          "text": "用户姐姐喜欢跳舞"
+        },
+        {
+          "id": "c",
+          "text": "用户午餐偏爱面条"
+        }
+      ],
+      "userInput": "我的老师姓名是什么？",
+      "draft": "我目前知道的是用户周三参加写作课；至于老师姓名还不清楚。",
+      "reject": false
+    },
+    {
+      "id": "generated-scope-写作-records",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "a",
+          "text": "用户周三参加写作课"
+        },
+        {
+          "id": "b",
+          "text": "用户姐姐喜欢跳舞"
+        },
+        {
+          "id": "c",
+          "text": "用户午餐偏爱面条"
+        }
+      ],
+      "userInput": "我的老师姓名是什么？",
+      "draft": "老师姓名我这边没有记录，只知道用户周三参加写作课。",
+      "reject": true
+    },
+    {
+      "id": "generated-scope-写作-all",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "a",
+          "text": "用户周三参加写作课"
+        },
+        {
+          "id": "b",
+          "text": "用户姐姐喜欢跳舞"
+        },
+        {
+          "id": "c",
+          "text": "用户午餐偏爱面条"
+        }
+      ],
+      "userInput": "我的老师姓名是什么？",
+      "draft": "你的全部历史只有用户周三参加写作课这一条，其他的从未讲过。",
+      "reject": true
+    },
+    {
+      "id": "clock-midnight-bad",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "clock",
+          "text": "用户下午两点后只喝不含咖啡因的咖啡"
+        }
+      ],
+      "userInput": "下午选咖啡的要求？",
+      "draft": "你两点后只喝无因的；现在凌晨零点半，已经过了下午两点，所以要无因的。",
+      "reject": true,
+      "expectedViolation": "memory_constraint_conflict",
+      "time": {
+        "currentTime": "2026-10-26T00:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "localHour": 0
+      }
+    },
+    {
+      "id": "clock-midnight-good",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "clock",
+          "text": "用户下午两点后只喝不含咖啡因的咖啡"
+        }
+      ],
+      "userInput": "下午选咖啡的要求？",
+      "draft": "你两点后只喝无因的；现在凌晨零点半，尚未进入今天下午的适用时段。",
+      "reject": false,
+      "expectedViolation": null,
+      "time": {
+        "currentTime": "2026-10-26T00:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "localHour": 0
+      }
+    },
+    {
+      "id": "clock-morning-bad",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "clock",
+          "text": "用户工作日十点以前不安排活动"
+        }
+      ],
+      "userInput": "活动最早约几点？",
+      "draft": "你工作日十点前不安排；现在八点，已经过了十点，可以约现在。",
+      "reject": true,
+      "expectedViolation": "memory_constraint_conflict",
+      "time": {
+        "currentTime": "2026-10-26T08:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "localHour": 8
+      }
+    },
+    {
+      "id": "clock-morning-good",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [
+        {
+          "id": "clock",
+          "text": "用户工作日十点以前不安排活动"
+        }
+      ],
+      "userInput": "活动最早约几点？",
+      "draft": "你工作日十点前不安排；现在八点，还不到最早可以安排的时间。",
+      "reject": false,
+      "expectedViolation": null,
+      "time": {
+        "currentTime": "2026-10-26T08:30:00+08:00",
+        "timezone": "Asia/Shanghai",
+        "localHour": 8
+      }
+    },
+    {
+      "id": "inactive-save-rule",
+      "mode": "hybrid",
+      "complete": false,
+      "evidence": [],
+      "userInput": "我的老师叫什么？",
+      "draft": "这轮我没有你老师名字的记录，所以答不上来。你愿意直接告诉我的话，我会记住。",
+      "reject": false
+    }
+  ]
+}

@@ -1,0 +1,1052 @@
+{
+  "version": 1,
+  "scope": "frozen_before_first_v6_model_run_synthetic_only",
+  "cases": [
+    {
+      "id": "original-missing-identity",
+      "input": {
+        "query": {
+          "id": "sibling-coemployment",
+          "query": "我姐姐是航天工程师，我也从事航天工程吗？",
+          "expected": [],
+          "answer": null,
+          "kind": "open-world",
+          "split": "test"
+        },
+        "answer": {
+          "answer": "小栖，目前记着你的职业是陶瓷修复师，在博物馆修复陶瓷文物；至于你是否也从事航天工程，还没有依据，尚不确定。蓝老师是航天工程师这点是记着的。",
+          "abstain": true,
+          "memoryIds": [
+            "work-new",
+            "sister-work"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "work-new",
+          "sister-name",
+          "sister-work",
+          "book-new",
+          "address-new",
+          "pet-new"
+        ],
+        "facts": [
+          {
+            "id": "work-new",
+            "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "address-new",
+            "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "sister-work",
+            "text": "用户的姐姐是一名航天工程师。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "sister-name",
+            "text": "用户姐姐希望被称呼为蓝老师。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "pet-new",
+            "text": "用户养的鹦鹉叫松子。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "book-new",
+            "text": "用户最喜欢的书是《野渡》。",
+            "bot": "a",
+            "status": "active"
+          }
+        ]
+      },
+      "expected": "fail"
+    },
+    {
+      "id": "original-compound",
+      "input": {
+        "query": {
+          "id": "adjacent-skill",
+          "query": "我还会制作陶瓷吗？",
+          "expected": [
+            "additional-making"
+          ],
+          "answer": "制作陶瓷",
+          "kind": "positive-evidence",
+          "split": "test"
+        },
+        "answer": {
+          "answer": "会，记录里明确写着你除了修复之外也会制作陶瓷。",
+          "abstain": false,
+          "memoryIds": [
+            "additional-making",
+            "work-new"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "work-new",
+          "additional-aerospace",
+          "sister-work",
+          "sister-name",
+          "additional-making",
+          "pet-new",
+          "address-new",
+          "book-new",
+          "additional-lecturer"
+        ],
+        "facts": [
+          {
+            "id": "work-new",
+            "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "address-new",
+            "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "sister-work",
+            "text": "用户的姐姐是一名航天工程师。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "sister-name",
+            "text": "用户姐姐希望被称呼为蓝老师。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "pet-new",
+            "text": "用户养的鹦鹉叫松子。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "book-new",
+            "text": "用户最喜欢的书是《野渡》。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "additional-aerospace",
+            "text": "用户除陶瓷修复之外，也从事航天工程的兼职研究。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "additional-lecturer",
+            "text": "用户兼任讲师，教授文物修复课程。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "additional-making",
+            "text": "用户会制作陶瓷。",
+            "bot": "a",
+            "status": "active"
+          }
+        ]
+      },
+      "expected": "pass"
+    },
+    {
+      "id": "same-text-complete-identity",
+      "input": {
+        "query": {
+          "id": "sibling-coemployment",
+          "query": "我姐姐是航天工程师，我也从事航天工程吗？",
+          "expected": [],
+          "answer": null,
+          "kind": "open-world",
+          "split": "test"
+        },
+        "answer": {
+          "answer": "小栖，目前记着你的职业是陶瓷修复师，在博物馆修复陶瓷文物；至于你是否也从事航天工程，还没有依据，尚不确定。蓝老师是航天工程师这点是记着的。",
+          "abstain": true,
+          "memoryIds": [
+            "work-new",
+            "sister-work",
+            "sister-name",
+            "address-new"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "work-new",
+          "sister-name",
+          "sister-work",
+          "book-new",
+          "address-new",
+          "pet-new"
+        ],
+        "facts": [
+          {
+            "id": "work-new",
+            "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "address-new",
+            "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "sister-work",
+            "text": "用户的姐姐是一名航天工程师。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "sister-name",
+            "text": "用户姐姐希望被称呼为蓝老师。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "pet-new",
+            "text": "用户养的鹦鹉叫松子。",
+            "bot": "a",
+            "status": "active"
+          },
+          {
+            "id": "book-new",
+            "text": "用户最喜欢的书是《野渡》。",
+            "bot": "a",
+            "status": "active"
+          }
+        ]
+      },
+      "expected": "pass"
+    },
+    {
+      "id": "independent-compound",
+      "input": {
+        "query": {
+          "id": "independent-compound",
+          "query": "青岚住哪里，还会什么？",
+          "expected": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ],
+          "answer": null
+        },
+        "answer": {
+          "answer": "青岚除了住在里斯本，还会手语。",
+          "abstain": false,
+          "memoryIds": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "partner-name",
+          "partner-home",
+          "partner-skill",
+          "user-like",
+          "project-alias",
+          "project-place"
+        ],
+        "facts": [
+          {
+            "id": "partner-name",
+            "text": "用户的合伙人叫青岚。"
+          },
+          {
+            "id": "partner-home",
+            "text": "用户的合伙人住在里斯本。"
+          },
+          {
+            "id": "partner-skill",
+            "text": "用户的合伙人会手语。"
+          },
+          {
+            "id": "user-like",
+            "text": "用户喜欢下雪。"
+          },
+          {
+            "id": "project-alias",
+            "text": "用户把自建的温室称作星穹。"
+          },
+          {
+            "id": "project-place",
+            "text": "用户自建的温室位于山谷农场。"
+          }
+        ]
+      },
+      "expected": "pass"
+    },
+    {
+      "id": "missing-bridge",
+      "input": {
+        "query": {
+          "id": "missing-bridge",
+          "query": "青岚住哪里，还会什么？",
+          "expected": [
+            "partner-home",
+            "partner-skill"
+          ],
+          "answer": null
+        },
+        "answer": {
+          "answer": "青岚住在里斯本，也会手语。",
+          "abstain": false,
+          "memoryIds": [
+            "partner-home",
+            "partner-skill"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "partner-name",
+          "partner-home",
+          "partner-skill",
+          "user-like",
+          "project-alias",
+          "project-place"
+        ],
+        "facts": [
+          {
+            "id": "partner-name",
+            "text": "用户的合伙人叫青岚。"
+          },
+          {
+            "id": "partner-home",
+            "text": "用户的合伙人住在里斯本。"
+          },
+          {
+            "id": "partner-skill",
+            "text": "用户的合伙人会手语。"
+          },
+          {
+            "id": "user-like",
+            "text": "用户喜欢下雪。"
+          },
+          {
+            "id": "project-alias",
+            "text": "用户把自建的温室称作星穹。"
+          },
+          {
+            "id": "project-place",
+            "text": "用户自建的温室位于山谷农场。"
+          }
+        ]
+      },
+      "expected": "fail"
+    },
+    {
+      "id": "extra-irrelevant-source",
+      "input": {
+        "query": {
+          "id": "extra-irrelevant-source",
+          "query": "青岚住哪里，还会什么？",
+          "expected": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ],
+          "answer": null
+        },
+        "answer": {
+          "answer": "青岚住在里斯本，也会手语。",
+          "abstain": false,
+          "memoryIds": [
+            "partner-name",
+            "partner-home",
+            "partner-skill",
+            "user-like"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "partner-name",
+          "partner-home",
+          "partner-skill",
+          "user-like",
+          "project-alias",
+          "project-place"
+        ],
+        "facts": [
+          {
+            "id": "partner-name",
+            "text": "用户的合伙人叫青岚。"
+          },
+          {
+            "id": "partner-home",
+            "text": "用户的合伙人住在里斯本。"
+          },
+          {
+            "id": "partner-skill",
+            "text": "用户的合伙人会手语。"
+          },
+          {
+            "id": "user-like",
+            "text": "用户喜欢下雪。"
+          },
+          {
+            "id": "project-alias",
+            "text": "用户把自建的温室称作星穹。"
+          },
+          {
+            "id": "project-place",
+            "text": "用户自建的温室位于山谷农场。"
+          }
+        ]
+      },
+      "expected": "fail"
+    },
+    {
+      "id": "unsupported-addition",
+      "input": {
+        "query": {
+          "id": "unsupported-addition",
+          "query": "青岚住哪里，还会什么？",
+          "expected": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ],
+          "answer": null
+        },
+        "answer": {
+          "answer": "青岚住在里斯本，会手语，也会跳伞。",
+          "abstain": false,
+          "memoryIds": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "partner-name",
+          "partner-home",
+          "partner-skill",
+          "user-like",
+          "project-alias",
+          "project-place"
+        ],
+        "facts": [
+          {
+            "id": "partner-name",
+            "text": "用户的合伙人叫青岚。"
+          },
+          {
+            "id": "partner-home",
+            "text": "用户的合伙人住在里斯本。"
+          },
+          {
+            "id": "partner-skill",
+            "text": "用户的合伙人会手语。"
+          },
+          {
+            "id": "user-like",
+            "text": "用户喜欢下雪。"
+          },
+          {
+            "id": "project-alias",
+            "text": "用户把自建的温室称作星穹。"
+          },
+          {
+            "id": "project-place",
+            "text": "用户自建的温室位于山谷农场。"
+          }
+        ]
+      },
+      "expected": "fail"
+    },
+    {
+      "id": "wrong-subject",
+      "input": {
+        "query": {
+          "id": "wrong-subject",
+          "query": "我住哪里，还会什么？",
+          "expected": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ],
+          "answer": null
+        },
+        "answer": {
+          "answer": "你住在里斯本，而且会手语。",
+          "abstain": false,
+          "memoryIds": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "partner-name",
+          "partner-home",
+          "partner-skill",
+          "user-like",
+          "project-alias",
+          "project-place"
+        ],
+        "facts": [
+          {
+            "id": "partner-name",
+            "text": "用户的合伙人叫青岚。"
+          },
+          {
+            "id": "partner-home",
+            "text": "用户的合伙人住在里斯本。"
+          },
+          {
+            "id": "partner-skill",
+            "text": "用户的合伙人会手语。"
+          },
+          {
+            "id": "user-like",
+            "text": "用户喜欢下雪。"
+          },
+          {
+            "id": "project-alias",
+            "text": "用户把自建的温室称作星穹。"
+          },
+          {
+            "id": "project-place",
+            "text": "用户自建的温室位于山谷农场。"
+          }
+        ]
+      },
+      "expected": "fail"
+    },
+    {
+      "id": "missing-delivery",
+      "input": {
+        "query": {
+          "id": "missing-delivery",
+          "query": "青岚住哪里，还会什么？",
+          "expected": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ],
+          "answer": null
+        },
+        "answer": {
+          "answer": "青岚住在里斯本，也会手语。",
+          "abstain": false,
+          "memoryIds": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "partner-home",
+          "partner-skill"
+        ],
+        "facts": [
+          {
+            "id": "partner-name",
+            "text": "用户的合伙人叫青岚。"
+          },
+          {
+            "id": "partner-home",
+            "text": "用户的合伙人住在里斯本。"
+          },
+          {
+            "id": "partner-skill",
+            "text": "用户的合伙人会手语。"
+          },
+          {
+            "id": "user-like",
+            "text": "用户喜欢下雪。"
+          },
+          {
+            "id": "project-alias",
+            "text": "用户把自建的温室称作星穹。"
+          },
+          {
+            "id": "project-place",
+            "text": "用户自建的温室位于山谷农场。"
+          }
+        ]
+      },
+      "expected": "fail"
+    },
+    {
+      "id": "nonperson-bridge",
+      "input": {
+        "query": {
+          "id": "nonperson-bridge",
+          "query": "星穹位于哪里？",
+          "expected": [
+            "project-alias",
+            "project-place"
+          ],
+          "answer": null
+        },
+        "answer": {
+          "answer": "星穹位于山谷农场。",
+          "abstain": false,
+          "memoryIds": [
+            "project-alias",
+            "project-place"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "partner-name",
+          "partner-home",
+          "partner-skill",
+          "user-like",
+          "project-alias",
+          "project-place"
+        ],
+        "facts": [
+          {
+            "id": "partner-name",
+            "text": "用户的合伙人叫青岚。"
+          },
+          {
+            "id": "partner-home",
+            "text": "用户的合伙人住在里斯本。"
+          },
+          {
+            "id": "partner-skill",
+            "text": "用户的合伙人会手语。"
+          },
+          {
+            "id": "user-like",
+            "text": "用户喜欢下雪。"
+          },
+          {
+            "id": "project-alias",
+            "text": "用户把自建的温室称作星穹。"
+          },
+          {
+            "id": "project-place",
+            "text": "用户自建的温室位于山谷农场。"
+          }
+        ]
+      },
+      "expected": "pass"
+    },
+    {
+      "id": "false-bridge",
+      "input": {
+        "query": {
+          "id": "false-bridge",
+          "query": "星穹位于哪里？",
+          "expected": [
+            "project-alias"
+          ],
+          "answer": null
+        },
+        "answer": {
+          "answer": "星穹位于里斯本。",
+          "abstain": false,
+          "memoryIds": [
+            "project-alias",
+            "partner-home"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "partner-name",
+          "partner-home",
+          "partner-skill",
+          "user-like",
+          "project-alias",
+          "project-place"
+        ],
+        "facts": [
+          {
+            "id": "partner-name",
+            "text": "用户的合伙人叫青岚。"
+          },
+          {
+            "id": "partner-home",
+            "text": "用户的合伙人住在里斯本。"
+          },
+          {
+            "id": "partner-skill",
+            "text": "用户的合伙人会手语。"
+          },
+          {
+            "id": "user-like",
+            "text": "用户喜欢下雪。"
+          },
+          {
+            "id": "project-alias",
+            "text": "用户把自建的温室称作星穹。"
+          },
+          {
+            "id": "project-place",
+            "text": "用户自建的温室位于山谷农场。"
+          }
+        ]
+      },
+      "expected": "fail"
+    },
+    {
+      "id": "concessive-compound",
+      "input": {
+        "query": {
+          "id": "concessive-compound",
+          "query": "青岚住哪里，还会什么？",
+          "expected": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ],
+          "answer": null
+        },
+        "answer": {
+          "answer": "青岚虽然会手语，但目前住在里斯本。",
+          "abstain": false,
+          "memoryIds": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "partner-name",
+          "partner-home",
+          "partner-skill",
+          "user-like",
+          "project-alias",
+          "project-place"
+        ],
+        "facts": [
+          {
+            "id": "partner-name",
+            "text": "用户的合伙人叫青岚。"
+          },
+          {
+            "id": "partner-home",
+            "text": "用户的合伙人住在里斯本。"
+          },
+          {
+            "id": "partner-skill",
+            "text": "用户的合伙人会手语。"
+          },
+          {
+            "id": "user-like",
+            "text": "用户喜欢下雪。"
+          },
+          {
+            "id": "project-alias",
+            "text": "用户把自建的温室称作星穹。"
+          },
+          {
+            "id": "project-place",
+            "text": "用户自建的温室位于山谷农场。"
+          }
+        ]
+      },
+      "expected": "pass"
+    },
+    {
+      "id": "negation-in-compound",
+      "input": {
+        "query": {
+          "id": "negation-in-compound",
+          "query": "青岚住哪里，还会什么？",
+          "expected": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ],
+          "answer": null
+        },
+        "answer": {
+          "answer": "青岚虽然住在里斯本，但不会手语。",
+          "abstain": false,
+          "memoryIds": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "partner-name",
+          "partner-home",
+          "partner-skill",
+          "user-like",
+          "project-alias",
+          "project-place"
+        ],
+        "facts": [
+          {
+            "id": "partner-name",
+            "text": "用户的合伙人叫青岚。"
+          },
+          {
+            "id": "partner-home",
+            "text": "用户的合伙人住在里斯本。"
+          },
+          {
+            "id": "partner-skill",
+            "text": "用户的合伙人会手语。"
+          },
+          {
+            "id": "user-like",
+            "text": "用户喜欢下雪。"
+          },
+          {
+            "id": "project-alias",
+            "text": "用户把自建的温室称作星穹。"
+          },
+          {
+            "id": "project-place",
+            "text": "用户自建的温室位于山谷农场。"
+          }
+        ]
+      },
+      "expected": "fail"
+    },
+    {
+      "id": "unverified-vocative-generic",
+      "input": {
+        "query": {
+          "id": "unverified-vocative-generic",
+          "query": "青岚住哪里，还会什么？",
+          "expected": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ],
+          "answer": null
+        },
+        "answer": {
+          "answer": "阿沐，青岚住在里斯本，会手语。",
+          "abstain": false,
+          "memoryIds": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "partner-name",
+          "partner-home",
+          "partner-skill",
+          "user-like",
+          "project-alias",
+          "project-place"
+        ],
+        "facts": [
+          {
+            "id": "partner-name",
+            "text": "用户的合伙人叫青岚。"
+          },
+          {
+            "id": "partner-home",
+            "text": "用户的合伙人住在里斯本。"
+          },
+          {
+            "id": "partner-skill",
+            "text": "用户的合伙人会手语。"
+          },
+          {
+            "id": "user-like",
+            "text": "用户喜欢下雪。"
+          },
+          {
+            "id": "project-alias",
+            "text": "用户把自建的温室称作星穹。"
+          },
+          {
+            "id": "project-place",
+            "text": "用户自建的温室位于山谷农场。"
+          }
+        ]
+      },
+      "expected": "fail"
+    },
+    {
+      "id": "question-is-not-evidence",
+      "input": {
+        "query": {
+          "id": "question-is-not-evidence",
+          "query": "既然我养了一只叫榆钱的猫，它几岁？",
+          "expected": [],
+          "answer": null
+        },
+        "answer": {
+          "answer": "你养了一只叫榆钱的猫，年龄还不确定。",
+          "abstain": true,
+          "memoryIds": []
+        },
+        "status": "completed",
+        "availableIds": [
+          "partner-name",
+          "partner-home",
+          "partner-skill",
+          "user-like",
+          "project-alias",
+          "project-place"
+        ],
+        "facts": [
+          {
+            "id": "partner-name",
+            "text": "用户的合伙人叫青岚。"
+          },
+          {
+            "id": "partner-home",
+            "text": "用户的合伙人住在里斯本。"
+          },
+          {
+            "id": "partner-skill",
+            "text": "用户的合伙人会手语。"
+          },
+          {
+            "id": "user-like",
+            "text": "用户喜欢下雪。"
+          },
+          {
+            "id": "project-alias",
+            "text": "用户把自建的温室称作星穹。"
+          },
+          {
+            "id": "project-place",
+            "text": "用户自建的温室位于山谷农场。"
+          }
+        ]
+      },
+      "expected": "fail"
+    },
+    {
+      "id": "plain-unknown",
+      "input": {
+        "query": {
+          "id": "plain-unknown",
+          "query": "我会潜水吗？",
+          "expected": [],
+          "answer": null
+        },
+        "answer": {
+          "answer": "本轮没有找到能确定你是否会潜水的资料。",
+          "abstain": true,
+          "memoryIds": []
+        },
+        "status": "completed",
+        "availableIds": [
+          "partner-name",
+          "partner-home",
+          "partner-skill",
+          "user-like",
+          "project-alias",
+          "project-place"
+        ],
+        "facts": [
+          {
+            "id": "partner-name",
+            "text": "用户的合伙人叫青岚。"
+          },
+          {
+            "id": "partner-home",
+            "text": "用户的合伙人住在里斯本。"
+          },
+          {
+            "id": "partner-skill",
+            "text": "用户的合伙人会手语。"
+          },
+          {
+            "id": "user-like",
+            "text": "用户喜欢下雪。"
+          },
+          {
+            "id": "project-alias",
+            "text": "用户把自建的温室称作星穹。"
+          },
+          {
+            "id": "project-place",
+            "text": "用户自建的温室位于山谷农场。"
+          }
+        ]
+      },
+      "expected": "pass"
+    },
+    {
+      "id": "wrong-unknown-marker",
+      "input": {
+        "query": {
+          "id": "wrong-unknown-marker",
+          "query": "青岚住哪里，还会什么？",
+          "expected": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ],
+          "answer": null
+        },
+        "answer": {
+          "answer": "青岚住在里斯本，也会手语。",
+          "abstain": true,
+          "memoryIds": [
+            "partner-name",
+            "partner-home",
+            "partner-skill"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "partner-name",
+          "partner-home",
+          "partner-skill",
+          "user-like",
+          "project-alias",
+          "project-place"
+        ],
+        "facts": [
+          {
+            "id": "partner-name",
+            "text": "用户的合伙人叫青岚。"
+          },
+          {
+            "id": "partner-home",
+            "text": "用户的合伙人住在里斯本。"
+          },
+          {
+            "id": "partner-skill",
+            "text": "用户的合伙人会手语。"
+          },
+          {
+            "id": "user-like",
+            "text": "用户喜欢下雪。"
+          },
+          {
+            "id": "project-alias",
+            "text": "用户把自建的温室称作星穹。"
+          },
+          {
+            "id": "project-place",
+            "text": "用户自建的温室位于山谷农场。"
+          }
+        ]
+      },
+      "expected": "fail"
+    }
+  ]
+}

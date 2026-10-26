@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "scope": "synthetic_unseen_domain_frozen_before_first_v6_run",
+  "facts": [
+    {
+      "id": "partner-name",
+      "text": "用户的合伙人叫青岚。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "partner-home",
+      "text": "用户的合伙人住在里斯本。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "partner-skill",
+      "text": "用户的合伙人会手语。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "user-like",
+      "text": "用户喜欢下雪。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "project-alias",
+      "text": "用户把自建的温室称作星穹。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "project-place",
+      "text": "用户自建的温室位于山谷农场。",
+      "bot": "a",
+      "status": "active"
+    }
+  ],
+  "queries": [
+    {
+      "id": "alias-pair",
+      "query": "青岚住哪里，还会什么？",
+      "expected": [
+        "partner-name",
+        "partner-home",
+        "partner-skill"
+      ],
+      "answer": "里斯本",
+      "kind": "evidence-closure",
+      "split": "test"
+    },
+    {
+      "id": "alias-home",
+      "query": "青岚住在哪里？",
+      "expected": [
+        "partner-name",
+        "partner-home"
+      ],
+      "answer": "里斯本",
+      "kind": "evidence-closure",
+      "split": "test"
+    },
+    {
+      "id": "alias-skill",
+      "query": "青岚会什么交流技能？",
+      "expected": [
+        "partner-name",
+        "partner-skill"
+      ],
+      "answer": "手语",
+      "kind": "evidence-closure",
+      "split": "test"
+    },
+    {
+      "id": "nonperson-location",
+      "query": "星穹位于哪里？",
+      "expected": [
+        "project-alias",
+        "project-place"
+      ],
+      "answer": "山谷农场",
+      "kind": "evidence-closure",
+      "split": "test"
+    },
+    {
+      "id": "nonperson-name",
+      "query": "我怎么称呼自己建的温室？",
+      "expected": [
+        "project-alias"
+      ],
+      "answer": "星穹",
+      "kind": "evidence-closure",
+      "split": "test"
+    },
+    {
+      "id": "parallel-entities",
+      "query": "青岚和星穹各自在哪里？",
+      "expected": [
+        "partner-name",
+        "partner-home",
+        "project-alias",
+        "project-place"
+      ],
+      "answer": "里斯本",
+      "kind": "evidence-closure",
+      "split": "test"
+    },
+    {
+      "id": "compound-relationship",
+      "query": "我的合伙人住在哪里，有什么交流技能？",
+      "expected": [
+        "partner-home",
+        "partner-skill"
+      ],
+      "answer": "里斯本",
+      "kind": "evidence-closure",
+      "split": "test"
+    },
+    {
+      "id": "unknown-extra",
+      "query": "青岚会手语，我也会手语吗？",
+      "expected": [],
+      "answer": null,
+      "kind": "evidence-closure",
+      "split": "test"
+    }
+  ]
+}

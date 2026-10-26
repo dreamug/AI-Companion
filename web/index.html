@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>陪伴测试台</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/voice-input.js" defer></script>
+    <script src="/run-status.js" defer></script>
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>陪伴测试台</h1>
+        <p id="connection">正在连接本地服务…</p>
+      </div>
+      <div class="header-actions">
+        <span id="model-status"></span
+        ><button id="notification-permission">启用浏览器通知</button>
+      </div>
+    </header>
+    <section class="bot-panel" aria-label="角色管理">
+      <label
+        >正在相处的角色<select id="bot-select" aria-label="切换角色"></select
+      ></label>
+      <button id="new-bot" type="button">新建角色</button>
+      <button id="archive-bot" type="button">归档当前角色</button>
+      <span id="bot-description" class="help"></span>
+      <details>
+        <summary>已归档角色</summary>
+        <div id="archived-bots"></div>
+      </details>
+    </section>
+    <section id="disclosure" class="notice" hidden>
+      <strong>第一次使用远程模型</strong>
+      <p>
+        对话及选中的记忆会发给你选择的 DeepSeek 或
+        xAI（Grok）；使用语音输入时，录音会发给 Fish Audio 转文字。API
+        内容的具体留存、训练与远端删除能力仍有待确认项；本地遗忘无法撤回已经外发的副本。先用合成或去标识内容体验，避免发送第三方秘密或高度敏感资料。
+      </p>
+      <button id="acknowledge">我了解外发范围，开始使用</button
+      ><a
+        href="https://cdn.deepseek.com/policies/en-US/deepseek-open-platform-terms-of-service.html"
+        target="_blank"
+        rel="noreferrer"
+        >DeepSeek 条款</a
+      >
+      ·
+      <a href="https://x.ai/legal/api" target="_blank" rel="noreferrer"
+        >xAI 条款</a
+      >
+    </section>
+    <div id="error" role="alert" hidden></div>
+    <section id="model-review" class="notice" hidden>
+      <p id="model-review-text"></p>
+      <button id="ack-model-review">已复核回归结果，恢复自发关心</button>
+    </section>
+    <div class="toolbar">
+      <label><input id="focused" type="checkbox" />专注工作</label
+      ><label><input id="muted" type="checkbox" />免打扰</label
+      ><label><input id="proactive" type="checkbox" />主动关心</label
+      ><label><input id="auto-extract" type="checkbox" />整理记忆建议</label
+      ><label><input id="split-replies" type="checkbox" />分条回复</label
+      ><label
+        ><input id="message-pacing" type="checkbox" disabled />发送间隔</label
+      ><span id="settings-revision"></span>
+    </div>
+    <p class="help">
+      分条回复与发送间隔仅对当前角色生效，默认关闭；修改后从下一轮回复生效。分条发送时插话或停止，会取消尚未发出的内容。
+    </p>
+    <section class="voice-panel" aria-label="语音朗读">
+      <div class="voice-actions">
+        <span id="voice-name">语音连接中…</span>
+        <button id="voice-preview" type="button">试听音色</button>
+        <a href="/voice-lab" target="_blank" rel="noopener">语音对比调试</a>
+        <button id="voice-stop" type="button" disabled>停止朗读</button>
+        <label
+          ><input
+            id="voice-auto"
+            type="checkbox"
+            checked
+          />自动朗读新回复</label
+        >
+      </div>
+      <p class="help">
+        朗读文本会发给 Fish
+        Audio，默认自动朗读本页打开后的新回复，可随时关闭；刷新不重播历史。音频只留在内存中。
+      </p>
+      <span id="voice-status" role="status">尚未播放</span>
+      <audio id="voice-player" controls preload="none" hidden></audio>
+    </section>
+    <main>
+      <section class="chat-panel">
+        <div class="panel-title">
+          <h2>聊天</h2>
+          <span id="run-status" role="status" aria-live="polite"
+            >还没有对话</span
+          >
+        </div>
+        <div id="messages" class="messages" aria-live="polite"></div>
+        <aside id="memory-candidate" aria-label="待确认记忆" hidden></aside>
+        <div id="memory-result" role="status"></div>
+        <form id="chat-form">
+          <label class="sr-only" for="chat-input">输入消息</label
+          ><textarea
+            id="chat-input"
+            rows="3"
+            placeholder="聊聊今天，或分享正在做的事。Enter 发送，Shift+Enter 换行。"
+            maxlength="12000"
+          ></textarea>
+          <div class="voice-input-actions">
+            <button type="button" id="voice-record" disabled>语音输入</button>
+            <button type="button" id="voice-record-cancel" hidden>
+              取消语音输入
+            </button>
+            <span id="voice-input-status" role="status">正在检查语音输入…</span>
+          </div>
+          <p class="help voice-input-help" id="voice-input-help">
+            识别结果可编辑，点发送后才进入聊天。原录音不保存。
+          </p>
+          <div class="composer-actions">
+            <span id="chat-note">对话保存在本机。关闭标签不会停止后台。</span
+            ><button type="button" id="cancel-run" disabled>停止</button
+            ><button type="submit" id="send">发送</button>
+          </div>
+        </form>
+      </section>
+      <aside class="lab-panel">
+        <nav aria-label="测试面板">
+          <button data-tab="memory" aria-selected="true">记忆</button
+          ><button data-tab="followups">关心与投递</button
+          ><button data-tab="persona">人格</button
+          ><button data-tab="trace">Trace / 维护</button>
+        </nav>
+        <section id="tab-memory" class="tab">
+          <div class="panel-title">
+            <h2>可检查的记忆</h2>
+            <button id="add-memory">添加确认记忆</button>
+          </div>
+          <p id="memory-help" class="help">
+            自动整理先成为待确认建议。删除记忆保留来源；遗忘原始发言会使相关内容失效。
+          </p>
+          <label class="search"
+            >检索记忆<input id="memory-search" placeholder="昵称、事项或关键词"
+          /></label>
+          <p id="memory-status" class="help"></p>
+          <div id="memory-list"></div>
+          <details>
+            <summary>较早的对话摘要</summary>
+            <div id="conversation-summary-list"></div>
+          </details>
+        </section>
+        <section id="tab-followups" class="tab" hidden>
+          <div class="panel-title">
+            <h2>跟进事项</h2>
+            <button id="new-followup">建立一次性跟进</button>
+          </div>
+          <p class="help">
+            请保持标签常驻。页面离线时只留站内消息，回来不会补弹旧通知。显示、点击和真正看见分别记录。
+          </p>
+          <div id="channel-status"></div>
+          <div id="followup-list"></div>
+          <div class="panel-title">
+            <h3>你确认的相处习惯</h3>
+            <button id="new-series">建立每日／每周习惯</button>
+          </div>
+          <div id="series-list"></div>
+          <h3>站内消息与投递</h3>
+          <div id="delivery-list"></div>
+        </section>
+        <section id="tab-persona" class="tab" hidden>
+          <h2>已发布人格</h2>
+          <p class="help">改动从下一轮生效。安全策略和执行权限不由人格覆盖。</p>
+          <form id="persona-form">
+            <label
+              >名字<input id="persona-name" maxlength="40" required /></label
+            ><label
+              >身份与价值<textarea
+                id="persona-identity"
+                rows="4"
+                maxlength="2000"
+                required
+              ></textarea></label
+            ><label
+              >表达与相处风格<textarea
+                id="persona-style"
+                rows="5"
+                maxlength="2000"
+                required
+              ></textarea></label
+            ><label
+              >示例<textarea
+                id="persona-examples"
+                rows="4"
+                maxlength="4000"
+              ></textarea>
+            </label>
+            <label
+              >角色背景<textarea
+                id="persona-background"
+                rows="3"
+                maxlength="2000"
+                placeholder="虚构背景与现实事实分开"
+              ></textarea>
+            </label>
+            <label
+              >兴趣与喜好<textarea
+                id="persona-interests"
+                rows="2"
+                maxlength="1000"
+              ></textarea>
+            </label>
+            <h3>相处设定</h3>
+            <label
+              >相处模式<select id="relationship-mode">
+                <option value="companion">日常陪伴</option>
+                <option value="romantic">虚拟恋爱</option>
+                <option value="custom">自定义</option>
+              </select></label
+            >
+            <label
+              >怎样称呼你<input id="relationship-user" maxlength="80"
+            /></label>
+            <label
+              >怎样称呼角色<input id="relationship-bot" maxlength="80"
+            /></label>
+            <label
+              >日常互动方式<textarea
+                id="relationship-interaction"
+                rows="3"
+                maxlength="2000"
+              ></textarea>
+            </label>
+            <label
+              >相处边界<textarea
+                id="relationship-boundaries"
+                rows="3"
+                maxlength="2000"
+              ></textarea>
+            </label>
+            <button type="submit">发布新版本</button>
+          </form>
+          <h3>运行设置</h3>
+          <form id="runtime-form">
+            <label
+              >模型服务商<select id="model-provider">
+                <option value="deepseek">DeepSeek（DS）</option>
+                <option value="grok">xAI（Grok）</option>
+              </select></label
+            >
+            <label
+              >模型<select id="model">
+                <option value="deepseek-flash">DeepSeek Flash</option>
+                <option value="deepseek-v4-pro">DeepSeek Pro</option>
+              </select></label
+            >
+            <label
+              >API Key（BYOK）<input
+                id="model-api-key"
+                type="password"
+                autocomplete="off"
+                spellcheck="false"
+                maxlength="4096"
+                placeholder="输入所选服务商的 Key，留空保留已有配置"
+            /></label>
+            <p id="model-key-status" class="help" aria-live="polite"></p>
+            <div class="actions">
+              <button id="save-model-key" type="button">保存 Key</button>
+              <button id="remove-model-key" type="button">移除 BYOK Key</button>
+            </div>
+            <p id="model-key-feedback" class="help" role="status"></p>
+            <p class="help">
+              模型与 Key 按当前角色保存，两家 Key 分别保留。Key
+              仅保存在本机私有文件，页面不回显；移除 BYOK
+              后使用后台配置（如有）。保存运行设置后，新对话使用所选模型。
+            </p>
+            <label>时区<input id="timezone" required /></label>
+            <div class="row">
+              <label
+                >静默开始（小时）<input
+                  id="quiet-start"
+                  type="number"
+                  min="0"
+                  max="23" /></label
+              ><label
+                >静默结束（小时）<input
+                  id="quiet-end"
+                  type="number"
+                  min="0"
+                  max="23"
+              /></label>
+            </div>
+            <label
+              >每日 Token 上限<input
+                id="daily-budget"
+                type="number"
+                min="1000"
+                max="1000000" /></label
+            ><button type="submit">保存运行设置</button>
+          </form>
+          <div id="persona-history"></div>
+        </section>
+        <section id="tab-trace" class="tab" hidden>
+          <h2>运行与证据</h2>
+          <p class="help">
+            这里显示程序可核对的来源、选择和状态，不展示模型隐藏思维链。
+          </p>
+          <label>选择运行<select id="trace-run"></select></label
+          ><button id="load-trace">查看 Trace 和上下文</button>
+          <div id="trace-content"></div>
+          <h3>后台整理</h3>
+          <div id="jobs"></div>
+          <div class="row">
+            <label>重算日摘要<input id="summary-day" type="date" /></label
+            ><button id="rebuild-summary">明确重算所选日期</button>
+          </div>
+          <h3>用量与维护</h3>
+          <div id="usage"></div>
+          <div class="actions">
+            <button id="export">导出当前角色数据</button
+            ><button id="backup">备份当前角色</button
+            ><button id="health">检查服务</button>
+          </div>
+          <pre id="maintenance-result"></pre>
+        </section>
+      </aside>
+    </main>
+    <footer>
+      单用户本地内测 · 浏览器通知仅覆盖电脑前且渠道可用的场景 ·
+      人格与陪伴感仍需持续试用
+    </footer>
+    <dialog id="editor">
+      <form id="editor-form">
+        <h2 id="editor-title"></h2>
+        <div id="editor-fields"></div>
+        <div class="actions">
+          <button type="button" id="editor-close">取消</button
+          ><button type="submit">保存</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>

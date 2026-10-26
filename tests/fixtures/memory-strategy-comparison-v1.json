@@ -1,0 +1,492 @@
+{
+  "version": "memory-strategy-comparison-v1",
+  "provenance": "Same-author frozen synthetic suite; two existing demo facts are historical regression, added topics and questions are fresh for this comparison, not independent holdout. No answers/labels passed to retrieval or reader.",
+  "facts": [
+    {
+      "id": "f01",
+      "text": "用户的手作工作室名叫“栖石-238884”",
+      "existingId": "3da4db5a-f47f-4262-b895-feb616cb114d"
+    },
+    {
+      "id": "f02",
+      "text": "用户每周二晚上会练习口琴",
+      "existingId": "2f13008a-ebf0-4438-8da5-89fa931fc53c"
+    },
+    {
+      "id": "f03",
+      "text": "用户早饭喜欢咸豆花，不喜欢甜豆花"
+    },
+    {
+      "id": "f04",
+      "text": "用户每周四晚上八点去游泳"
+    },
+    {
+      "id": "f05",
+      "text": "用户晴天骑自行车上班，路上约二十五分钟；下雨时坐公交车"
+    },
+    {
+      "id": "f06",
+      "text": "用户养了一只兔子，名字叫月饼"
+    },
+    {
+      "id": "f07",
+      "text": "用户每周日早上和姐姐一起打网球"
+    },
+    {
+      "id": "f08",
+      "text": "用户的姐姐经营一家叫拂麦的蛋糕店"
+    },
+    {
+      "id": "f09",
+      "text": "用户的妈妈最喜欢栀子花"
+    },
+    {
+      "id": "f10",
+      "text": "用户计划在2027年四月去西宁旅行"
+    },
+    {
+      "id": "f11",
+      "text": "用户希望工作日的活动不要安排在上午十点之前"
+    },
+    {
+      "id": "f12",
+      "text": "用户下午两点之后喝咖啡只选不含咖啡因的"
+    },
+    {
+      "id": "f13",
+      "text": "用户在家用法压壶冲咖啡"
+    },
+    {
+      "id": "f14",
+      "text": "用户不吃花生"
+    },
+    {
+      "id": "f15",
+      "text": "用户把同事陈岚称作岚姐"
+    },
+    {
+      "id": "f16",
+      "text": "用户正在做的陶艺系列名叫岸线练习"
+    },
+    {
+      "id": "d01",
+      "text": "用户的同事每周三晚上练小号"
+    },
+    {
+      "id": "d02",
+      "text": "用户的表弟在每周二下午练钢琴"
+    },
+    {
+      "id": "d03",
+      "text": "用户的朋友小程养了一只叫糯米的猫"
+    },
+    {
+      "id": "d04",
+      "text": "用户的姐姐喜欢甜豆花"
+    },
+    {
+      "id": "d05",
+      "text": "用户的父亲最喜欢茉莉花"
+    },
+    {
+      "id": "d06",
+      "text": "用户的同事陈岚平时开车上班"
+    },
+    {
+      "id": "d07",
+      "text": "用户的姐姐每周六上午去游泳"
+    },
+    {
+      "id": "d08",
+      "text": "用户的朋友开了一间叫微光的摄影工作室"
+    },
+    {
+      "id": "d09",
+      "text": "用户的同事给自己的书房起名为空山"
+    },
+    {
+      "id": "d10",
+      "text": "用户的表弟计划2027年五月去银川旅行"
+    },
+    {
+      "id": "d11",
+      "text": "用户的朋友用摩卡壶做咖啡"
+    },
+    {
+      "id": "d12",
+      "text": "用户的妈妈喜欢上午在公园散步"
+    },
+    {
+      "id": "d13",
+      "text": "用户的姐姐打羽毛球时常约朋友一起"
+    },
+    {
+      "id": "d14",
+      "text": "用户的同事工作日早上八点参加线上读书会"
+    },
+    {
+      "id": "d15",
+      "text": "用户的朋友在周三晚上上陶艺课"
+    },
+    {
+      "id": "d16",
+      "text": "用户的父亲习惯在饭后整理相册"
+    },
+    {
+      "id": "x-pending",
+      "text": "用户的兔子今年三岁",
+      "eligibility": "pending"
+    },
+    {
+      "id": "x-source",
+      "text": "用户的工作室位于河岸路18号",
+      "eligibility": "invalid_source"
+    },
+    {
+      "id": "x-expired",
+      "text": "用户当前工作室月租八百元",
+      "eligibility": "expired"
+    },
+    {
+      "id": "x-roleplay",
+      "text": "用户的虚构角色擅长弹钢琴",
+      "eligibility": "roleplay"
+    },
+    {
+      "id": "x-other",
+      "text": "用户的手作工作室叫星河屋，兔子叫团团",
+      "eligibility": "other_scope"
+    }
+  ],
+  "queries": [
+    {
+      "id": "q01",
+      "kind": "literal",
+      "query": "我的手作工作室叫什么名字？",
+      "expected": [
+        "f01"
+      ],
+      "requiredMeaning": "名称是栖石-238884",
+      "unknownParts": []
+    },
+    {
+      "id": "q02",
+      "kind": "paraphrase",
+      "query": "我做手工的那个地方叫什么来着？",
+      "expected": [
+        "f01"
+      ],
+      "requiredMeaning": "名称是栖石-238884",
+      "unknownParts": []
+    },
+    {
+      "id": "q03",
+      "kind": "paraphrase",
+      "query": "我的手作空间叫什么？",
+      "expected": [
+        "f01"
+      ],
+      "requiredMeaning": "名称是栖石-238884",
+      "unknownParts": []
+    },
+    {
+      "id": "q04",
+      "kind": "literal",
+      "query": "我每周二晚上练什么？",
+      "expected": [
+        "f02"
+      ],
+      "requiredMeaning": "练口琴",
+      "unknownParts": []
+    },
+    {
+      "id": "q05",
+      "kind": "paraphrase",
+      "query": "我每周固定的乐器练习安排是什么？",
+      "expected": [
+        "f02"
+      ],
+      "requiredMeaning": "每周二晚上练口琴",
+      "unknownParts": []
+    },
+    {
+      "id": "q06",
+      "kind": "paraphrase",
+      "query": "给我选个早饭，豆花口味上我更偏哪一边？",
+      "expected": [
+        "f03"
+      ],
+      "requiredMeaning": "偏咸豆花，不是甜豆花",
+      "unknownParts": []
+    },
+    {
+      "id": "q07",
+      "kind": "literal",
+      "query": "我平时怎么通勤？",
+      "expected": [
+        "f05"
+      ],
+      "requiredMeaning": "晴天骑自行车约25分钟，下雨坐公交；无需补其他方式",
+      "unknownParts": []
+    },
+    {
+      "id": "q08",
+      "kind": "paraphrase",
+      "query": "晴天去上班我通常怎么过去，要花多久？",
+      "expected": [
+        "f05"
+      ],
+      "requiredMeaning": "骑自行车约25分钟",
+      "unknownParts": []
+    },
+    {
+      "id": "q09",
+      "kind": "literal",
+      "query": "我的兔子叫什么？",
+      "expected": [
+        "f06"
+      ],
+      "requiredMeaning": "叫月饼",
+      "unknownParts": []
+    },
+    {
+      "id": "q10",
+      "kind": "paraphrase",
+      "query": "我家那个长耳朵的小家伙，你还记得名字吗？",
+      "expected": [
+        "f06"
+      ],
+      "requiredMeaning": "兔子名叫月饼，不能用朋友的猫代答",
+      "unknownParts": []
+    },
+    {
+      "id": "q11",
+      "kind": "entity",
+      "query": "我姐姐的店叫什么？",
+      "expected": [
+        "f08"
+      ],
+      "requiredMeaning": "蛋糕店叫拂麦，不是用户自己的工作室",
+      "unknownParts": []
+    },
+    {
+      "id": "q12",
+      "kind": "entity",
+      "query": "我妈妈喜欢什么花？",
+      "expected": [
+        "f09"
+      ],
+      "requiredMeaning": "栀子花，不是父亲喜欢的茉莉",
+      "unknownParts": []
+    },
+    {
+      "id": "q13",
+      "kind": "time",
+      "query": "我提过的西宁旅行是计划什么时候去？",
+      "expected": [
+        "f10"
+      ],
+      "requiredMeaning": "2027年四月的计划，不能说已旅行完成",
+      "unknownParts": []
+    },
+    {
+      "id": "q14",
+      "kind": "negative",
+      "query": "我是不吃花生吗？",
+      "expected": [
+        "f14"
+      ],
+      "requiredMeaning": "是，不吃花生；不能补原因或医疗推断",
+      "unknownParts": []
+    },
+    {
+      "id": "q15",
+      "kind": "compound",
+      "query": "我的手作空间叫什么？我姐的店又叫什么？",
+      "expected": [
+        "f01",
+        "f08"
+      ],
+      "requiredMeaning": "分别是栖石-238884和拂麦，两项都要回答且主体正确",
+      "unknownParts": []
+    },
+    {
+      "id": "q16",
+      "kind": "compound",
+      "query": "周二和周四晚上我分别有什么固定安排？",
+      "expected": [
+        "f02",
+        "f04"
+      ],
+      "requiredMeaning": "周二练口琴；周四八点游泳",
+      "unknownParts": []
+    },
+    {
+      "id": "q17",
+      "kind": "constraint",
+      "query": "工作日早上的活动，最早几点给我安排比较合适？",
+      "expected": [
+        "f11"
+      ],
+      "requiredMeaning": "上午十点或之后，不推广到周末",
+      "unknownParts": []
+    },
+    {
+      "id": "q18",
+      "kind": "paraphrase",
+      "query": "下午还想喝点咖啡，我有什么要求？",
+      "expected": [
+        "f12"
+      ],
+      "requiredMeaning": "两点之后只选无咖啡因；不是不喝任何咖啡",
+      "unknownParts": []
+    },
+    {
+      "id": "q19",
+      "kind": "paraphrase",
+      "query": "我在家用什么方式冲咖啡？",
+      "expected": [
+        "f13"
+      ],
+      "requiredMeaning": "法压壶，不是朋友的摩卡壶",
+      "unknownParts": []
+    },
+    {
+      "id": "q20",
+      "kind": "entity",
+      "query": "岚姐是我怎么称呼谁的？",
+      "expected": [
+        "f15"
+      ],
+      "requiredMeaning": "是同事陈岚的称呼",
+      "unknownParts": []
+    },
+    {
+      "id": "q21",
+      "kind": "literal",
+      "query": "岸线练习是我的什么项目？",
+      "expected": [
+        "f16"
+      ],
+      "requiredMeaning": "正在做的陶艺系列",
+      "unknownParts": []
+    },
+    {
+      "id": "q22",
+      "kind": "paraphrase",
+      "query": "我跟姐姐那项球类活动通常放在什么时候？",
+      "expected": [
+        "f07"
+      ],
+      "requiredMeaning": "每周日早上打网球，不是姐姐打羽毛球的安排",
+      "unknownParts": []
+    },
+    {
+      "id": "q23",
+      "kind": "unknown",
+      "query": "我的手作工作室在哪条路、几号？",
+      "expected": [],
+      "requiredMeaning": "必须说明本轮无有效依据，不能使用失效来源地址",
+      "unknownParts": [
+        "街道门牌"
+      ]
+    },
+    {
+      "id": "q24",
+      "kind": "unknown",
+      "query": "我家兔子几岁了？",
+      "expected": [],
+      "requiredMeaning": "年龄没有确认依据，不能用待确认三岁",
+      "unknownParts": [
+        "年龄"
+      ]
+    },
+    {
+      "id": "q25",
+      "kind": "unknown",
+      "query": "我妈妈最喜欢哪种咖啡？",
+      "expected": [],
+      "requiredMeaning": "没有妈妈咖啡偏好的依据，不能把用户或朋友偏好套给妈妈",
+      "unknownParts": [
+        "妈妈的咖啡偏好"
+      ]
+    },
+    {
+      "id": "q26",
+      "kind": "unknown",
+      "query": "我的游泳教练叫什么？",
+      "expected": [],
+      "requiredMeaning": "没有教练姓名依据，不能从游泳安排推断",
+      "unknownParts": [
+        "教练姓名"
+      ]
+    },
+    {
+      "id": "q27",
+      "kind": "unknown",
+      "query": "我的工作室每月房租是多少？",
+      "expected": [],
+      "requiredMeaning": "没有当前有效租金依据，不能用已过期的八百元",
+      "unknownParts": [
+        "当前月租"
+      ]
+    },
+    {
+      "id": "q28",
+      "kind": "unknown",
+      "query": "我学过钢琴吗？",
+      "expected": [],
+      "requiredMeaning": "没有用户钢琴经历依据，不能用表弟或虚构角色代答，也不能断言没学过",
+      "unknownParts": [
+        "钢琴经历"
+      ]
+    },
+    {
+      "id": "q29",
+      "kind": "mixed",
+      "query": "我家兔子叫什么、几岁了？",
+      "expected": [
+        "f06"
+      ],
+      "requiredMeaning": "已知名称月饼，年龄须明确未知",
+      "unknownParts": [
+        "年龄"
+      ]
+    },
+    {
+      "id": "q30",
+      "kind": "mixed",
+      "query": "岚姐叫什么，她住哪一栋？",
+      "expected": [
+        "f15"
+      ],
+      "requiredMeaning": "已知同事陈岚，居住楼栋须明确未知",
+      "unknownParts": [
+        "居住楼栋"
+      ]
+    }
+  ],
+  "browserDemoIds": [
+    "q02",
+    "q15",
+    "q23"
+  ],
+  "protocol": {
+    "strategies": [
+      "all",
+      "keyword",
+      "e5"
+    ],
+    "retrievalBudget": 2000,
+    "allReferenceBudget": 12000,
+    "requestBudget": 24000,
+    "sameReader": "deepseek-flash low reasoning; plain natural answer; 1500 max output tokens",
+    "history": false,
+    "summaries": false,
+    "tools": false,
+    "oneSamplePerQuestionPerStrategy": true,
+    "tuningAfterRun": false,
+    "e5": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "scoring": "Recall uses all required canonical IDs; no-answer has no recall denominator. Answer audit checks every requested known/unknown part, subject/time/negation, unsupported additions and source delivery. All ambiguous and failed answers retained."
+  }
+}

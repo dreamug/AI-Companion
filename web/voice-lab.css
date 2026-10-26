@@ -1,0 +1,171 @@
+:root {
+  color-scheme: light;
+  font:
+    15px/1.65 -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: #24292e;
+  background: #f7f8f9;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+h1 {
+  font-size: 26px;
+  line-height: 1.3;
+  margin: 0 0 6px;
+}
+h2 {
+  font-size: 18px;
+  margin: 0;
+}
+p {
+  margin: 6px 0;
+}
+a {
+  color: #23594e;
+}
+header p,
+.help,
+footer,
+.cue,
+.timing {
+  color: #626a73;
+}
+.conditions {
+  background: white;
+  border: 1px solid #d7dce1;
+  padding: 20px;
+}
+blockquote {
+  margin: 16px 0;
+  font-size: 19px;
+  line-height: 1.85;
+}
+summary {
+  cursor: pointer;
+}
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+}
+.toolbar,
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.toolbar {
+  margin: 22px 0 12px;
+}
+button {
+  font: inherit;
+  background: white;
+  color: #24292e;
+  border: 1px solid #aeb6bf;
+  border-radius: 5px;
+  padding: 7px 13px;
+  cursor: pointer;
+}
+button:hover:not(:disabled) {
+  border-color: #23594e;
+  background: #eff4f2;
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #23594e;
+  outline-offset: 3px;
+}
+#generate-all {
+  background: #23594e;
+  color: white;
+  border-color: #23594e;
+}
+#status {
+  min-height: 25px;
+}
+.help,
+footer,
+.cue {
+  font-size: 13px;
+}
+#variants {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.variant {
+  min-width: 0;
+  border: 1px solid #d7dce1;
+  padding: 20px;
+  background: white;
+}
+.variant.chosen {
+  border: 2px solid #23594e;
+  padding: 19px;
+}
+.cue {
+  margin: 5px 0 14px;
+}
+audio {
+  width: 100%;
+  margin-top: 14px;
+  height: 40px;
+}
+.result {
+  min-height: 26px;
+  margin-top: 10px;
+}
+.timing {
+  font-size: 12px;
+  min-height: 20px;
+  font-variant-numeric: tabular-nums;
+}
+.preference {
+  margin-top: 22px;
+}
+footer {
+  margin-top: 28px;
+  border-top: 1px solid #d7dce1;
+  padding-top: 16px;
+}
+@media (max-width: 650px) {
+  main {
+    padding: 22px 16px;
+  }
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #variants {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 23px;
+  }
+}

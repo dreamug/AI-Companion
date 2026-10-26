@@ -1,0 +1,653 @@
+{
+  "source": "test-results/memory-query-generalization/results.json",
+  "syntheticOnly": true,
+  "rows": [
+    {
+      "query": {
+        "id": "work-0",
+        "query": "我的职业是做什么的？",
+        "expected": [
+          "work-new"
+        ],
+        "answer": "陶瓷修复师",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "你是陶瓷修复师，在博物馆修复陶瓷文物。",
+        "abstain": false,
+        "memoryIds": [
+          "work-new"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "work-new",
+        "a7848d72-384a-4b76-bfbe-c4c16cd7a46f",
+        "3024fdc7-fbcb-4cbb-8e84-4322ed7cf48b",
+        "74238f29-df14-4943-b9d3-7ed254db12c1",
+        "9e8b8b0c-315e-4f95-a1d3-cb785e21e697"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "work-1",
+        "query": "我现在做什么工作？",
+        "expected": [
+          "work-new"
+        ],
+        "answer": "陶瓷修复师",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "你是陶瓷修复师，在博物馆修复陶瓷文物。",
+        "abstain": false,
+        "memoryIds": [
+          "work-new"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "work-new",
+        "a7848d72-384a-4b76-bfbe-c4c16cd7a46f",
+        "a05202fb-de8a-4165-9f5b-e69a47abb624",
+        "342c4a53-a546-4684-800e-e3a9fff399cf",
+        "9e8b8b0c-315e-4f95-a1d3-cb785e21e697"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "work-2",
+        "query": "我从事的工作是哪类？",
+        "expected": [
+          "work-new"
+        ],
+        "answer": "陶瓷修复师",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "属于文物修复类工作：陶瓷修复，在博物馆修复陶瓷文物。",
+        "abstain": false,
+        "memoryIds": [
+          "work-new"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "a7848d72-384a-4b76-bfbe-c4c16cd7a46f",
+        "9e8b8b0c-315e-4f95-a1d3-cb785e21e697",
+        "922d5b81-83f1-4bc9-9e4d-8ebde62a9de0",
+        "work-new",
+        "a05202fb-de8a-4165-9f5b-e69a47abb624"
+      ],
+      "oldCorrect": false
+    },
+    {
+      "query": {
+        "id": "work-3",
+        "query": "我现在干哪一行？",
+        "expected": [
+          "work-new"
+        ],
+        "answer": "陶瓷修复师",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "你在博物馆做陶瓷文物修复，属于文物修复这一行。",
+        "abstain": false,
+        "memoryIds": [
+          "work-new"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "work-new",
+        "a7848d72-384a-4b76-bfbe-c4c16cd7a46f",
+        "a05202fb-de8a-4165-9f5b-e69a47abb624",
+        "342c4a53-a546-4684-800e-e3a9fff399cf",
+        "74238f29-df14-4943-b9d3-7ed254db12c1"
+      ],
+      "oldCorrect": false
+    },
+    {
+      "query": {
+        "id": "work-4",
+        "query": "靠什么工作谋生？",
+        "expected": [
+          "work-new"
+        ],
+        "answer": "陶瓷修复师",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "靠博物馆的陶瓷修复工作谋生，具体说就是修复陶瓷文物。",
+        "abstain": false,
+        "memoryIds": [
+          "work-new"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "work-new",
+        "a7848d72-384a-4b76-bfbe-c4c16cd7a46f",
+        "aee01bcf-f54f-4907-963f-dcfe6e57b502",
+        "a05202fb-de8a-4165-9f5b-e69a47abb624",
+        "342c4a53-a546-4684-800e-e3a9fff399cf"
+      ],
+      "oldCorrect": false
+    },
+    {
+      "query": {
+        "id": "work-5",
+        "query": "我的工作岗位是什么？",
+        "expected": [
+          "work-new"
+        ],
+        "answer": "陶瓷修复师",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "记忆里只记了你在博物馆做陶瓷文物修复，没写具体岗位名称。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "status": "completed",
+      "availableIds": [
+        "a7848d72-384a-4b76-bfbe-c4c16cd7a46f",
+        "9dca84bc-826d-47c2-98b9-1ba5c369e717",
+        "9e8b8b0c-315e-4f95-a1d3-cb785e21e697",
+        "work-new",
+        "342c4a53-a546-4684-800e-e3a9fff399cf"
+      ],
+      "oldCorrect": false
+    },
+    {
+      "query": {
+        "id": "address-0",
+        "query": "你该怎么叫我才合我心意？",
+        "expected": [
+          "address-new"
+        ],
+        "answer": "小栖",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "叫小栖。",
+        "abstain": false,
+        "memoryIds": [
+          "address-new"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "address-new",
+        "sister-name",
+        "c006d1e4-9a84-4bc3-aa42-036d969880f0",
+        "9a13dce7-0949-4dfe-af9e-b63fd46d4357",
+        "2b465bb4-169c-48ef-beb9-e0b57d276bfa"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "address-1",
+        "query": "怎么称呼我比较合适？",
+        "expected": [
+          "address-new"
+        ],
+        "answer": "小栖",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "叫小栖比较合适，你不喜欢被叫老板。",
+        "abstain": false,
+        "memoryIds": [
+          "address-new"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "address-new",
+        "sister-name",
+        "616fbf70-79f4-46a7-acc0-6cd81d0e1d58",
+        "9a13dce7-0949-4dfe-af9e-b63fd46d4357",
+        "9c5ca833-0cd7-4717-8cba-266f2edd40e5"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "address-2",
+        "query": "我希望你怎么叫我？",
+        "expected": [
+          "address-new"
+        ],
+        "answer": "小栖",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "叫小栖。",
+        "abstain": false,
+        "memoryIds": [
+          "address-new"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "address-new",
+        "sister-name",
+        "work-new",
+        "26f42d16-e68c-4890-a94f-94b33e88a591",
+        "9a13dce7-0949-4dfe-af9e-b63fd46d4357"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "address-3",
+        "query": "我的昵称是什么？",
+        "expected": [
+          "address-new"
+        ],
+        "answer": "小栖",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "你希望被叫小栖。",
+        "abstain": false,
+        "memoryIds": [
+          "address-new"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "address-new",
+        "sister-name",
+        "work-new",
+        "9a13dce7-0949-4dfe-af9e-b63fd46d4357",
+        "e8beb002-3ccd-4d79-b339-877ce7440c93"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "address-4",
+        "query": "平时叫我什么好？",
+        "expected": [
+          "address-new"
+        ],
+        "answer": "小栖",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "平时叫小栖就好。",
+        "abstain": false,
+        "memoryIds": [
+          "address-new"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "address-new",
+        "616fbf70-79f4-46a7-acc0-6cd81d0e1d58",
+        "d9eb2727-36a5-4f61-bba1-336a8847685e",
+        "8385c23a-6f80-4a4a-8228-2d116045ca3e",
+        "d5b72560-c9fb-41aa-ac28-23805d571414"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "address-5",
+        "query": "我不喜欢被叫老板，那该叫我什么？",
+        "expected": [
+          "address-new"
+        ],
+        "answer": "小栖",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "叫小栖。",
+        "abstain": false,
+        "memoryIds": [
+          "address-new"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "address-new",
+        "sister-name",
+        "d5b72560-c9fb-41aa-ac28-23805d571414",
+        "e8beb002-3ccd-4d79-b339-877ce7440c93",
+        "616fbf70-79f4-46a7-acc0-6cd81d0e1d58"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "family-work-0",
+        "query": "我姐姐是什么职业？",
+        "expected": [
+          "sister-work"
+        ],
+        "answer": "航天工程师",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "你姐姐是航天工程师，希望被称呼为蓝老师。",
+        "abstain": false,
+        "memoryIds": [
+          "sister-work",
+          "sister-name"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "work-new",
+        "sister-work",
+        "sister-name",
+        "d2852bf5-5acd-4b45-9829-ae9965dfb4a8",
+        "3024fdc7-fbcb-4cbb-8e84-4322ed7cf48b"
+      ],
+      "oldCorrect": false
+    },
+    {
+      "query": {
+        "id": "family-work-1",
+        "query": "姐姐从事哪一行？",
+        "expected": [
+          "sister-work"
+        ],
+        "answer": "航天工程师",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "航天工程，你姐姐是航天工程师。",
+        "abstain": false,
+        "memoryIds": [
+          "sister-work"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "sister-work",
+        "sister-name",
+        "d9eb2727-36a5-4f61-bba1-336a8847685e",
+        "d2852bf5-5acd-4b45-9829-ae9965dfb4a8",
+        "c006d1e4-9a84-4bc3-aa42-036d969880f0"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "family-address-0",
+        "query": "我姐姐想让别人怎么称呼她？",
+        "expected": [
+          "sister-name"
+        ],
+        "answer": "蓝老师",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "蓝老师。",
+        "abstain": false,
+        "memoryIds": [
+          "sister-name"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "sister-name",
+        "address-new",
+        "sister-work",
+        "9a13dce7-0949-4dfe-af9e-b63fd46d4357",
+        "e8beb002-3ccd-4d79-b339-877ce7440c93"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "family-address-1",
+        "query": "姐姐喜欢怎样的称呼？",
+        "expected": [
+          "sister-name"
+        ],
+        "answer": "蓝老师",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "她希望被称呼为蓝老师。",
+        "abstain": false,
+        "memoryIds": [
+          "sister-name"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "sister-name",
+        "address-new",
+        "sister-work",
+        "c006d1e4-9a84-4bc3-aa42-036d969880f0",
+        "9a13dce7-0949-4dfe-af9e-b63fd46d4357"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "pet-0",
+        "query": "我养的鹦鹉叫什么？",
+        "expected": [
+          "pet-new"
+        ],
+        "answer": "松子",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "叫松子。",
+        "abstain": false,
+        "memoryIds": [
+          "pet-new"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "pet-new",
+        "address-new",
+        "616fbf70-79f4-46a7-acc0-6cd81d0e1d58",
+        "e8beb002-3ccd-4d79-b339-877ce7440c93",
+        "d5b72560-c9fb-41aa-ac28-23805d571414"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "book-0",
+        "query": "我最喜欢哪本书？",
+        "expected": [
+          "book-new"
+        ],
+        "answer": "野渡",
+        "kind": "generalization",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "《野渡》。",
+        "abstain": false,
+        "memoryIds": [
+          "book-new"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "book-new",
+        "d5b72560-c9fb-41aa-ac28-23805d571414",
+        "9a13dce7-0949-4dfe-af9e-b63fd46d4357",
+        "a7848d72-384a-4b76-bfbe-c4c16cd7a46f",
+        "e8beb002-3ccd-4d79-b339-877ce7440c93"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "unknown-0",
+        "query": "我的工号是多少？",
+        "expected": [],
+        "answer": null,
+        "kind": "unknown",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "不知道，我这边没有你工号的记录。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "status": "completed",
+      "availableIds": [
+        "26f42d16-e68c-4890-a94f-94b33e88a591",
+        "aee01bcf-f54f-4907-963f-dcfe6e57b502",
+        "2b465bb4-169c-48ef-beb9-e0b57d276bfa",
+        "c006d1e4-9a84-4bc3-aa42-036d969880f0",
+        "ef931de9-b6d2-4dc3-bbcc-56da6be45ea9"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "unknown-1",
+        "query": "你知道我公司的具体地址吗？",
+        "expected": [],
+        "answer": null,
+        "kind": "unknown",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "不知道，我这边没有你公司地址的记录。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "status": "completed",
+      "availableIds": [
+        "sister-work",
+        "work-new",
+        "d2852bf5-5acd-4b45-9829-ae9965dfb4a8",
+        "c006d1e4-9a84-4bc3-aa42-036d969880f0",
+        "9a13dce7-0949-4dfe-af9e-b63fd46d4357"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "unknown-2",
+        "query": "我正式证件上的姓名是什么？",
+        "expected": [],
+        "answer": null,
+        "kind": "unknown",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "不知道，我这边没有你证件姓名的记录。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "status": "completed",
+      "availableIds": [
+        "sister-name",
+        "616fbf70-79f4-46a7-acc0-6cd81d0e1d58",
+        "work-new",
+        "sister-work",
+        "d5b72560-c9fb-41aa-ac28-23805d571414"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "unknown-3",
+        "query": "我姐姐的工号是什么？",
+        "expected": [],
+        "answer": null,
+        "kind": "unknown",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "不知道，我这边没有你姐姐工号的记录。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "status": "completed",
+      "availableIds": [
+        "sister-work",
+        "sister-name",
+        "2b465bb4-169c-48ef-beb9-e0b57d276bfa",
+        "d9eb2727-36a5-4f61-bba1-336a8847685e",
+        "d2852bf5-5acd-4b45-9829-ae9965dfb4a8"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "unknown-4",
+        "query": "我入职的具体日期是哪天？",
+        "expected": [],
+        "answer": null,
+        "kind": "unknown",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "不知道，我这边没有你入职日期的记录。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "status": "completed",
+      "availableIds": [
+        "work-new",
+        "cd2f24b7-5f6c-40c5-abbb-2f94ee5da494",
+        "d2852bf5-5acd-4b45-9829-ae9965dfb4a8",
+        "9a13dce7-0949-4dfe-af9e-b63fd46d4357",
+        "bb549906-37cd-48c9-a1d8-9cf62ccfcd92"
+      ],
+      "oldCorrect": true
+    },
+    {
+      "query": {
+        "id": "unknown-5",
+        "query": "鹦鹉的生日是哪天？",
+        "expected": [],
+        "answer": null,
+        "kind": "unknown",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "不知道，我这边没有松子生日的记录。",
+        "abstain": true,
+        "memoryIds": []
+      },
+      "status": "completed",
+      "availableIds": [
+        "pet-new",
+        "d2852bf5-5acd-4b45-9829-ae9965dfb4a8",
+        "book-new",
+        "address-new",
+        "a0cd69fd-293e-41de-958b-201af75112db"
+      ],
+      "oldCorrect": true
+    }
+  ]
+}

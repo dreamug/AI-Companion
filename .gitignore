@@ -1,0 +1,27 @@
+# Local credentials
+env.local
+.env.local
+model-keys.json
+node_modules/
+dist/
+data/
+local-data/
+backups/
+coverage/
+test-results/
+playwright-report/
+.DS_Store
+.venv-asr/
+.venv-memory-lab/
+__pycache__/
+# Local databases and credential variants
+/v1
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+.env
+.env.*
+!*.example
+*.pem
+*.key

@@ -1,0 +1,414 @@
+{
+  "version": "1.2",
+  "scope": "judge_calibration_frozen_before_prompt_changes_not_answer_generation_accuracy",
+  "cases": [
+    {
+      "id": "unknown-scope",
+      "expected": "pass",
+      "input": {
+        "query": {
+          "id": "unknown-scope",
+          "query": "我的会员编号是什么？",
+          "expected": [],
+          "answer": null
+        },
+        "answer": {
+          "answer": "本轮没有你的会员编号记录，我不知道。",
+          "abstain": true,
+          "memoryIds": []
+        },
+        "status": "completed",
+        "availableIds": [
+          "a",
+          "b"
+        ],
+        "facts": [
+          {
+            "id": "a",
+            "text": "用户的朋友叫行舟。"
+          },
+          {
+            "id": "b",
+            "text": "用户的朋友住在雷克雅未克。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "unknown-speaker",
+      "expected": "pass",
+      "input": {
+        "query": {
+          "id": "unknown-speaker",
+          "query": "我的会员编号是什么？",
+          "expected": [],
+          "answer": null
+        },
+        "answer": {
+          "answer": "我不知道你的会员编号。",
+          "abstain": true,
+          "memoryIds": []
+        },
+        "status": "completed",
+        "availableIds": [
+          "a",
+          "b"
+        ],
+        "facts": [
+          {
+            "id": "a",
+            "text": "用户的朋友叫行舟。"
+          },
+          {
+            "id": "b",
+            "text": "用户的朋友住在雷克雅未克。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "scope-noise",
+      "expected": "pass",
+      "input": {
+        "query": {
+          "id": "scope-noise",
+          "query": "我的会员编号是什么？",
+          "expected": [],
+          "answer": null
+        },
+        "answer": {
+          "answer": "本轮只收到几位合成角色的跑步偏好，没有会员编号。",
+          "abstain": true,
+          "memoryIds": []
+        },
+        "status": "completed",
+        "availableIds": [
+          "n",
+          "n2"
+        ],
+        "facts": [
+          {
+            "id": "n",
+            "text": "合成角色甲喜欢跑步。"
+          },
+          {
+            "id": "n2",
+            "text": "合成角色乙喜欢跑步。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "background-required",
+      "expected": "pass",
+      "input": {
+        "query": {
+          "id": "background-required",
+          "query": "我的会员编号是什么？",
+          "expected": [],
+          "answer": null
+        },
+        "answer": {
+          "answer": "我不知道你的会员编号；你有一位住在雷克雅未克的朋友。",
+          "abstain": true,
+          "memoryIds": [
+            "b"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "a",
+          "b"
+        ],
+        "facts": [
+          {
+            "id": "a",
+            "text": "用户的朋友叫行舟。"
+          },
+          {
+            "id": "b",
+            "text": "用户的朋友住在雷克雅未克。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "background-omitted-citation",
+      "expected": "fail",
+      "input": {
+        "query": {
+          "id": "background-omitted-citation",
+          "query": "我的会员编号是什么？",
+          "expected": [],
+          "answer": null
+        },
+        "answer": {
+          "answer": "我不知道你的会员编号；你有一位住在雷克雅未克的朋友。",
+          "abstain": true,
+          "memoryIds": []
+        },
+        "status": "completed",
+        "availableIds": [
+          "a",
+          "b"
+        ],
+        "facts": [
+          {
+            "id": "a",
+            "text": "用户的朋友叫行舟。"
+          },
+          {
+            "id": "b",
+            "text": "用户的朋友住在雷克雅未克。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "not-personal-unknown",
+      "expected": "fail",
+      "input": {
+        "query": {
+          "id": "not-personal-unknown",
+          "query": "我的会员编号是什么？",
+          "expected": [],
+          "answer": null
+        },
+        "answer": {
+          "answer": "你的朋友不知道自己的会员编号。",
+          "abstain": true,
+          "memoryIds": []
+        },
+        "status": "completed",
+        "availableIds": [
+          "a",
+          "b"
+        ],
+        "facts": [
+          {
+            "id": "a",
+            "text": "用户的朋友叫行舟。"
+          },
+          {
+            "id": "b",
+            "text": "用户的朋友住在雷克雅未克。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "forbidden-global-absence",
+      "expected": "fail",
+      "input": {
+        "query": {
+          "id": "forbidden-global-absence",
+          "query": "我的会员编号是什么？",
+          "expected": [],
+          "answer": null
+        },
+        "answer": {
+          "answer": "你从来没有说过你的会员编号。",
+          "abstain": true,
+          "memoryIds": []
+        },
+        "status": "completed",
+        "availableIds": [
+          "a",
+          "b"
+        ],
+        "facts": [
+          {
+            "id": "a",
+            "text": "用户的朋友叫行舟。"
+          },
+          {
+            "id": "b",
+            "text": "用户的朋友住在雷克雅未克。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "attribute-negation",
+      "expected": "fail",
+      "input": {
+        "query": {
+          "id": "attribute-negation",
+          "query": "我的会员编号是什么？",
+          "expected": [],
+          "answer": null
+        },
+        "answer": {
+          "answer": "你的会员编号不存在。",
+          "abstain": true,
+          "memoryIds": []
+        },
+        "status": "completed",
+        "availableIds": [
+          "a",
+          "b"
+        ],
+        "facts": [
+          {
+            "id": "a",
+            "text": "用户的朋友叫行舟。"
+          },
+          {
+            "id": "b",
+            "text": "用户的朋友住在雷克雅未克。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "address-preference",
+      "expected": "pass",
+      "input": {
+        "query": {
+          "id": "address-preference",
+          "query": "平时怎么称呼我？",
+          "expected": [
+            "a"
+          ],
+          "answer": "雷克雅未克"
+        },
+        "answer": {
+          "answer": "叫你云朵合适，你希望平时这么称呼你。",
+          "abstain": false,
+          "memoryIds": [
+            "a"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "a"
+        ],
+        "facts": [
+          {
+            "id": "a",
+            "text": "用户希望平时被称呼为云朵。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "implicit-identity-covered",
+      "expected": "pass",
+      "input": {
+        "query": {
+          "id": "implicit-identity-covered",
+          "query": "我的朋友住在哪里？",
+          "expected": [
+            "b"
+          ],
+          "answer": "雷克雅未克"
+        },
+        "answer": {
+          "answer": "你的朋友行舟住在雷克雅未克。",
+          "abstain": false,
+          "memoryIds": [
+            "a",
+            "b"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "a",
+          "b"
+        ],
+        "facts": [
+          {
+            "id": "a",
+            "text": "用户的朋友叫行舟。"
+          },
+          {
+            "id": "b",
+            "text": "用户的朋友住在雷克雅未克。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "implicit-identity-missing",
+      "expected": "fail",
+      "input": {
+        "query": {
+          "id": "implicit-identity-missing",
+          "query": "我的朋友住在哪里？",
+          "expected": [
+            "b"
+          ],
+          "answer": "雷克雅未克"
+        },
+        "answer": {
+          "answer": "你的朋友行舟住在雷克雅未克。",
+          "abstain": false,
+          "memoryIds": [
+            "b"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "a",
+          "b"
+        ],
+        "facts": [
+          {
+            "id": "a",
+            "text": "用户的朋友叫行舟。"
+          },
+          {
+            "id": "b",
+            "text": "用户的朋友住在雷克雅未克。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wrong-person",
+      "expected": "fail",
+      "input": {
+        "query": {
+          "id": "wrong-person",
+          "query": "我住在哪里？",
+          "expected": [],
+          "answer": null
+        },
+        "answer": {
+          "answer": "你住在雷克雅未克。",
+          "abstain": false,
+          "memoryIds": [
+            "b"
+          ]
+        },
+        "status": "completed",
+        "availableIds": [
+          "a",
+          "b"
+        ],
+        "facts": [
+          {
+            "id": "a",
+            "text": "用户的朋友叫行舟。"
+          },
+          {
+            "id": "b",
+            "text": "用户的朋友住在雷克雅未克。"
+          }
+        ]
+      }
+    }
+  ],
+  "corrections": [
+    {
+      "from": "memory-judge-calibration-v1.json",
+      "case": "scope-noise",
+      "reason": "原题几位但只有一条资料，补齐第二个角色以消除数量歧义；不改预期判定，不修改旧文件或旧成绩。"
+    },
+    {
+      "from": "memory-judge-calibration-v1.1.json",
+      "case": "wrong-person",
+      "reason": "朋友的住址不能作为用户住址的可回答参照；将query.expected修正为空、answer修正为null。被评回答、事实、问题和预期fail均不变。"
+    }
+  ]
+}

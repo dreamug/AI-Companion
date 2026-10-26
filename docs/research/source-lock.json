@@ -1,0 +1,1336 @@
+{
+  "schema_version": 1,
+  "research_date": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "purpose": "Read-only upstream source review; no upstream test suite executed",
+  "upstreams": [
+    {
+      "requested_repo": "EverMind-AI/EverOS",
+      "repo": "EverMind-AI/EverOS",
+      "branch": "main",
+      "sha": "5b0979b1b7f3a0cbe235756ff098515ec490753e",
+      "commit_date": "2026-10-22T12:57:05Z",
+      "license": "Apache-2.0",
+      "archived": false,
+      "tree_truncated": false,
+      "files": 1176,
+      "source_url": "https://github.com/EverMind-AI/EverOS/tree/5b0979b1b7f3a0cbe235756ff098515ec490753e",
+      "cached_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha": "8e2912af61dcb4d0fca14ab38e2c43a5a6e873d5",
+          "verified_against_tree": true,
+          "bytes": 11341
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "24072dbc227bb1f269c4c6963a0bece18e38dfe9",
+          "verified_against_tree": true,
+          "bytes": 28262
+        },
+        {
+          "path": "pyproject.toml",
+          "git_blob_sha": "0428edfc11e3de548d8e61012ff9610816aa25d4",
+          "verified_against_tree": true,
+          "bytes": 15992
+        },
+        {
+          "path": "src/everos/infra/persistence/markdown/writers/episode_writer.py",
+          "git_blob_sha": "56d2b15b8efec37bf4a843b33b99f0345b5312fa",
+          "verified_against_tree": true,
+          "bytes": 2097
+        },
+        {
+          "path": "src/everos/memory/cascade/handlers/foresight.py",
+          "git_blob_sha": "9d1184faf0dcf45c4bb741e3d7e2559ba44366aa",
+          "verified_against_tree": true,
+          "bytes": 3794
+        },
+        {
+          "path": "src/everos/memory/cascade/handlers/user_profile.py",
+          "git_blob_sha": "f4c6449d283dce8ef7666fa9b5468d69f553ccf7",
+          "verified_against_tree": true,
+          "bytes": 4949
+        },
+        {
+          "path": "src/everos/memory/cascade/orchestrator.py",
+          "git_blob_sha": "893494e5152618c4c910daef93d65065e1a870e7",
+          "verified_against_tree": true,
+          "bytes": 20412
+        },
+        {
+          "path": "src/everos/memory/cascade/reconciler.py",
+          "git_blob_sha": "553f9848272b2a0a6a848e765fdb3a8f434451e7",
+          "verified_against_tree": true,
+          "bytes": 4945
+        },
+        {
+          "path": "tests/integration/test_cascade_all_kinds_consistency.py",
+          "git_blob_sha": "60eb52800360010a9458d700ff9c440953786485",
+          "verified_against_tree": true,
+          "bytes": 10861
+        }
+      ]
+    },
+    {
+      "requested_repo": "MemTensor/MemOS",
+      "repo": "MemTensor/MemOS",
+      "branch": "main",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "commit_date": "2026-09-22T01:51:03Z",
+      "license": "Apache-2.0",
+      "archived": false,
+      "tree_truncated": false,
+      "files": 2438,
+      "source_url": "https://github.com/MemTensor/MemOS/tree/a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "cached_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha": "2090de541d3389f3da3d001d37e6426fe5c93779",
+          "verified_against_tree": true,
+          "bytes": 11358
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "9c85150d0ed03d2ddfb6e953c6cefddc88de0e12",
+          "verified_against_tree": true,
+          "bytes": 17535
+        },
+        {
+          "path": "apps/memos-local-plugin/core/feedback/feedback.ts",
+          "git_blob_sha": "c43e0d3f5d464d694b7a5e75811dc70aacc2f61c",
+          "verified_against_tree": true,
+          "bytes": 11952
+        },
+        {
+          "path": "apps/memos-local-plugin/core/feedback/subscriber.ts",
+          "git_blob_sha": "7c9d5bb499bfd0667f5b878b7dbfdc20a523055a",
+          "verified_against_tree": true,
+          "bytes": 5969
+        },
+        {
+          "path": "apps/memos-local-plugin/package.json",
+          "git_blob_sha": "d9d5e30996e777771e4a1be3edeceb16b67aaeb7",
+          "verified_against_tree": true,
+          "bytes": 4632
+        },
+        {
+          "path": "apps/memos-local-plugin/tests/unit/feedback/feedback.integration.test.ts",
+          "git_blob_sha": "7d0c46f4e62b63d59e6743f645b0e4b07edcf675",
+          "verified_against_tree": true,
+          "bytes": 12322
+        },
+        {
+          "path": "pyproject.toml",
+          "git_blob_sha": "314fce3d5c092ea912dc458f75ae45dcf959c714",
+          "verified_against_tree": true,
+          "bytes": 8164
+        },
+        {
+          "path": "src/memos/mem_reader/source_filter.py",
+          "git_blob_sha": "6283a725e1a4d67e3a4ff56abef508173af06b60",
+          "verified_against_tree": true,
+          "bytes": 8345
+        },
+        {
+          "path": "src/memos/mem_scheduler/base_scheduler.py",
+          "git_blob_sha": "7c26336ed6420d203b29be06626d5c90c343641d",
+          "verified_against_tree": true,
+          "bytes": 18722
+        }
+      ]
+    },
+    {
+      "requested_repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "branch": "main",
+      "sha": "992309c0aa19845960228f880013d4685fde93b5",
+      "commit_date": "2026-05-15T07:18:03Z",
+      "license": "NOASSERTION",
+      "archived": false,
+      "tree_truncated": false,
+      "files": 299,
+      "source_url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/tree/992309c0aa19845960228f880013d4685fde93b5",
+      "cached_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha": "8c13e43124f5656eebcc721e8744b5d40e6b98aa",
+          "verified_against_tree": true,
+          "bytes": 1216
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "d5453728cd9b9c405ccf6dcfb75b9dfde7d530ae",
+          "verified_against_tree": true,
+          "bytes": 11536
+        },
+        {
+          "path": "config_templates/conf.default.yaml",
+          "git_blob_sha": "cd3e5d8a30c33d270b9e41a4e4b48e597056528a",
+          "verified_against_tree": true,
+          "bytes": 25210
+        },
+        {
+          "path": "pyproject.toml",
+          "git_blob_sha": "e9641cea6b353fb2ce8b9e494154a53f3d49997e",
+          "verified_against_tree": true,
+          "bytes": 1840
+        },
+        {
+          "path": "src/open_llm_vtuber/agent/agents/basic_memory_agent.py",
+          "git_blob_sha": "403b559075da25a51e0defcb50b460d561fcd523",
+          "verified_against_tree": true,
+          "bytes": 28012
+        },
+        {
+          "path": "src/open_llm_vtuber/agent/agents/letta_agent.py",
+          "git_blob_sha": "70406a79156250c368220f62a5a6ce60643e47d3",
+          "verified_against_tree": true,
+          "bytes": 4431
+        },
+        {
+          "path": "src/open_llm_vtuber/agent/agents/mem0_llm.py",
+          "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "verified_against_tree": true,
+          "bytes": 0
+        },
+        {
+          "path": "src/open_llm_vtuber/conversations/conversation_handler.py",
+          "git_blob_sha": "02780b486bcb13783bf9a3b04b2dcbb5d182665f",
+          "verified_against_tree": true,
+          "bytes": 7958
+        },
+        {
+          "path": "src/open_llm_vtuber/conversations/single_conversation.py",
+          "git_blob_sha": "493fa9c4e55bd83cb6ed3118c8b4da5b2112cc8c",
+          "verified_against_tree": true,
+          "bytes": 6675
+        },
+        {
+          "path": "src/open_llm_vtuber/websocket_handler.py",
+          "git_blob_sha": "41368a6f6ba4ab82defb59df8be4b96fd2f6bfb7",
+          "verified_against_tree": true,
+          "bytes": 23172
+        }
+      ]
+    },
+    {
+      "requested_repo": "SillyTavern/SillyTavern",
+      "repo": "SillyTavern/SillyTavern",
+      "branch": "release",
+      "sha": "06bde939fb1e9c4c8d8641d810f0a916b5bce127",
+      "commit_date": "2026-09-14T19:01:34Z",
+      "license": "AGPL-3.0",
+      "archived": false,
+      "tree_truncated": false,
+      "files": 1095,
+      "source_url": "https://github.com/SillyTavern/SillyTavern/tree/06bde939fb1e9c4c8d8641d810f0a916b5bce127",
+      "cached_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha": "0ad25db4bd1d86c452db3f9602ccdbe172438f52",
+          "verified_against_tree": true,
+          "bytes": 34523
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "3f9f974f1a969cc574b5765dd6d84c63713e40c9",
+          "verified_against_tree": true,
+          "bytes": 267
+        },
+        {
+          "path": "package.json",
+          "git_blob_sha": "ea41cec0158fc2678f16d587d7bcf880be3fc302",
+          "verified_against_tree": true,
+          "bytes": 5941
+        },
+        {
+          "path": "public/scripts/PromptManager.js",
+          "git_blob_sha": "20219dc45ffa232ef61ebbfac0836241f168a55a",
+          "verified_against_tree": true,
+          "bytes": 90717
+        },
+        {
+          "path": "public/scripts/extensions/memory/index.js",
+          "git_blob_sha": "af268ba58f2e22d22c5d20d0d5f60b73a0c14338",
+          "verified_against_tree": true,
+          "bytes": 41777
+        },
+        {
+          "path": "public/scripts/extensions/vectors/index.js",
+          "git_blob_sha": "e671234c55ed9998b36233899979adfc5dd888c3",
+          "verified_against_tree": true,
+          "bytes": 93152
+        },
+        {
+          "path": "public/scripts/world-info.js",
+          "git_blob_sha": "1941041a7d3d520bc2239117e3853cd0058feac8",
+          "verified_against_tree": true,
+          "bytes": 265081
+        },
+        {
+          "path": "tests/prompt-converters.test.js",
+          "git_blob_sha": "30fb347063fa0c38b3d66015a66edf471544a9cd",
+          "verified_against_tree": true,
+          "bytes": 55016
+        }
+      ]
+    },
+    {
+      "requested_repo": "agnaistic/agnai",
+      "repo": "agnaistic/agnai",
+      "branch": "dev",
+      "sha": "fccee00f5f7628d150760c787c4be87e6b1a652c",
+      "commit_date": "2026-06-13T11:58:57Z",
+      "license": "AGPL-3.0",
+      "archived": false,
+      "tree_truncated": false,
+      "files": 1226,
+      "source_url": "https://github.com/agnaistic/agnai/tree/fccee00f5f7628d150760c787c4be87e6b1a652c",
+      "cached_files": [
+        {
+          "path": "LICENSE.md",
+          "git_blob_sha": "cba6f6a15a4cc3ba212e9e9059f7243e2d171090",
+          "verified_against_tree": true,
+          "bytes": 34283
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "7e5bce7be6aa311ecc32e7f349bbb978ecdab206",
+          "verified_against_tree": true,
+          "bytes": 6711
+        },
+        {
+          "path": "common/memory.ts",
+          "git_blob_sha": "97c90fed0e28601b3233f156dfc775f2cf6d511f",
+          "verified_against_tree": true,
+          "bytes": 9028
+        },
+        {
+          "path": "common/prompt.ts",
+          "git_blob_sha": "cb10031b0fc21c9cde00a1c94cd9c7cdc1f05048",
+          "verified_against_tree": true,
+          "bytes": 37014
+        },
+        {
+          "path": "package.json",
+          "git_blob_sha": "60f5bb9f4f82d079e0d5084119395eeecebcc38a",
+          "verified_against_tree": true,
+          "bytes": 9355
+        },
+        {
+          "path": "srv/adapter/prompt.ts",
+          "git_blob_sha": "658b2eb0ce8b3586fb8c048f29c6f83af3f80c2f",
+          "verified_against_tree": true,
+          "bytes": 1544
+        },
+        {
+          "path": "tests/prompt.spec.ts",
+          "git_blob_sha": "fad590d13e39558eb0373a6b29ef2939da34ca03",
+          "verified_against_tree": true,
+          "bytes": 10762
+        }
+      ]
+    },
+    {
+      "repo": "earendil-works/pi",
+      "branch": "main",
+      "sha": "906e1302f94829ec7e228059199681c11faec0b0",
+      "commit_date": "2026-10-23T08:31:50Z",
+      "license": "MIT",
+      "tree_truncated": false,
+      "source_url": "https://github.com/earendil-works/pi/tree/906e1302f94829ec7e228059199681c11faec0b0",
+      "cached_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha": "b0a8e9b81083294360c69b4ec45d3d39a2b28197",
+          "verified_against_tree": true,
+          "bytes": 1069
+        },
+        {
+          "path": "packages/agent/package.json",
+          "git_blob_sha": "d1231d95df683a382b5abb32a51fee02d1f08d03",
+          "verified_against_tree": true,
+          "bytes": 1032
+        },
+        {
+          "path": "packages/agent/src/agent-loop.ts",
+          "git_blob_sha": "cfc9401e5581847f6d5a9bb1815ab0f0e663f2e5",
+          "verified_against_tree": true,
+          "bytes": 29889
+        },
+        {
+          "path": "packages/agent/src/agent.ts",
+          "git_blob_sha": "c0a482d3a499b6baabd61cd1c4eed3f93cb2a9a6",
+          "verified_against_tree": true,
+          "bytes": 20206
+        },
+        {
+          "path": "packages/agent/src/types.ts",
+          "git_blob_sha": "dbfba74a084f71951e48285869730b70a405ba3a",
+          "verified_against_tree": true,
+          "bytes": 21234
+        },
+        {
+          "path": "packages/ai/README.md",
+          "git_blob_sha": "61038c7cffcf820c5126614c6b3df1630e47a616",
+          "verified_against_tree": true,
+          "bytes": 107500
+        },
+        {
+          "path": "packages/ai/package.json",
+          "git_blob_sha": "ac6f865c6f5ee8be1d9d4a7e9070ced977612ae1",
+          "verified_against_tree": true,
+          "bytes": 2720
+        },
+        {
+          "path": "packages/ai/src/types.ts",
+          "git_blob_sha": "d1fcee314ea6cc4faacd69c55bee0194e1b7d3ee",
+          "verified_against_tree": true,
+          "bytes": 32938
+        },
+        {
+          "path": "packages/ai/src/utils/abort.ts",
+          "git_blob_sha": "5d76d19f412f82b26f9b856e332aa5637513f690",
+          "verified_against_tree": true,
+          "bytes": 1374
+        },
+        {
+          "path": "packages/ai/src/utils/validation.ts",
+          "git_blob_sha": "c9e818834a9f555d182f14118c908cc77024f411",
+          "verified_against_tree": true,
+          "bytes": 10033
+        },
+        {
+          "path": "packages/ai/test/abort.test.ts",
+          "git_blob_sha": "b457cfa9dd8aa2b7fe739f040c36bb6d01ccaf72",
+          "verified_against_tree": true,
+          "bytes": 11661
+        },
+        {
+          "path": "packages/ai/test/tool-call-without-result.test.ts",
+          "git_blob_sha": "0223559670fe13e02d36aeaf59e3bf2150cc6cac",
+          "verified_against_tree": true,
+          "bytes": 14162
+        }
+      ]
+    },
+    {
+      "requested_repo": "getzep/graphiti",
+      "repo": "getzep/graphiti",
+      "branch": "main",
+      "sha": "345e73161a61b0a4400f80c64e5bba6a584acb7b",
+      "commit_date": "2026-10-22T20:17:33Z",
+      "license": "Apache-2.0",
+      "archived": false,
+      "tree_truncated": false,
+      "files": 504,
+      "source_url": "https://github.com/getzep/graphiti/tree/345e73161a61b0a4400f80c64e5bba6a584acb7b",
+      "cached_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha": "5feb0d9d299a1107adfa8331306b13cc0eff2d78",
+          "verified_against_tree": true,
+          "bytes": 11325
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "dc1d339d13d77b6cccb9d00af54b5f15665760bd",
+          "verified_against_tree": true,
+          "bytes": 35219
+        },
+        {
+          "path": "graphiti_core/edges.py",
+          "git_blob_sha": "6800438d9da1ea0f9d566a93bb4489c206726e2c",
+          "verified_against_tree": true,
+          "bytes": 33822
+        },
+        {
+          "path": "graphiti_core/search/search.py",
+          "git_blob_sha": "9a74c84172dd15a159d4d5e2e35c10fb14d56f4a",
+          "verified_against_tree": true,
+          "bytes": 33733
+        },
+        {
+          "path": "graphiti_core/utils/maintenance/edge_operations.py",
+          "git_blob_sha": "465259e71a1e31a0b3e7c0b4fa7acc5701a6d21c",
+          "verified_against_tree": true,
+          "bytes": 46743
+        },
+        {
+          "path": "graphiti_core/utils/maintenance/temporal_edge_utils.py",
+          "git_blob_sha": "6a8e161e7510fcd5349828ff773ff686c6f05f78",
+          "verified_against_tree": true,
+          "bytes": 3023
+        },
+        {
+          "path": "pyproject.toml",
+          "git_blob_sha": "6f1cd4718a5ff6570532e9eab57fd3b704740fd3",
+          "verified_against_tree": true,
+          "bytes": 2811
+        },
+        {
+          "path": "tests/utils/maintenance/test_temporal_edge_utils.py",
+          "git_blob_sha": "4e3df66584b85aeb03dbe92427317e923e58a0a8",
+          "verified_against_tree": true,
+          "bytes": 2555
+        }
+      ]
+    },
+    {
+      "requested_repo": "kwaroran/Risuai",
+      "repo": "kwaroran/Risuai",
+      "branch": "main",
+      "sha": "f50b5942ec6aa59aa3c56049ac687ca09667fec7",
+      "commit_date": "2026-10-22T15:20:53Z",
+      "license": "GPL-3.0",
+      "archived": false,
+      "tree_truncated": false,
+      "files": 718,
+      "source_url": "https://github.com/kwaroran/Risuai/tree/f50b5942ec6aa59aa3c56049ac687ca09667fec7",
+      "cached_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha": "19d89695339d193efad53476925969721820a563",
+          "verified_against_tree": true,
+          "bytes": 35108
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "e3eaefce8f60e2d54ab1c755d113ae725c027ba3",
+          "verified_against_tree": true,
+          "bytes": 3517
+        },
+        {
+          "path": "package.json",
+          "git_blob_sha": "eeb47ce1606584e68265ef4e823873b6ee5951c0",
+          "verified_against_tree": true,
+          "bytes": 4067
+        },
+        {
+          "path": "src/ts/characterCards.ts",
+          "git_blob_sha": "99fad382849378dcf130706ab36438726d4c4685",
+          "verified_against_tree": true,
+          "bytes": 75625
+        },
+        {
+          "path": "src/ts/process/memory/contextualEmbeddingCache.test.ts",
+          "git_blob_sha": "97b681b87aafeaf7b25044939cc8184cd814cc52",
+          "verified_against_tree": true,
+          "bytes": 2423
+        },
+        {
+          "path": "src/ts/process/memory/hypav3.ts",
+          "git_blob_sha": "6a82be6c1f609e72bef70e364cda71743e6bcbaa",
+          "verified_against_tree": true,
+          "bytes": 65873
+        },
+        {
+          "path": "src/ts/process/memory/supaMemory.ts",
+          "git_blob_sha": "be2d5a5d8559ad2b0e23067e5afb9efda09c371a",
+          "verified_against_tree": true,
+          "bytes": 16093
+        },
+        {
+          "path": "src/ts/process/prompt.ts",
+          "git_blob_sha": "9641f92150b2acfce21dc2a7f57fcd482ac3aac6",
+          "verified_against_tree": true,
+          "bytes": 14555
+        }
+      ]
+    },
+    {
+      "requested_repo": "letta-ai/letta-code",
+      "repo": "letta-ai/letta-code",
+      "branch": "main",
+      "sha": "6c8b08fedfb6f3fb437163ede8320a387151693f",
+      "commit_date": "2026-10-23T06:05:08Z",
+      "license": "Apache-2.0",
+      "archived": false,
+      "tree_truncated": false,
+      "files": 2824,
+      "source_url": "https://github.com/letta-ai/letta-code/tree/6c8b08fedfb6f3fb437163ede8320a387151693f",
+      "cached_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha": "e72f5de5dd5610ee3fee7feb791ebff246cc931e",
+          "verified_against_tree": true,
+          "bytes": 11092
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "6b09e6cf359981d7c2a6c225a6fa1b8617a8435b",
+          "verified_against_tree": true,
+          "bytes": 9952
+        },
+        {
+          "path": "package.json",
+          "git_blob_sha": "ffd696d3bcbe6106dffffc36d0d0cffadd48e939",
+          "verified_against_tree": true,
+          "bytes": 9599
+        },
+        {
+          "path": "src/agent/memory-constraints-audit.test.ts",
+          "git_blob_sha": "30b706a06d9eec065584523c9d9f657f9bb4f09e",
+          "verified_against_tree": true,
+          "bytes": 6058
+        },
+        {
+          "path": "src/agent/memory-constraints.ts",
+          "git_blob_sha": "4de08d3913333de338e3480f51f80299c97b4891",
+          "verified_against_tree": true,
+          "bytes": 8402
+        },
+        {
+          "path": "src/agent/memory-filesystem.test.ts",
+          "git_blob_sha": "235f7fbd375e3ebce11f863c871fcfc9cf72c18f",
+          "verified_against_tree": true,
+          "bytes": 29864
+        },
+        {
+          "path": "src/agent/memory-filesystem.ts",
+          "git_blob_sha": "0ab979d370a3992178708e664fcb466825e356e0",
+          "verified_against_tree": true,
+          "bytes": 22353
+        },
+        {
+          "path": "src/agent/memory-runtime.ts",
+          "git_blob_sha": "3d9f7cf7d47c0a80d9f1e9938f0dfa9031a0e10d",
+          "verified_against_tree": true,
+          "bytes": 945
+        },
+        {
+          "path": "src/agent/personality-default-files.ts",
+          "git_blob_sha": "c6cbc2a83e77988099ad39ea809ce96ab21a7bdb",
+          "verified_against_tree": true,
+          "bytes": 6865
+        },
+        {
+          "path": "src/agent/personality.test.ts",
+          "git_blob_sha": "b346a099c51dd9296750759ccfe1c1ab37cc3b24",
+          "verified_against_tree": true,
+          "bytes": 11975
+        },
+        {
+          "path": "src/agent/personality.ts",
+          "git_blob_sha": "457677c16982db7fefbe8b42066bcf9c5a74ce4b",
+          "verified_against_tree": true,
+          "bytes": 12179
+        },
+        {
+          "path": "src/agent/prompts/persona.mdx",
+          "git_blob_sha": "0835d88d6c349d0936f6ae4f8e60134f0baac0c7",
+          "verified_against_tree": true,
+          "bytes": 203
+        },
+        {
+          "path": "src/backend/dev/headless-turn-executor.ts",
+          "git_blob_sha": "b6f2b56c608b00637293ae34d29f8ca69027e355",
+          "verified_against_tree": true,
+          "bytes": 5431
+        },
+        {
+          "path": "src/backend/dev/pi-stream-adapter.ts",
+          "git_blob_sha": "334c67bfc397fc63bd4cd4bd217842e53daac4a5",
+          "verified_against_tree": true,
+          "bytes": 32982
+        },
+        {
+          "path": "src/backend/dev/provider-turn-executor.ts",
+          "git_blob_sha": "b2ddd01310556a1cb80bbc1833ad5d585bfced6c",
+          "verified_against_tree": true,
+          "bytes": 18033
+        },
+        {
+          "path": "src/backend/local/local-backend-memfs-opt-out.test.ts",
+          "git_blob_sha": "5d74057bf4534e3ed0eefd4ab7a5ab922dd6ee5f",
+          "verified_against_tree": true,
+          "bytes": 4379
+        },
+        {
+          "path": "src/backend/local/local-backend.ts",
+          "git_blob_sha": "6b404b35c24873e54be9e0595610dce3bbe081e3",
+          "verified_against_tree": true,
+          "bytes": 31793
+        },
+        {
+          "path": "src/backend/local/local-executor-factory.ts",
+          "git_blob_sha": "7963069c2ffd7c46a638572c13d930409b9114a6",
+          "verified_against_tree": true,
+          "bytes": 2175
+        },
+        {
+          "path": "src/backend/local/local-transcript.ts",
+          "git_blob_sha": "a919396226284928b03f64435631c2ce41c1e4f3",
+          "verified_against_tree": true,
+          "bytes": 31821
+        },
+        {
+          "path": "src/backend/local/system-prompt-compilation.ts",
+          "git_blob_sha": "64c858f279920d6fb3503376e338fa7e4b74dbd4",
+          "verified_against_tree": true,
+          "bytes": 14309
+        },
+        {
+          "path": "src/cli/helpers/reflection-memory-v2.ts",
+          "git_blob_sha": "25a7e0b41bc06b905022068dfed81c900d6570e0",
+          "verified_against_tree": true,
+          "bytes": 2766
+        }
+      ]
+    },
+    {
+      "requested_repo": "mem0ai/mem0",
+      "repo": "mem0ai/mem0",
+      "branch": "main",
+      "sha": "2c81af3bbe27d9bccb09c772d583df9e9be72ee5",
+      "commit_date": "2026-10-21T01:16:17Z",
+      "license": "Apache-2.0",
+      "archived": false,
+      "tree_truncated": false,
+      "files": 2217,
+      "source_url": "https://github.com/mem0ai/mem0/tree/2c81af3bbe27d9bccb09c772d583df9e9be72ee5",
+      "cached_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha": "d20d5102c3cf97ecbee54afd65893de4a11d26fe",
+          "verified_against_tree": true,
+          "bytes": 11349
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "c9ed6dbfbe14a2fe60b8f3761a083786157a6987",
+          "verified_against_tree": true,
+          "bytes": 12306
+        },
+        {
+          "path": "mem0/memory/main.py",
+          "git_blob_sha": "e750edbf19b4ed20b12d11118f2831ce6d700f6c",
+          "verified_against_tree": true,
+          "bytes": 169881
+        },
+        {
+          "path": "mem0/memory/storage.py",
+          "git_blob_sha": "5bd5512436cc6f3cbd5ce03d10808d3e6eef067b",
+          "verified_against_tree": true,
+          "bytes": 12886
+        },
+        {
+          "path": "mem0-ts/package.json",
+          "git_blob_sha": "586bf9030cf7b929aadfe08df56cba6ac74c10c6",
+          "verified_against_tree": true,
+          "bytes": 8404
+        },
+        {
+          "path": "mem0-ts/src/oss/package.json",
+          "git_blob_sha": "9254a76708bacf79b1443818f2e9a423aaa72995",
+          "verified_against_tree": true,
+          "bytes": 1325
+        },
+        {
+          "path": "mem0-ts/src/oss/src/memory/index.ts",
+          "git_blob_sha": "42f3ca22e744b8d82be1a70643b57b74acffd202",
+          "verified_against_tree": true,
+          "bytes": 70149
+        },
+        {
+          "path": "mem0-ts/src/oss/tests/memory.add.test.ts",
+          "git_blob_sha": "94fee5846ca29cbfeed486e9a6c2295ad7d8c8d7",
+          "verified_against_tree": true,
+          "bytes": 10873
+        },
+        {
+          "path": "mem0-ts/src/oss/tests/memory.crud.test.ts",
+          "git_blob_sha": "6e45eaa0105c20c41dee22bc539608188db79b53",
+          "verified_against_tree": true,
+          "bytes": 29192
+        }
+      ]
+    },
+    {
+      "requested_repo": "memodb-io/memobase",
+      "repo": "memodb-io/memobase",
+      "branch": "main",
+      "sha": "358c16bbc6d687937d79bc2f984a11c3be8da901",
+      "commit_date": "2026-01-11T03:43:56Z",
+      "license": "Apache-2.0",
+      "archived": false,
+      "tree_truncated": false,
+      "files": 430,
+      "source_url": "https://github.com/memodb-io/memobase/tree/358c16bbc6d687937d79bc2f984a11c3be8da901",
+      "cached_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha": "a5906aff66440994e680f18e1a1178aba3b791a0",
+          "verified_against_tree": true,
+          "bytes": 11338
+        },
+        {
+          "path": "src/server/api/example_config/profile_for_companion/config.yaml",
+          "git_blob_sha": "fb6fd183ad73278f361e0dc9adb9335b8f41ca5f",
+          "verified_against_tree": true,
+          "bytes": 1800
+        },
+        {
+          "path": "src/server/api/memobase_server/controllers/buffer.py",
+          "git_blob_sha": "31bbd76015dfc445794925e8bdc369ae98f59220",
+          "verified_against_tree": true,
+          "bytes": 9016
+        },
+        {
+          "path": "src/server/api/memobase_server/controllers/buffer_background.py",
+          "git_blob_sha": "ba25aa8cf1fa131399a8fda5f0114c3429161b25",
+          "verified_against_tree": true,
+          "bytes": 9855
+        },
+        {
+          "path": "src/server/api/memobase_server/controllers/modal/chat/event_summary.py",
+          "git_blob_sha": "b9e7b8f9fc5f266286856d3a6e74322ee55c1223",
+          "verified_against_tree": true,
+          "bytes": 1393
+        },
+        {
+          "path": "src/server/api/memobase_server/controllers/modal/chat/extract.py",
+          "git_blob_sha": "ea12467a4cde54c7af7fed943d222d06b0bc4048",
+          "verified_against_tree": true,
+          "bytes": 3843
+        },
+        {
+          "path": "src/server/api/memobase_server/controllers/profile.py",
+          "git_blob_sha": "07bb02633304fe8be2ef5d0fdb5909c0c3e1255e",
+          "verified_against_tree": true,
+          "bytes": 11593
+        },
+        {
+          "path": "src/server/api/memobase_server/prompts/merge_profile.py",
+          "git_blob_sha": "af87c05a8519b183ce164784744389140f710dfa",
+          "verified_against_tree": true,
+          "bytes": 4906
+        },
+        {
+          "path": "src/server/api/pyproject.toml",
+          "git_blob_sha": "941c9f2b5273f279e8b7d102a819b7c51cf86124",
+          "verified_against_tree": true,
+          "bytes": 787
+        },
+        {
+          "path": "src/server/api/tests/test_chat_modal.py",
+          "git_blob_sha": "43bdf68df084d6531a3c5c4b49aa4a20b77a61df",
+          "verified_against_tree": true,
+          "bytes": 11146
+        }
+      ]
+    },
+    {
+      "requested_repo": "moeru-ai/airi",
+      "repo": "moeru-ai/airi",
+      "branch": "main",
+      "sha": "13240c2ff33bcef5118623a829f7c505828e5c87",
+      "commit_date": "2026-10-23T07:58:48Z",
+      "license": "MIT",
+      "archived": false,
+      "tree_truncated": false,
+      "files": 7354,
+      "source_url": "https://github.com/moeru-ai/airi/tree/13240c2ff33bcef5118623a829f7c505828e5c87",
+      "cached_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha": "1bd715572472cd766a5c1444a467f5f011b14aaa",
+          "verified_against_tree": true,
+          "bytes": 1075
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "4cd28bb0d4321c252aea41b1b894f6b684796d23",
+          "verified_against_tree": true,
+          "bytes": 27244
+        },
+        {
+          "path": "apps/stage-tamagotchi/src/main/services/electron/powerMonitor.ts",
+          "git_blob_sha": "fe0756e9bac789ee1fe418c980c6c284314dbdb4",
+          "verified_against_tree": true,
+          "bytes": 1506
+        },
+        {
+          "path": "package.json",
+          "git_blob_sha": "511c8bea814c019518f020c3153be829fb03fff0",
+          "verified_against_tree": true,
+          "bytes": 4739
+        },
+        {
+          "path": "packages/core-agent/README.md",
+          "git_blob_sha": "102d72e3ab1654f48f349551f35d256f2161560d",
+          "verified_against_tree": true,
+          "bytes": 20502
+        },
+        {
+          "path": "packages/core-agent/package.json",
+          "git_blob_sha": "b416036fb1884b8233ec9077531bfc640acc73fe",
+          "verified_against_tree": true,
+          "bytes": 2545
+        },
+        {
+          "path": "packages/core-agent/src/agents/spark-notify/agent.test.ts",
+          "git_blob_sha": "dca20c65b586199bc117175720c7d89c7a19aeec",
+          "verified_against_tree": true,
+          "bytes": 3907
+        },
+        {
+          "path": "packages/core-agent/src/agents/spark-notify/agent.ts",
+          "git_blob_sha": "74c73fa5a89c9d613e8be58abc771660a24dbbe8",
+          "verified_against_tree": true,
+          "bytes": 10134
+        },
+        {
+          "path": "packages/core-agent/src/agents/spark-notify/tools.ts",
+          "git_blob_sha": "38c51506615472a7740a4acf52f938464014857a",
+          "verified_against_tree": true,
+          "bytes": 7631
+        },
+        {
+          "path": "packages/core-agent/src/agents/spark-notify/types.ts",
+          "git_blob_sha": "dd15fde314f626a4c6fd7f237d3882b67b8e7537",
+          "verified_against_tree": true,
+          "bytes": 7427
+        },
+        {
+          "path": "packages/core-agent/src/contracts/llm-port.ts",
+          "git_blob_sha": "677c0194b182be01e3ef835ec8472462d3c26dc3",
+          "verified_against_tree": true,
+          "bytes": 424
+        },
+        {
+          "path": "packages/core-agent/src/contracts/session-port.ts",
+          "git_blob_sha": "8ae395d7c4c12d7643f00a3c60f75e36e71ace26",
+          "verified_against_tree": true,
+          "bytes": 332
+        },
+        {
+          "path": "packages/core-agent/src/runtime/chat-orchestrator-runtime.test.ts",
+          "git_blob_sha": "5c65336694377a5fab3daa048d22acb6b77f67f7",
+          "verified_against_tree": true,
+          "bytes": 79547
+        },
+        {
+          "path": "packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+          "git_blob_sha": "5f47f669169c264fd3bde3b598ed6805ec7b13b8",
+          "verified_against_tree": true,
+          "bytes": 60312
+        },
+        {
+          "path": "packages/pipelines-audio/src/managers/playback-manager.ts",
+          "git_blob_sha": "4810b8601973ade3bb25cb7dfd0d1a58549d88a2",
+          "verified_against_tree": true,
+          "bytes": 9770
+        },
+        {
+          "path": "packages/stage-ui/package.json",
+          "git_blob_sha": "7147ef3dc6eb4dd4111cb4a905c4bbdc1cf44304",
+          "verified_against_tree": true,
+          "bytes": 10009
+        },
+        {
+          "path": "packages/stage-ui/src/stores/character/index.ts",
+          "git_blob_sha": "d4b962aac90186ef72dde917a10978e6c03dd839",
+          "verified_against_tree": true,
+          "bytes": 4478
+        },
+        {
+          "path": "packages/stage-ui/src/stores/character/notebook.ts",
+          "git_blob_sha": "d9885475e6301804c7b0ea29f930b881b3f69499",
+          "verified_against_tree": true,
+          "bytes": 3947
+        },
+        {
+          "path": "packages/stage-ui/src/stores/character/orchestrator/index.test.ts",
+          "git_blob_sha": "9c90b423f86fcde4511e7804375028ff4fe2f2fa",
+          "verified_against_tree": true,
+          "bytes": 13322
+        },
+        {
+          "path": "packages/stage-ui/src/stores/character/orchestrator/index.ts",
+          "git_blob_sha": "16c863321072c14b4ad7e440fd2ecef1d27a81c4",
+          "verified_against_tree": true,
+          "bytes": 24
+        },
+        {
+          "path": "packages/stage-ui/src/stores/character/orchestrator/store.ts",
+          "git_blob_sha": "3950b9a92a77b1403222a2bba4a59bd417508c2d",
+          "verified_against_tree": true,
+          "bytes": 10227
+        },
+        {
+          "path": "packages/stage-ui/src/stores/characters.ts",
+          "git_blob_sha": "47378b9b50f34128c83a915f396b32d447e39fad",
+          "verified_against_tree": true,
+          "bytes": 8272
+        },
+        {
+          "path": "packages/stage-ui/src/stores/chat/context-prompt.ts",
+          "git_blob_sha": "b4eb0c1e3910f188b7aac143832c093e6244f9be",
+          "verified_against_tree": true,
+          "bytes": 152
+        },
+        {
+          "path": "packages/stage-ui/src/stores/chat/context-store.test.ts",
+          "git_blob_sha": "7fec016b2b6699f99f7d567e6d38d840acee0dfe",
+          "verified_against_tree": true,
+          "bytes": 7856
+        },
+        {
+          "path": "packages/stage-ui/src/stores/chat.contract.test.ts",
+          "git_blob_sha": "7b4f4634d9d9b0003ea0610220c2482bf41e9d75",
+          "verified_against_tree": true,
+          "bytes": 91628
+        },
+        {
+          "path": "packages/stage-ui/src/stores/chat.ts",
+          "git_blob_sha": "70e45c0b5d4dd3704bba617dc65bf047bb753d3f",
+          "verified_against_tree": true,
+          "bytes": 72461
+        },
+        {
+          "path": "packages/stage-ui/src/stores/memory.test.ts",
+          "git_blob_sha": "9285bfca927c8d7c0177ed0543b5d008b9d3befc",
+          "verified_against_tree": true,
+          "bytes": 2861
+        },
+        {
+          "path": "packages/stage-ui/src/stores/memory.ts",
+          "git_blob_sha": "4dc693222699851ab06e74f8f9d7d0b7ab0d6537",
+          "verified_against_tree": true,
+          "bytes": 5021
+        },
+        {
+          "path": "packages/stage-ui/src/stores/modules/airi-card.ts",
+          "git_blob_sha": "5ff2099ea054527f337ae53023f1495ce05da9f9",
+          "verified_against_tree": true,
+          "bytes": 60816
+        },
+        {
+          "path": "packages/stage-ui/src/stores/modules/consciousness.ts",
+          "git_blob_sha": "863fb3395c186829bf719d2c8abd3f2361ce4c1b",
+          "verified_against_tree": true,
+          "bytes": 7000
+        },
+        {
+          "path": "packages/stage-ui/src/tools/memory.test.ts",
+          "git_blob_sha": "531d77dfde33bb1a5aa52da0128cd5dfb9226122",
+          "verified_against_tree": true,
+          "bytes": 3110
+        },
+        {
+          "path": "packages/stage-ui/src/tools/memory.ts",
+          "git_blob_sha": "21ef9af6fdad6d04bf90e792b03e205d74b7d97c",
+          "verified_against_tree": true,
+          "bytes": 4885
+        }
+      ]
+    },
+    {
+      "requested_repo": "openclaw/openclaw",
+      "repo": "openclaw/openclaw",
+      "branch": "main",
+      "sha": "ceb574b148932fbf5fcefdc90d0da8da20f64259",
+      "commit_date": "2026-10-23T08:36:43Z",
+      "license": "MIT",
+      "archived": false,
+      "tree_truncated": false,
+      "files": 60819,
+      "source_url": "https://github.com/openclaw/openclaw/tree/ceb574b148932fbf5fcefdc90d0da8da20f64259",
+      "cached_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha": "ed064819ab537575d0cad902f7e5af4a3488b1d0",
+          "verified_against_tree": true,
+          "bytes": 1076
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "98cefb7193ef59c963bdacd24a642d195adf8103",
+          "verified_against_tree": true,
+          "bytes": 113204
+        },
+        {
+          "path": "package.json",
+          "git_blob_sha": "e67cfb0112e14186c558ced99f11d4a980f189a7",
+          "verified_against_tree": true,
+          "bytes": 151564
+        },
+        {
+          "path": "src/agents/system-prompt-context-files.ts",
+          "git_blob_sha": "47405fd7a4a3fcde5c1614cf8158ce9d1166774a",
+          "verified_against_tree": true,
+          "bytes": 3741
+        },
+        {
+          "path": "src/agents/system-prompt.ts",
+          "git_blob_sha": "efa05e03be520c01d18c1d4ff02f9f49e3b0dd40",
+          "verified_against_tree": true,
+          "bytes": 45221
+        },
+        {
+          "path": "src/cron/service/delivery-attempt-fence.ts",
+          "git_blob_sha": "0c8eb6892ba3e099171419a05c1d55f5b2ee2685",
+          "verified_against_tree": true,
+          "bytes": 2802
+        },
+        {
+          "path": "src/cron/service/notification-intents.ts",
+          "git_blob_sha": "d0df7c832ec13585e048a35cfdef6e9d2910870d",
+          "verified_against_tree": true,
+          "bytes": 2722
+        },
+        {
+          "path": "src/cron/service/occurrence-admission.ts",
+          "git_blob_sha": "e5030df996876e54a246c7aba29cbef0a8e78896",
+          "verified_against_tree": true,
+          "bytes": 1561
+        },
+        {
+          "path": "src/cron/service.persists-delivered-status.test.ts",
+          "git_blob_sha": "89398e5bb9782723a4d7a8f6586ebd45dca1312c",
+          "verified_against_tree": true,
+          "bytes": 19486
+        },
+        {
+          "path": "src/cron/service.restart-catchup.test.ts",
+          "git_blob_sha": "da2bfe39f22ed01cdd550fe56c219b463c052297",
+          "verified_against_tree": true,
+          "bytes": 19812
+        },
+        {
+          "path": "src/cron/service.restart-delivery.test.ts",
+          "git_blob_sha": "c50d75a4cceb9c112864ef14dfb3e24f96873407",
+          "verified_against_tree": true,
+          "bytes": 11867
+        }
+      ]
+    },
+    {
+      "requested_repo": "pipecat-ai/pipecat",
+      "repo": "pipecat-ai/pipecat",
+      "branch": "main",
+      "sha": "3dfcd17a112fba71c66f5b8ed5929eb2a07e74e9",
+      "commit_date": "2026-10-23T01:20:19Z",
+      "license": "BSD-2-Clause",
+      "archived": false,
+      "tree_truncated": false,
+      "files": 2336,
+      "source_url": "https://github.com/pipecat-ai/pipecat/tree/3dfcd17a112fba71c66f5b8ed5929eb2a07e74e9",
+      "cached_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha": "88cf66570d9c1e77bcb44f9eeacfa051d840267c",
+          "verified_against_tree": true,
+          "bytes": 1301
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "56a8bd8b047f37f47f76ecc1ef6700d5908b641c",
+          "verified_against_tree": true,
+          "bytes": 43041
+        },
+        {
+          "path": "evals/release/scenarios/scripted/interruption.yaml",
+          "git_blob_sha": "2edc57331bea90b18590c0d24e9c8662bd3db260",
+          "verified_against_tree": true,
+          "bytes": 1365
+        },
+        {
+          "path": "pyproject.toml",
+          "git_blob_sha": "5e1cb73e2bbacdf8aa32912dd393eb6957eaa862",
+          "verified_against_tree": true,
+          "bytes": 12271
+        },
+        {
+          "path": "src/pipecat/turns/user_start/wake_phrase_user_turn_start_strategy.py",
+          "git_blob_sha": "a9e305c898f8426926425cde35ec7de9fe2a4aa3",
+          "verified_against_tree": true,
+          "bytes": 10298
+        },
+        {
+          "path": "src/pipecat/turns/user_turn_controller.py",
+          "git_blob_sha": "1055023eeadeb29309eec86eaa409791860daf98",
+          "verified_against_tree": true,
+          "bytes": 17835
+        },
+        {
+          "path": "tests/test_frames_interruptible.py",
+          "git_blob_sha": "610722091fbdebc5cdb1f1e738741ec01e39f486",
+          "verified_against_tree": true,
+          "bytes": 1670
+        },
+        {
+          "path": "tests/test_user_turn_controller.py",
+          "git_blob_sha": "5db550d925335ab64aa1ed566b19f31192825d21",
+          "verified_against_tree": true,
+          "bytes": 37061
+        }
+      ]
+    },
+    {
+      "requested_repo": "vectorize-io/hindsight",
+      "repo": "vectorize-io/hindsight",
+      "branch": "main",
+      "sha": "80591c20b43473baf1647fd9ed8c5992d9803ea1",
+      "commit_date": "2026-10-23T08:33:05Z",
+      "license": "MIT",
+      "archived": false,
+      "tree_truncated": false,
+      "files": 5995,
+      "source_url": "https://github.com/vectorize-io/hindsight/tree/80591c20b43473baf1647fd9ed8c5992d9803ea1",
+      "cached_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha": "8dce7b4d4c2632990bdf8b4101694ea19ba6ad46",
+          "verified_against_tree": true,
+          "bytes": 1075
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "250a2e8eca4fccae242a9b7c90ba5d17fe8f8919",
+          "verified_against_tree": true,
+          "bytes": 24997
+        },
+        {
+          "path": "hindsight-api-slim/hindsight_api/engine/consolidation/consolidator.py",
+          "git_blob_sha": "99a5d0337a654e57953f7c113d2f94395bf923ee",
+          "verified_against_tree": true,
+          "bytes": 195036
+        },
+        {
+          "path": "hindsight-api-slim/hindsight_api/engine/consolidation/triage.py",
+          "git_blob_sha": "f00961ffb0f4f5b86b441ccc31108b2b296ab64c",
+          "verified_against_tree": true,
+          "bytes": 14232
+        },
+        {
+          "path": "hindsight-api-slim/hindsight_api/engine/memories/pg/retain.py",
+          "git_blob_sha": "be8deb3311ba428e2df62352d7c48f154c7d41f4",
+          "verified_against_tree": true,
+          "bytes": 21517
+        },
+        {
+          "path": "hindsight-api-slim/hindsight_api/engine/retain/fact_extraction.py",
+          "git_blob_sha": "7c43169e94ffcef1ce06d84d01c449a1808c6c40",
+          "verified_against_tree": true,
+          "bytes": 186070
+        },
+        {
+          "path": "hindsight-api-slim/hindsight_api/engine/retain/orchestrator.py",
+          "git_blob_sha": "7ad443415d913b38e9adcb7bad3ce553de91a07f",
+          "verified_against_tree": true,
+          "bytes": 235138
+        },
+        {
+          "path": "hindsight-api-slim/pyproject.toml",
+          "git_blob_sha": "5b3621f1b602f0f3aa753575926a3bbaa9333526",
+          "verified_against_tree": true,
+          "bytes": 17699
+        },
+        {
+          "path": "hindsight-api-slim/tests/test_consolidation_batch_atomicity.py",
+          "git_blob_sha": "1384b8e1a61fc067e71a9333c5ee4fc791ae1f95",
+          "verified_against_tree": true,
+          "bytes": 13242
+        },
+        {
+          "path": "hindsight-api-slim/tests/test_delete_document_concurrency.py",
+          "git_blob_sha": "fb82a337da677be52d84490d062a6446db39edc0",
+          "verified_against_tree": true,
+          "bytes": 21149
+        }
+      ]
+    },
+    {
+      "repo": "vercel/ai",
+      "branch": "main",
+      "sha": "e623e8c88b55066dde769614a16ae51d424974aa",
+      "commit_date": "2026-10-22T21:24:03Z",
+      "license": "NOASSERTION",
+      "tree_truncated": false,
+      "source_url": "https://github.com/vercel/ai/tree/e623e8c88b55066dde769614a16ae51d424974aa",
+      "cached_files": [
+        {
+          "path": "packages/ai/package.json",
+          "git_blob_sha": "713371d301543dc555cd878d07135d75519d2e17",
+          "verified_against_tree": true,
+          "bytes": 3454
+        },
+        {
+          "path": "packages/ai/src/generate-text/output.ts",
+          "git_blob_sha": "fd3fd6808eefa75a2a41b918ac7d49798621c50d",
+          "verified_against_tree": true,
+          "bytes": 21005
+        },
+        {
+          "path": "packages/ai/src/generate-text/stream-text-timeout.test.ts",
+          "git_blob_sha": "e58f305bce2f3653ec3f690104eda8d1f72155cb",
+          "verified_against_tree": true,
+          "bytes": 26775
+        },
+        {
+          "path": "packages/ai/src/generate-text/stream-text.ts",
+          "git_blob_sha": "b7b0e00c1103a22bd1509adeb5de289312c1f5e5",
+          "verified_against_tree": true,
+          "bytes": 128290
+        }
+      ]
+    },
+    {
+      "repo": "screenpipe/screenpipe",
+      "branch": "main",
+      "sha": "13216302a9ac9d114ad4a798878f44ef1447e081",
+      "commit_date": "2026-10-23T00:46:15Z",
+      "license": "NOASSERTION",
+      "classification": "source-available reference; not assumed OSI open source",
+      "tree_truncated": false,
+      "source_url": "https://github.com/screenpipe/screenpipe/tree/13216302a9ac9d114ad4a798878f44ef1447e081",
+      "cached_files": [
+        {
+          "path": "LICENSE.md",
+          "git_blob_sha": "97e41ae4fbb23a737a3ff360dc50207212c374a3",
+          "verified_against_tree": true,
+          "bytes": 3973
+        },
+        {
+          "path": "crates/screenpipe-capture/src/paired_capture.rs",
+          "git_blob_sha": "b1169d90509ee10bc0108ed435d777c4853dd842",
+          "verified_against_tree": true,
+          "bytes": 98606
+        },
+        {
+          "path": "crates/screenpipe-engine/src/capture_exclusions.rs",
+          "git_blob_sha": "436713dfd223ba8cbc0d89a491abce97aa4c5fa7",
+          "verified_against_tree": true,
+          "bytes": 17162
+        },
+        {
+          "path": "crates/screenpipe-engine/src/event_driven_capture.rs",
+          "git_blob_sha": "92166b2ecb85f11000b364da1a66fd3689717742",
+          "verified_against_tree": true,
+          "bytes": 253728
+        },
+        {
+          "path": "crates/screenpipe-semantic/tests/capture_adapter.rs",
+          "git_blob_sha": "22a90fb84c40f15b0cd44a1d86358c58be7c7c5d",
+          "verified_against_tree": true,
+          "bytes": 10515
+        }
+      ]
+    }
+  ],
+  "kimi_reference": {
+    "repo": "MoonshotAI/kimi-code",
+    "sha": "9e1248416faa22d9f0b777b91ad092bbf1e19182",
+    "snapshot_date": "2026-07-19",
+    "local_path": "/Users/kuanyu/Projects/story-creation-agent/kimi-cli",
+    "identity_manifest": "/Users/kuanyu/Projects/story-creation-agent/README.md"
+  },
+  "cache_root": "/Users/kuanyu/.codex/research/aic-harness/2026-10-23",
+  "verification": {
+    "cached_file_count": 181,
+    "blob_mismatches": []
+  }
+}

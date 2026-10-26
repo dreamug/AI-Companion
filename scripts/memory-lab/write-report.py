@@ -1,0 +1,167 @@
+"""Assemble the final decision from saved experiment evidence."""
+import json
+from pathlib import Path
+from datetime import datetime,timezone
+ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'data/reports/memory-lab'
+retrieval=json.loads((OUT/'retrieval-results.json').read_text())
+audit=json.loads((OUT/'audited-reader-results.json').read_text())
+challenge=json.loads((OUT/'challenge/retrieval-results.json').read_text())
+small=json.loads((OUT/'small/reader-summary.json').read_text())
+storage=json.loads((OUT/'storage-e5-results.json').read_text())
+unit=json.loads((OUT/'unit-regression.json').read_text())
+selection=dict(at=datetime.now(timezone.utc).isoformat(),status='research_final_not_deployed',routing='all valid confirmed assertions if full projection plus pinned/recent summaries/boundaries fits existing 2000-token memory budget; otherwise hybrid',model='intfloat/multilingual-e5-small',modelRevision='614241f622f53c4eeff9890bdc4f31cfecc418b3',dimensions=384,pooling='attention-mask mean, L2 normalization',queryPrefix='query: ',documentPrefix='passage: ',maxTokens=512,index='SQLite float32 BLOB, disposable per-bot cache',scan='exact cosine in application worker',fusion=dict(rrfK=60,semanticWeight=1,keywordWeight=.35,literalFullMatchFirst=True,denseCandidates=12,keywordCandidates=5,outputTopK=5),hardSimilarityCutoff=None,remoteEmbeddings=False,standaloneVectorDatabase=False,sqliteVectorExtensionRequired=False,defaultRemoteQueryRewriting=False)
+selection['longMemory']=dict(strategy='preserve complete sentence/paragraph; split oversize spans at 256 tokens with 32 overlap; aggregate by current canonical memory and return sourced bounded excerpts',chunkTokens=256,overlapTokens=32,silentTruncationAllowed=False)
+(OUT/'final-decision.json').write_text(json.dumps(selection,ensure_ascii=False,indent=2))
+rows=[]
+for label,name in [('现有关键词','keyword'),('问题改写＋关键词','rewrite'),('E5 384 维混合','hybrid-e5-384'),('Qwen 512 维混合','hybrid-qwen-512')]:
+ m=retrieval['test'][name];r=audit['initial']['summary'][name]
+ rows.append(f"| {label} | {m['exact']['hits']}/16 | {m['natural']['hits']+m['indirect']['hits']}/32 | {r['correct']}/{r['n']} |")
+ch=[]
+for label,name in [('现有关键词','keyword'),('E5 混合','hybrid-e5-384'),('Qwen 512 混合','hybrid-qwen-512')]:
+ m=challenge['metrics'][name];r=audit['challenge']['summary'][name]
+ ch.append(f"| {label} | {m['exact']['hits']}/16 | {m['natural']['hits']}/16 | {r['correct']}/{r['n']} | {r['unknownAbstained']}/{r['unknownN']} |")
+perf=[]
+for label,key in [('E5 small','e5'),('Qwen 0.6B','qwen')]:
+ s=retrieval['modelStats'][key]
+ perf.append(f"| {label} | {s['singleQueryMs']['p50']:.1f} / {s['singleQueryMs']['p95']:.1f} ms | {s['loadMs']/1000:.2f} s | {s['peakProcessRssMiB']:.0f} MiB |")
+scan=[]
+for r in storage['results']:
+ scan.append(f"| {r['rowsInSelectedBot']} | {r['methods']['nodeResidentExact']['p95']:.2f} ms | {r['methods']['sqliteVec0Exact']['p95']:.2f} ms |")
+content='''# 记忆方案最终决策与实测
+
+2026-10-23。实验已完成，方案定稿；正式聊天尚未接入本方案。本轮没有读取私人聊天、修改正式关系数据库或重启服务。结果全部来自隔离的虚构记忆，原型测试使用临时 Store/Harness。
+
+## 最终决策
+
+**按上下文预算分流：少量记忆直接读取全部有效事实；放不下时，使用本地 multilingual-e5-small 384 维＋现有关键词混合检索。继续使用 SQLite，首期不增加向量扩展或独立向量数据库。**
+
+直接读取的判断依据是完整投影的 Token 预算，不能硬编码成“20 条”。置顶、近期摘要与明确边界也占预算。这样少量记忆不必启动向量模型，增长之后仍有清楚的扩展路径。
+
+| 决策项 | 定案 |
+|---|---|
+| 事实权威 | 现有已确认记忆及其来源、修订、有效期；向量只是可重建索引 |
+| 少量记忆 | 全量有效已确认事实与原有置顶／摘要／边界合并后，若完整投影不超过现有 2000 Token 记忆预算，就全部提供给回答模型 |
+| 超预算时 | 本地 E5 small 384 维＋关键词，精确匹配优先，融合后最多 5 条，再服从原有上下文预算 |
+| 模型版本 | intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3 |
+| 编码 | query: / passage: 前缀、掩码均值池化、L2 归一化、最大 512 Token；长记忆保留完整句段，超长片段用 256 Token／32 重叠切分，不静默截掉末尾 |
+| 存储 | 每个 bot 的 SQLite 增加向量 BLOB 表；进程缓存可重建，按角色隔离 |
+| 搜索 | 精确余弦扫描；首期无需 ANN、sqlite-vec、Qdrant 或 Milvus |
+| 问题改写 | 不放在默认热路径；实测效果弱于向量且增加远程调用 |
+| 是否知道答案 | 由问题与有效来源决定，不能把向量相似度当成答案置信度 |
+| 失败行为 | 编码失败、超时、未预热或缺索引时继续关键词检索，不能阻塞聊天 |
+
+## 实验设计
+
+首轮 71 条虚构记录、128 个问题，包含 32 个目标主题、相似干扰项、另一角色的近似事实以及删除／待确认／过期／未生效／无效来源记录。按主题固定分成 64 个调参问题与 64 个验证问题。所有数据先生成、计算哈希，再运行模型。
+
+比较真实 Store.search、仅看到问题的 DeepSeek 改写器、纯向量、混合检索，以及 Qwen 的 256／512／1024 维。E5 仅使用原生 384 维。原始自动选择确实选中了 Qwen 256 维＋0.3 阈值；独立验证暴露其漏召回与精确匹配退化，因此没有采用。保留原始选择、阈值扫描和失败输出，没有把失败结果抹掉。
+
+随后综合资源成本选择 E5，并在新主题生成和编码前固定候选。确认集增加 16 个此前没有出现的目标主题及 16 个干扰项，形成 103 条记录、48 个新问题；确认阶段未调整融合权重或用该组问题重新选模型。
+
+另增加 10 条短记忆的全量读取对照，共 16 个问答。上述三组不同数据下总计 192 个问题配置；受控阅读器对不同策略共生成 496 个答案。再用 12 条约 3000 字的长记忆检查事实位于头部或尾部时的截断问题。
+
+## 检索与回答结果
+
+首轮独立验证，命中指目标出现在前 5 条；“问答正确”包括有依据回答及正确弃答，使用相同 DeepSeek 阅读提示词：
+
+| 方法 | 准确关键词命中 | 换说法命中 | 受控问答正确 |
+|---|---:|---:|---:|
+'''+ '\n'.join(rows)+'''
+
+新主题确认：
+
+| 方法 | 准确关键词命中 | 换说法命中 | 受控问答正确 | 真正无答案时弃答 |
+|---|---:|---:|---:|---:|
+'''+ '\n'.join(ch)+'''
+
+这里不能推导“真实陪伴准确率 100%”。确认集只有 16 个主题，且阅读器只测了 DeepSeek，没有完整聊天历史、人格提示和多轮工具链，也未验证 Grok 等其他回答模型。原始字符串自动评分也有误差：审计修正了“尚未出发”可推出该次旅行住宿为零的标签，以及“先听你说”“暖一点的水”“当天往返”的合理复述。所有方法用同一修正规则；原始输出和原始分数保留，修正原因逐条记录。
+
+E5 和 Qwen 均未解决首轮的“我的职业是做什么的”这一抽象问法；原有事实是“从事动画分镜设计”，结果被其他人的职业干扰。少量全量读取能避免这个召回瓶颈；大量记忆阶段如要继续提高这类问题，应另测主体／主题标注或查询扩展，不能宣称换模型已彻底解决。
+
+## 少量记忆的结果
+
+10 条短记忆下，关键词策略受控问答 8/16；直接读取全部事实 16/16，且 8 个真正未知属性问题都正确弃答。该组 10 条记忆按现有 context 投影格式估算约 1130 Token，20 条约 2258，50 条约 5642。边界和摘要会进一步占用空间，因此按实际投影预算判断。
+
+这项结果改变了最初“所有情况都默认向量”的实现顺序：先解决少量事实无需检索却被漏掉的问题，规模增长时再启用已经验证的混合路径。
+
+## 长记忆与截断
+
+12 条约 3000 字、最多 2269 Token 的合成长记忆，分别把关键事实放在开头／末尾。直接截到模型前 512 Token 的 Recall@5 为 11/12 与 5/12；固定 256 Token、32 重叠窗口为 7/12 与 12/12，说明机械切窗也会因完整事实被无关内容稀释而退化。保留完整句段、仅将超长句段切窗后，两种位置均为 11/12，结果更稳定，但仍有一次语义召回失败。
+
+因此长记忆索引按句段保留，不默认把多句事实与无关段落拼满窗口，也不静默截尾；片段标注 canonical memory_id、修订和原文位置，同一事实按最相关片段聚合并去重。进入上下文使用有来源的原文片段，必要时带相邻限定句，并受预算约束。分块策略在压力集上有证据，正式 4000 字上限、相邻否定／时间条件与完整回答链路仍须在实现阶段验收，不能把片段拼成新事实。
+
+## 本机资源与存储
+
+Apple M1 Max、64 GiB；Torch 2.9.1、Transformers 4.57.5，MPS。首轮单问题编码 24 次测量，冷启动与编码单列：
+
+| 模型 | 单问题编码 P50 / P95 | 模型加载 | 进程峰值 RSS |
+|---|---:|---:|---:|
+'''+ '\n'.join(perf)+'''
+
+新主题复测 E5 P50 11.5 ms、P95 63.4 ms；Qwen P50 43.7 ms、P95 92.5 ms。首次编译、序列形状和本机其他负载会影响尾延迟，不应只宣传中位数。RSS 与 MPS allocated 是不同统计，不直接相加；编码时间也不等于整轮回复延迟。改写实验每批 8 个问题的中位等待约 5.90 秒，不能换算成真实单问题网络延迟。
+
+384 维精确扫描，25 次计时，使用相同向量比较 Node 常驻数组与 SQLite vec0：
+
+| 当前 bot 中的向量数 | Node 常驻精确扫描 P95 | sqlite-vec 精确查询 P95 |
+|---|---:|---:|
+'''+ '\n'.join(scan)+'''
+
+四档扫描的 SQLite C 标量全表扫描与 vec0 前 5 结果一致。常驻扫描包含点积与选前 5，不含编码、从 SQLite 加载或每条事实的来源校验；持久表、常驻缓存并非相同成本。压力集是实验向量的重复与微扰，只衡量速度，不衡量语义质量。
+
+在当前个人多 bot 场景下，普通 SQLite BLOB＋可重建缓存已足够。未来若实际检索 P95 超预算、活跃候选超过本轮测过的 25000 条／bot，或出现多用户并发，再测是否加入 sqlite-vec；不能仅凭条数承诺性能。当前没有部署独立数据库的收益证据。
+
+## 可直接实施的工程规格
+
+### 1. 统一候选资格与少量事实路径
+
+抽出统一的 eligibleMemories：限定 owner／relationship／bot，确认 active、confirmed、来源当前有效、validFrom／validTo。用于全量读取、关键词、向量三个入口；置顶与摘要沿用现有规则，去重后按实际投影检查 2000 Token 预算。
+
+预算足够时返回全部有效事实，不调用 Embedding。预算不足时进入同一个异步 MemoryRetrievalPort，供 buildContext 和 search_memory 工具复用，避免两条检索路径行为不一致。现有 Store.search 保留为同步关键词基础能力。
+
+### 2. 本地模型与索引
+
+一个按需启动、可预热的本地 E5 worker；两位角色共用只读模型权重，数据缓存与任务身份隔离。接近上下文预算时可后台预热；模型未就绪时回退关键词，不能把冷启动压进用户等待。查询编码建议先给 250 ms 有界等待，在实现阶段按真实 P95 调整；该截止值是工程起点，尚未做正式服务 SLA 验收。
+
+memory_embeddings 表至少记录 owner、relationship、memory_id、chunk_id／原文位置、memory_revision、source_fingerprint、text_hash、model_key、dimension、normalized_float32_blob。model_key 固定模型 commit、池化、前缀、切分与维度。SQLite 是持久来源，缓存可丢弃重建；不要把向量另写成脱离遗忘机制的内容日志。
+
+新增／确认／更正后后台索引；任务捕获 bot、epoch、记忆修订与内容／来源指纹，写入前再检查。重启扫描有效但缺索引的记录恢复工作，不新增一套复杂队列系统。
+
+### 3. 混合检索与回答
+
+向量取前 12，关键词取前 5，按 ID 去重。实验起点使用 RRF：k=60，语义权重 1、关键词权重 0.35；完整字面命中优先，最多返回 5 条。来源资格在进入结果后、交给模型前再次核验。之后仍遵守原有 2000 Token 记忆预算。
+
+不使用本轮失败的全局硬相似度截断。相似候选可以帮助读问题，但不等于问题所问的属性有记录。回答提示明确要求尊重主体、否定、时间与计划／已发生区别，仅在记载或能严格推导时作答；缺少品牌、年龄、门牌号等属性时说不知道。实验中的结构化 answer／abstain／memoryIds 用于评估，不要求直接显示在产品聊天界面。
+
+### 4. 更正、遗忘、备份与失败
+
+更正使旧事实失效；遗忘同步删除对应索引、清缓存并推进来源代数，拒绝迟到回写。即使脏索引残留，读取端也必须从当前事实库验证，不能复活删除。备份恢复先应用删除清单，再清理／重建索引；这部分正式 SQLite 迁移、缓存更新和恢复链路尚待实现验收。
+
+9 个隔离原型测试已覆盖：来源修订、待确认／有效期、更正、遗忘、跨角色任务、模型版本／维度、取消不合作提供方、Embedding 失败后关键词仍可读，以及计算期间遗忘。全项目类型检查、248 项测试和生产构建通过。测试证明所写原型契约，不代表正式缓存／备份链路已经上线。
+
+### 5. 实施顺序与发布门槛
+
+先实现统一资格校验与预算内全量读取，再接本地 worker／SQLite 索引／混合检索，最后做真实服务多轮验收后开启。不要先把所有历史聊天都转成向量，只索引有效已确认记忆。
+
+发布前重跑本轮数据，并补完整 Harness：模型不可用、取消／归档、编码期间遗忘、恢复备份、两角色并行、持续创建／修订、2000 Token 裁剪与来源引用。要求精确关键词不退化、跨角色和遗忘泄漏为零、失败不阻塞聊天、换说法明显优于原关键词。用户真实案例如要加入评测，另行限定使用范围；本轮没有拿私人记忆作样本。
+
+## 证据、来源与重跑
+
+- [实验数据、运行说明和脚本](../../scripts/memory-lab/README.md)
+- [最终机器可读决策](../../data/reports/memory-lab/final-decision.json)
+- [数据与源码哈希](../../data/reports/memory-lab/manifest.json)
+- [首轮检索与所有候选](../../data/reports/memory-lab/retrieval-results.json)
+- [自动选择与阈值失败证据](../../data/reports/memory-lab/frozen-selection.json)
+- [新主题前固定候选](../../data/reports/memory-lab/final-candidate-before-challenge.json)
+- [新主题检索](../../data/reports/memory-lab/challenge/retrieval-results.json)
+- [受控问答原始输出](../../data/reports/memory-lab/reader-results.json)、[审计后的问答](../../data/reports/memory-lab/audited-reader-results.json)
+- [少量全量读取](../../data/reports/memory-lab/small/reader-summary.json)、[投影预算](../../data/reports/memory-lab/small/full-memory-lists.json)、[长记忆截断与分块](../../data/reports/memory-lab/long-memory-results.json)
+- [存储性能](../../data/reports/memory-lab/storage-e5-results.json)、[全项目回归](../../data/reports/memory-lab/unit-regression.json)
+
+外部一手来源：[E5 作者模型卡](https://huggingface.co/intfloat/multilingual-e5-small)、[Qwen 官方模型卡](https://huggingface.co/Qwen/Qwen3-Embedding-0.6B)、[SQLite FTS5](https://www.sqlite.org/fts5.html#the_trigram_tokenizer)、[sqlite-vec 源码](https://github.com/asg017/sqlite-vec)、[SQLite Vec1 精确／近似扫描手册](https://www.sqlite.org/vec1doc.html)。实测结论取代仅依据模型卡的选型；模型卡用于确认编码协议，不用于替代本机质量测试。
+
+工程边界参考 engineer-agents-with-kimi 的固定 Kimi 快照 9e1248416faa22d9f0b777b91ad092bbf1e19182（2026-07-19）。核对 contextProjectorService.ts 及 projector-tool-exchanges.test.ts 的只读投影与源历史分离契约；决策为 Adapt：向量缓存和模型上下文是事实库的派生物，不成为事实权威。没有引入其 DI／会话框架，也未修改参考快照。
+
+早期 12 条事实、24 个查询的 12/12 对 0/12 结果保留于 [旧基线](../../data/reports/memory-retrieval-baseline.json) 和 [原脚本](../../scripts/evaluate-memory-retrieval.ts)。旧基线是刻意避开原字面的压力集；不能与本轮更自然问法的比例混为同一准确率。
+'''
+(ROOT/'docs/research/vector-memory-decision.md').write_text(content)
+print(json.dumps(dict(report='docs/research/vector-memory-decision.md',finalDecision=selection['routing'],tests=unit.get('numPassedTests'),readerOutputs=sum(len(a['rows']) for a in audit.values())+sum(v['n'] for v in small.values())),ensure_ascii=False))

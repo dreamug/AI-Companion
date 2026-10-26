@@ -1,0 +1,59 @@
+{
+  "name": "companion-harness",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "tsx src/main.ts",
+    "build": "tsc -p tsconfig.json && node scripts/copy-memory-runtime.mjs",
+    "start": "node dist/main.js",
+    "typecheck": "tsc -p tsconfig.check.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write src scripts tests web '*config.ts' package.json tsconfig.json tsconfig.check.json",
+    "test:web": "playwright test",
+    "verify": "npm run typecheck && npm test && npm run build",
+    "smoke:live": "tsx scripts/live-smoke.ts",
+    "test:live": "tsx scripts/integration-live.ts",
+    "test:crash": "tsx scripts/crash-smoke.ts",
+    "eval": "tsx scripts/evaluate.ts",
+    "eval:canary": "tsx scripts/evaluate.ts --live --canary",
+    "benchmark": "tsx scripts/benchmark.ts",
+    "backup": "tsx scripts/backup.ts",
+    "smoke:speech": "tsx scripts/speech-smoke.ts",
+    "smoke:speech-comparison": "tsx scripts/speech-comparison-smoke.ts",
+    "memory:metrics": "tsx scripts/memory-metrics.ts",
+    "memory:trial": "tsx scripts/memory-trial.ts",
+    "test:memory:web": "playwright test --config playwright.memory.config.ts",
+    "eval:memory": "tsx scripts/memory-evaluate.ts",
+    "test:memory": "vitest run tests/memory*.test.ts",
+    "memory:migrate": "tsx scripts/memory-migrate.ts",
+    "memory:release": "tsx scripts/memory-release.ts",
+    "conversation:trial": "tsx scripts/conversation-trial.ts",
+    "test:memory:performance": "tsx scripts/memory-performance.ts --assert",
+    "test:memory:recall": "tsx scripts/memory-evaluate.ts --assert"
+  },
+  "dependencies": {
+    "@ai-sdk/deepseek": "3.0.72",
+    "@ai-sdk/xai": "5.0.29",
+    "@fastify/cookie": "11.1.3",
+    "@js-temporal/polyfill": "0.5.1",
+    "ai": "7.0.150",
+    "better-sqlite3": "12.11.1",
+    "dotenv": "17.4.2",
+    "fastify": "5.12.7",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/better-sqlite3": "7.6.13",
+    "@types/node": "24.19.2",
+    "prettier": "3.9.10",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "4.1.12"
+  }
+}

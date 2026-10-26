@@ -1,0 +1,656 @@
+{
+  "version": 1,
+  "scope": "synthetic_new_holdout_frozen_before_new_tuning",
+  "facts": [
+    {
+      "id": "font",
+      "text": "用户写读书笔记时使用霞鹜文楷字体。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "hedgehog",
+      "text": "用户养的刺猬叫豆包。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "room",
+      "text": "用户的工作室在307室。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "climb",
+      "text": "用户打算下周四20:40去攀岩，目前尚未开始。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "cilantro",
+      "text": "用户不吃香菜；用户姐姐喜欢香菜。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "camera",
+      "text": "用户相机上的镜头是35毫米定焦。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "keyboard",
+      "text": "用户键盘使用茶轴，未记录购买日期。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "train",
+      "text": "用户订的是11月8日早上09:15的高铁，尚未出发。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "plant",
+      "text": "用户桌边的植物是龟背竹。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "password",
+      "text": "用户给项目取的代号是北斗；没有提供任何账户密码。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "sister",
+      "text": "用户姐姐是陶艺师，用户自己是桥梁工程师。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "nickname",
+      "text": "用户希望称呼为小砚，妹妹称呼为小禾。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-0",
+      "text": "虚构测试书架第0层存放第0册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-1",
+      "text": "虚构测试书架第1层存放第1册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-2",
+      "text": "虚构测试书架第2层存放第2册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-3",
+      "text": "虚构测试书架第3层存放第3册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-4",
+      "text": "虚构测试书架第4层存放第4册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-5",
+      "text": "虚构测试书架第5层存放第5册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-6",
+      "text": "虚构测试书架第6层存放第6册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-7",
+      "text": "虚构测试书架第7层存放第7册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-8",
+      "text": "虚构测试书架第8层存放第8册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-9",
+      "text": "虚构测试书架第9层存放第9册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-10",
+      "text": "虚构测试书架第10层存放第10册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-11",
+      "text": "虚构测试书架第11层存放第11册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-12",
+      "text": "虚构测试书架第12层存放第12册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-13",
+      "text": "虚构测试书架第13层存放第13册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-14",
+      "text": "虚构测试书架第14层存放第14册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-15",
+      "text": "虚构测试书架第15层存放第15册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-16",
+      "text": "虚构测试书架第16层存放第16册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-17",
+      "text": "虚构测试书架第17层存放第17册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-18",
+      "text": "虚构测试书架第18层存放第18册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-19",
+      "text": "虚构测试书架第19层存放第19册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-20",
+      "text": "虚构测试书架第20层存放第20册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-21",
+      "text": "虚构测试书架第21层存放第21册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-22",
+      "text": "虚构测试书架第22层存放第22册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-23",
+      "text": "虚构测试书架第23层存放第23册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-24",
+      "text": "虚构测试书架第24层存放第24册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-25",
+      "text": "虚构测试书架第25层存放第25册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-26",
+      "text": "虚构测试书架第26层存放第26册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-27",
+      "text": "虚构测试书架第27层存放第27册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-28",
+      "text": "虚构测试书架第28层存放第28册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-29",
+      "text": "虚构测试书架第29层存放第29册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-30",
+      "text": "虚构测试书架第30层存放第30册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    },
+    {
+      "id": "noise-31",
+      "text": "虚构测试书架第31层存放第31册材料手册，与用户个人偏好无关。",
+      "bot": "a",
+      "status": "active",
+      "revision": 1
+    }
+  ],
+  "queries": [
+    {
+      "id": "font-exact",
+      "query": "霞鹜文楷",
+      "expected": [
+        "font"
+      ],
+      "answer": "霞鹜文楷",
+      "kind": "exact",
+      "split": "test"
+    },
+    {
+      "id": "font-paraphrase",
+      "query": "做阅读手账我一般选哪款字型？",
+      "expected": [
+        "font"
+      ],
+      "answer": "霞鹜文楷",
+      "kind": "paraphrase",
+      "split": "test"
+    },
+    {
+      "id": "font-unknown",
+      "query": "用户用的字号是多少？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    },
+    {
+      "id": "hedgehog-exact",
+      "query": "刺猬",
+      "expected": [
+        "hedgehog"
+      ],
+      "answer": "豆包",
+      "kind": "exact",
+      "split": "test"
+    },
+    {
+      "id": "hedgehog-paraphrase",
+      "query": "家里那只带刺的小家伙叫什么？",
+      "expected": [
+        "hedgehog"
+      ],
+      "answer": "豆包",
+      "kind": "paraphrase",
+      "split": "test"
+    },
+    {
+      "id": "hedgehog-unknown",
+      "query": "豆包的生日是哪天？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    },
+    {
+      "id": "room-exact",
+      "query": "307室",
+      "expected": [
+        "room"
+      ],
+      "answer": "307",
+      "kind": "exact",
+      "split": "test"
+    },
+    {
+      "id": "room-paraphrase",
+      "query": "我要去自己干活的那个房间，该找哪个门牌？",
+      "expected": [
+        "room"
+      ],
+      "answer": "307",
+      "kind": "paraphrase",
+      "split": "test"
+    },
+    {
+      "id": "room-unknown",
+      "query": "工作室的租金多少钱？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    },
+    {
+      "id": "climb-exact",
+      "query": "攀岩",
+      "expected": [
+        "climb"
+      ],
+      "answer": "20:40",
+      "kind": "exact",
+      "split": "test"
+    },
+    {
+      "id": "climb-paraphrase",
+      "query": "下一次去抱石的安排是几点？",
+      "expected": [
+        "climb"
+      ],
+      "answer": "20:40",
+      "kind": "paraphrase",
+      "split": "test"
+    },
+    {
+      "id": "climb-temporal",
+      "query": "用户已经完成这次攀岩了吗？",
+      "expected": [
+        "climb"
+      ],
+      "answer": "尚未",
+      "kind": "temporal",
+      "split": "test"
+    },
+    {
+      "id": "cilantro-exact",
+      "query": "香菜",
+      "expected": [
+        "cilantro"
+      ],
+      "answer": "香菜",
+      "kind": "exact",
+      "split": "test"
+    },
+    {
+      "id": "cilantro-paraphrase",
+      "query": "给我准备配菜时应该避开什么绿叶调味菜？",
+      "expected": [
+        "cilantro"
+      ],
+      "answer": "香菜",
+      "kind": "paraphrase",
+      "split": "test"
+    },
+    {
+      "id": "cilantro-unknown",
+      "query": "用户的弟弟也不吃香菜吗？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    },
+    {
+      "id": "camera-exact",
+      "query": "35毫米",
+      "expected": [
+        "camera"
+      ],
+      "answer": "35",
+      "kind": "exact",
+      "split": "test"
+    },
+    {
+      "id": "camera-paraphrase",
+      "query": "我拍照用的固定焦距是多少？",
+      "expected": [
+        "camera"
+      ],
+      "answer": "35",
+      "kind": "paraphrase",
+      "split": "test"
+    },
+    {
+      "id": "camera-unknown",
+      "query": "这支镜头买了多少钱？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    },
+    {
+      "id": "keyboard-exact",
+      "query": "茶轴",
+      "expected": [
+        "keyboard"
+      ],
+      "answer": "茶轴",
+      "kind": "exact",
+      "split": "test"
+    },
+    {
+      "id": "keyboard-paraphrase",
+      "query": "我日常打字的机械轴体是哪种？",
+      "expected": [
+        "keyboard"
+      ],
+      "answer": "茶轴",
+      "kind": "paraphrase",
+      "split": "test"
+    },
+    {
+      "id": "keyboard-unknown",
+      "query": "键盘是哪天购买的？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    },
+    {
+      "id": "train-exact",
+      "query": "高铁",
+      "expected": [
+        "train"
+      ],
+      "answer": "09:15",
+      "kind": "exact",
+      "split": "test"
+    },
+    {
+      "id": "train-paraphrase",
+      "query": "我预订的那趟列车几点开？",
+      "expected": [
+        "train"
+      ],
+      "answer": "09:15",
+      "kind": "paraphrase",
+      "split": "test"
+    },
+    {
+      "id": "train-temporal",
+      "query": "那趟车已经抵达终点了吗？",
+      "expected": [
+        "train"
+      ],
+      "answer": "尚未",
+      "kind": "temporal",
+      "split": "test"
+    },
+    {
+      "id": "plant-exact",
+      "query": "龟背竹",
+      "expected": [
+        "plant"
+      ],
+      "answer": "龟背竹",
+      "kind": "exact",
+      "split": "test"
+    },
+    {
+      "id": "plant-paraphrase",
+      "query": "陪我办公的绿植叫什么？",
+      "expected": [
+        "plant"
+      ],
+      "answer": "龟背竹",
+      "kind": "paraphrase",
+      "split": "test"
+    },
+    {
+      "id": "plant-unknown",
+      "query": "这株植物养了几年？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    },
+    {
+      "id": "password-exact",
+      "query": "北斗",
+      "expected": [
+        "password"
+      ],
+      "answer": "北斗",
+      "kind": "exact",
+      "split": "test"
+    },
+    {
+      "id": "password-paraphrase",
+      "query": "新工程内部怎么称呼？",
+      "expected": [
+        "password"
+      ],
+      "answer": "北斗",
+      "kind": "paraphrase",
+      "split": "test"
+    },
+    {
+      "id": "password-unknown",
+      "query": "用户的邮箱密码是什么？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    },
+    {
+      "id": "sister-exact",
+      "query": "桥梁工程师",
+      "expected": [
+        "sister"
+      ],
+      "answer": "桥梁工程师",
+      "kind": "exact",
+      "split": "test"
+    },
+    {
+      "id": "sister-paraphrase",
+      "query": "我自己的职业是什么？",
+      "expected": [
+        "sister"
+      ],
+      "answer": "桥梁工程师",
+      "kind": "paraphrase",
+      "split": "test"
+    },
+    {
+      "id": "sister-unknown",
+      "query": "用户哥哥从事什么职业？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    },
+    {
+      "id": "nickname-exact",
+      "query": "小砚",
+      "expected": [
+        "nickname"
+      ],
+      "answer": "小砚",
+      "kind": "exact",
+      "split": "test"
+    },
+    {
+      "id": "nickname-paraphrase",
+      "query": "你平时应该怎么叫我？",
+      "expected": [
+        "nickname"
+      ],
+      "answer": "小砚",
+      "kind": "paraphrase",
+      "split": "test"
+    },
+    {
+      "id": "nickname-unknown",
+      "query": "用户的法定姓名是什么？",
+      "expected": [],
+      "answer": null,
+      "kind": "unknown",
+      "split": "test"
+    }
+  ]
+}

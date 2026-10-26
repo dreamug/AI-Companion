@@ -1,0 +1,34 @@
+{
+  "createdAt": "2026-10-25T04:48:40.465398+00:00",
+  "fixture": "tests/fixtures/memory-commit-acceptance-v2.json",
+  "sha256": "b68ee26bfabd47e5ec5b237568249db10b03b412ac3f321798905f38a62d8b90",
+  "cases": 48,
+  "protocol": {
+    "normalHarness": true,
+    "autoExtract": false,
+    "vectors": true,
+    "historyAndSummariesHidden": true,
+    "naturalFirstDraft": true,
+    "runtimeGuardUnchanged": true,
+    "noOperatorRetry": true,
+    "auditAllOutputs": true,
+    "expectedNotSent": true
+  },
+  "runtimeBefore": {
+    "src/harness.ts": "5345ae9d102d06a090552e2681602d809da43afd9f2008ab1e2b11a6887f98f5",
+    "src/memory/reply-contract.ts": "76c5df57b6399fad146d4337a8626e5bbba3c95c4e92d270ac62f6f00898e889",
+    "src/memory/candidates.ts": "a269dba679cba1a2cae043dcbdf3e2061f526d70302069723874f1cb8de6eecf",
+    "src/memory/read-scope.ts": "d9714326a595c41449ead05bdecec4308ee610e4421522de9d016f39b957d2d2"
+  },
+  "sourceFrozenSets": [
+    "c4bde615930d87feed33e4da9c866fe84d1f3592931d47513aae6948a6eb617a",
+    "01826bd385e27c0a0da4a8e5963158d44842d0af6efc73202c7e2010b58caa9e"
+  ],
+  "newUnseenSet": {
+    "fixture": "tests/fixtures/memory-commit-heldout-v3.json",
+    "sha256": "92192a6ffd75ecd3174377be1082c1f1c1545d66f5e2593da0401695f674be49",
+    "cases": 8,
+    "noFurtherTuning": true
+  },
+  "reason": "补齐存+补语的肯定与否定对称处理；此前48题运行只到旧题，未运行新8题，停止并保留该次部分结果。题目及要求字节不变。"
+}

@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "scope": "synthetic_positive_evidence_counterbalances_unknown_guidance_frozen_before_evaluation",
+  "facts": [
+    {
+      "id": "work-new",
+      "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "address-new",
+      "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "sister-work",
+      "text": "用户的姐姐是一名航天工程师。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "sister-name",
+      "text": "用户姐姐希望被称呼为蓝老师。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "pet-new",
+      "text": "用户养的鹦鹉叫松子。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "book-new",
+      "text": "用户最喜欢的书是《野渡》。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "additional-aerospace",
+      "text": "用户除陶瓷修复之外，也从事航天工程的兼职研究。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "additional-lecturer",
+      "text": "用户兼任讲师，教授文物修复课程。",
+      "bot": "a",
+      "status": "active"
+    },
+    {
+      "id": "additional-making",
+      "text": "用户会制作陶瓷。",
+      "bot": "a",
+      "status": "active"
+    }
+  ],
+  "queries": [
+    {
+      "id": "sibling-coemployment",
+      "query": "我姐姐是航天工程师，我也从事航天工程吗？",
+      "expected": [
+        "additional-aerospace"
+      ],
+      "answer": "从事航天工程",
+      "kind": "positive-evidence",
+      "split": "test"
+    },
+    {
+      "id": "unrecorded-secondary-job",
+      "query": "除了陶瓷修复，我还兼任讲师吗？",
+      "expected": [
+        "additional-lecturer"
+      ],
+      "answer": "兼任讲师",
+      "kind": "positive-evidence",
+      "split": "test"
+    },
+    {
+      "id": "adjacent-skill",
+      "query": "我还会制作陶瓷吗？",
+      "expected": [
+        "additional-making"
+      ],
+      "answer": "制作陶瓷",
+      "kind": "positive-evidence",
+      "split": "test"
+    }
+  ]
+}

@@ -1,0 +1,438 @@
+[
+  {
+    "id": "original-missing-identity",
+    "source": "test-results/memory-answer-delivery-final/results.json",
+    "sourceHash": "6afd553ec1ee4be9e55af271b40f5f38cd96314ed5f1e7db585786f95b3bc297",
+    "input": {
+      "query": {
+        "id": "sibling-coemployment",
+        "query": "我姐姐是航天工程师，我也从事航天工程吗？",
+        "expected": [],
+        "answer": null,
+        "kind": "open-world",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "小栖，目前记着你的职业是陶瓷修复师，在博物馆修复陶瓷文物；至于你是否也从事航天工程，还没有依据，尚不确定。蓝老师是航天工程师这点是记着的。",
+        "abstain": true,
+        "memoryIds": [
+          "work-new",
+          "sister-work"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "work-new",
+        "sister-name",
+        "sister-work",
+        "book-new",
+        "address-new",
+        "pet-new"
+      ],
+      "facts": [
+        {
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "bot": "a",
+          "status": "active"
+        },
+        {
+          "id": "address-new",
+          "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+          "bot": "a",
+          "status": "active"
+        },
+        {
+          "id": "sister-work",
+          "text": "用户的姐姐是一名航天工程师。",
+          "bot": "a",
+          "status": "active"
+        },
+        {
+          "id": "sister-name",
+          "text": "用户姐姐希望被称呼为蓝老师。",
+          "bot": "a",
+          "status": "active"
+        },
+        {
+          "id": "pet-new",
+          "text": "用户养的鹦鹉叫松子。",
+          "bot": "a",
+          "status": "active"
+        },
+        {
+          "id": "book-new",
+          "text": "用户最喜欢的书是《野渡》。",
+          "bot": "a",
+          "status": "active"
+        }
+      ]
+    },
+    "inventory": {
+      "segments": [
+        {
+          "quote": "小栖，",
+          "claims": [
+            {
+              "text": "用户愿意被称为小栖",
+              "kind": "fact",
+              "focus": "小栖",
+              "subject": "用户"
+            }
+          ]
+        },
+        {
+          "quote": "目前记着你的职业是陶瓷修复师，在博物馆修复陶瓷文物；",
+          "claims": [
+            {
+              "text": "用户的职业是陶瓷修复师",
+              "kind": "fact",
+              "focus": "陶瓷修复师",
+              "subject": "用户"
+            },
+            {
+              "text": "用户在博物馆修复陶瓷文物",
+              "kind": "fact",
+              "focus": "在博物馆修复陶瓷文物",
+              "subject": "用户"
+            }
+          ]
+        },
+        {
+          "quote": "至于你是否也从事航天工程，还没有依据，尚不确定。",
+          "claims": [
+            {
+              "text": "本轮不能确定用户是否也从事航天工程",
+              "kind": "unknown",
+              "focus": "从事航天工程"
+            },
+            {
+              "text": "本轮不能确定用户是否也从事航天工程",
+              "kind": "unknown",
+              "focus": "尚不确定"
+            },
+            {
+              "text": "本轮没有依据确定用户是否也从事航天工程",
+              "kind": "unknown",
+              "focus": "还没有依据"
+            }
+          ]
+        },
+        {
+          "quote": "蓝老师是航天工程师这点是记着的。",
+          "claims": [
+            {
+              "text": "蓝老师是航天工程师",
+              "kind": "fact",
+              "focus": "航天工程师",
+              "subject": "蓝老师"
+            }
+          ]
+        }
+      ]
+    },
+    "proof": {
+      "segments": [
+        {
+          "index": 0,
+          "fullyDecomposed": true,
+          "faithful": true
+        },
+        {
+          "index": 1,
+          "fullyDecomposed": true,
+          "faithful": true
+        },
+        {
+          "index": 2,
+          "fullyDecomposed": true,
+          "faithful": true
+        },
+        {
+          "index": 3,
+          "fullyDecomposed": true,
+          "faithful": true
+        }
+      ],
+      "claims": [
+        {
+          "id": "0.0",
+          "witnesses": [
+            {
+              "evidenceId": "address-new",
+              "quote": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+              "role": "direct",
+              "sourceSubject": "用户"
+            }
+          ],
+          "assessment": "entailed",
+          "subjectLinks": []
+        },
+        {
+          "id": "1.0",
+          "witnesses": [
+            {
+              "evidenceId": "work-new",
+              "quote": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+              "role": "direct",
+              "sourceSubject": "用户"
+            }
+          ],
+          "assessment": "entailed",
+          "subjectLinks": []
+        },
+        {
+          "id": "1.1",
+          "witnesses": [
+            {
+              "evidenceId": "work-new",
+              "quote": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+              "role": "direct",
+              "sourceSubject": "用户"
+            }
+          ],
+          "assessment": "entailed",
+          "subjectLinks": []
+        },
+        {
+          "id": "2.0",
+          "witnesses": [],
+          "assessment": "valid_unknown",
+          "subjectLinks": []
+        },
+        {
+          "id": "3.0",
+          "witnesses": [
+            {
+              "evidenceId": "sister-work",
+              "quote": "用户的姐姐是一名航天工程师。",
+              "role": "direct",
+              "sourceSubject": "用户的姐姐"
+            },
+            {
+              "evidenceId": "sister-name",
+              "quote": "用户姐姐希望被称呼为蓝老师。",
+              "role": "identity"
+            }
+          ],
+          "assessment": "entailed",
+          "subjectLinks": [
+            {
+              "from": "蓝老师",
+              "to": "用户的姐姐",
+              "evidenceId": "sister-name",
+              "quote": "用户姐姐希望被称呼为蓝老师。"
+            }
+          ]
+        },
+        {
+          "id": "2.1",
+          "witnesses": [],
+          "assessment": "valid_unknown",
+          "subjectLinks": []
+        },
+        {
+          "id": "2.2",
+          "witnesses": [],
+          "assessment": "valid_unknown",
+          "subjectLinks": []
+        }
+      ],
+      "explanation": "人工逐项拆解原答卷，记录原子属性及必要身份连接。",
+      "version": "atomic-proof-v3",
+      "targetClaimIds": [
+        "2.0",
+        "2.1",
+        "2.2"
+      ]
+    },
+    "expected": "fail"
+  },
+  {
+    "id": "original-compound",
+    "source": "test-results/memory-answer-delivery-final/results.json",
+    "sourceHash": "6afd553ec1ee4be9e55af271b40f5f38cd96314ed5f1e7db585786f95b3bc297",
+    "input": {
+      "query": {
+        "id": "adjacent-skill",
+        "query": "我还会制作陶瓷吗？",
+        "expected": [
+          "additional-making"
+        ],
+        "answer": "制作陶瓷",
+        "kind": "positive-evidence",
+        "split": "test"
+      },
+      "answer": {
+        "answer": "会，记录里明确写着你除了修复之外也会制作陶瓷。",
+        "abstain": false,
+        "memoryIds": [
+          "additional-making",
+          "work-new"
+        ]
+      },
+      "status": "completed",
+      "availableIds": [
+        "work-new",
+        "additional-aerospace",
+        "sister-work",
+        "sister-name",
+        "additional-making",
+        "pet-new",
+        "address-new",
+        "book-new",
+        "additional-lecturer"
+      ],
+      "facts": [
+        {
+          "id": "work-new",
+          "text": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+          "bot": "a",
+          "status": "active"
+        },
+        {
+          "id": "address-new",
+          "text": "用户想让助手平时称呼自己为小栖，不喜欢被叫老板。",
+          "bot": "a",
+          "status": "active"
+        },
+        {
+          "id": "sister-work",
+          "text": "用户的姐姐是一名航天工程师。",
+          "bot": "a",
+          "status": "active"
+        },
+        {
+          "id": "sister-name",
+          "text": "用户姐姐希望被称呼为蓝老师。",
+          "bot": "a",
+          "status": "active"
+        },
+        {
+          "id": "pet-new",
+          "text": "用户养的鹦鹉叫松子。",
+          "bot": "a",
+          "status": "active"
+        },
+        {
+          "id": "book-new",
+          "text": "用户最喜欢的书是《野渡》。",
+          "bot": "a",
+          "status": "active"
+        },
+        {
+          "id": "additional-aerospace",
+          "text": "用户除陶瓷修复之外，也从事航天工程的兼职研究。",
+          "bot": "a",
+          "status": "active"
+        },
+        {
+          "id": "additional-lecturer",
+          "text": "用户兼任讲师，教授文物修复课程。",
+          "bot": "a",
+          "status": "active"
+        },
+        {
+          "id": "additional-making",
+          "text": "用户会制作陶瓷。",
+          "bot": "a",
+          "status": "active"
+        }
+      ]
+    },
+    "inventory": {
+      "segments": [
+        {
+          "quote": "会，",
+          "claims": [
+            {
+              "text": "用户会制作陶瓷",
+              "kind": "fact",
+              "focus": "会",
+              "subject": "用户"
+            }
+          ]
+        },
+        {
+          "quote": "记录里明确写着你除了修复之外也会制作陶瓷。",
+          "claims": [
+            {
+              "text": "用户从事陶瓷修复",
+              "kind": "fact",
+              "focus": "修复",
+              "subject": "用户"
+            },
+            {
+              "text": "用户会制作陶瓷",
+              "kind": "fact",
+              "focus": "制作陶瓷",
+              "subject": "用户"
+            }
+          ]
+        }
+      ]
+    },
+    "proof": {
+      "segments": [
+        {
+          "index": 0,
+          "fullyDecomposed": true,
+          "faithful": true
+        },
+        {
+          "index": 1,
+          "fullyDecomposed": true,
+          "faithful": true
+        }
+      ],
+      "claims": [
+        {
+          "id": "0.0",
+          "witnesses": [
+            {
+              "evidenceId": "additional-making",
+              "quote": "用户会制作陶瓷。",
+              "role": "direct",
+              "sourceSubject": "用户"
+            }
+          ],
+          "assessment": "entailed",
+          "subjectLinks": []
+        },
+        {
+          "id": "1.0",
+          "witnesses": [
+            {
+              "evidenceId": "work-new",
+              "quote": "用户现在的职业是陶瓷修复师，在博物馆修复陶瓷文物。",
+              "role": "direct",
+              "sourceSubject": "用户"
+            }
+          ],
+          "assessment": "entailed",
+          "subjectLinks": []
+        },
+        {
+          "id": "1.1",
+          "witnesses": [
+            {
+              "evidenceId": "additional-making",
+              "quote": "用户会制作陶瓷。",
+              "role": "direct",
+              "sourceSubject": "用户"
+            }
+          ],
+          "assessment": "entailed",
+          "subjectLinks": []
+        }
+      ],
+      "explanation": "人工逐项拆解原答卷，记录原子属性及必要身份连接。",
+      "version": "atomic-proof-v3",
+      "targetClaimIds": [
+        "0.0",
+        "1.1"
+      ]
+    },
+    "expected": "pass"
+  }
+]

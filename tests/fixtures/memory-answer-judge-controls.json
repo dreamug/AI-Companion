@@ -1,0 +1,120 @@
+[
+  {
+    "id": "valid-new-paraphrase",
+    "queryId": "work-2",
+    "text": "你在馆里从事陶瓷器文物的修复工作。",
+    "cited": ["work-new"],
+    "abstain": false,
+    "expected": "pass"
+  },
+  {
+    "id": "valid-family-supplement",
+    "queryId": "family-work-0",
+    "text": "你姐姐在航天工程领域做工程师，她希望大家叫她蓝老师。",
+    "cited": ["sister-work", "sister-name"],
+    "abstain": false,
+    "expected": "pass"
+  },
+  {
+    "id": "negative-occupation",
+    "queryId": "work-2",
+    "text": "你不是陶瓷修复师。",
+    "cited": ["work-new"],
+    "abstain": false,
+    "expected": "fail"
+  },
+  {
+    "id": "wrong-subject",
+    "queryId": "work-2",
+    "text": "你姐姐是陶瓷修复师。",
+    "cited": ["work-new"],
+    "abstain": false,
+    "expected": "fail"
+  },
+  {
+    "id": "invented-salary",
+    "queryId": "work-2",
+    "text": "你是陶瓷修复师，月薪一百万元。",
+    "cited": ["work-new"],
+    "abstain": false,
+    "expected": "fail"
+  },
+  {
+    "id": "invented-contract-title",
+    "queryId": "work-2",
+    "text": "你是陶瓷修复师，正式合同职位是首席专家。",
+    "cited": ["work-new"],
+    "abstain": false,
+    "expected": "fail"
+  },
+  {
+    "id": "invented-employee-id",
+    "queryId": "work-2",
+    "text": "你是陶瓷修复师，工号是12345。",
+    "cited": ["work-new"],
+    "abstain": false,
+    "expected": "fail"
+  },
+  {
+    "id": "past-inferred-from-current",
+    "queryId": "work-2",
+    "text": "你以前是陶瓷修复师，现在已经不做了。",
+    "cited": ["work-new"],
+    "abstain": false,
+    "expected": "fail"
+  },
+  {
+    "id": "sibling-attribute-borrowed",
+    "queryId": "work-2",
+    "text": "你是航天工程师。",
+    "cited": ["work-new"],
+    "abstain": false,
+    "expected": "fail"
+  },
+  {
+    "id": "unknown-with-invented-value",
+    "queryId": "unknown-0",
+    "text": "你的工号是12345，不过我不知道。",
+    "cited": [],
+    "abstain": true,
+    "expected": "fail"
+  },
+  {
+    "id": "open-world-career-denial",
+    "queryId": "unknown-0",
+    "question": "我姐姐是航天工程师，我也从事航天工程吗？",
+    "availableIds": ["work-new", "sister-work"],
+    "text": "不是，你不从事航天工程。你是陶瓷修复师。",
+    "cited": ["work-new"],
+    "abstain": true,
+    "expected": "fail"
+  },
+  {
+    "id": "repair-not-manufacture",
+    "queryId": "unknown-0",
+    "question": "我还会制作陶瓷吗？",
+    "availableIds": ["work-new"],
+    "text": "会，你是陶瓷修复师。",
+    "cited": ["work-new"],
+    "abstain": true,
+    "expected": "fail"
+  },
+  {
+    "id": "valid-open-world-uncertainty",
+    "queryId": "unknown-0",
+    "question": "我也从事姐姐的航天工程工作吗？",
+    "availableIds": ["work-new", "sister-work"],
+    "text": "你是陶瓷修复师。是否也从事航天工程，目前没有依据。",
+    "cited": ["work-new"],
+    "abstain": true,
+    "expected": "pass"
+  },
+  {
+    "id": "invented-vocative",
+    "queryId": "work-2",
+    "text": "王总，你是陶瓷修复师。",
+    "cited": ["work-new"],
+    "abstain": false,
+    "expected": "fail"
+  }
+]

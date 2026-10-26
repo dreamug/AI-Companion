@@ -1,0 +1,19 @@
+{
+  "provenance": "同一工程作者预先编写的合成验收场景；不是独立人工标注或真实流量 benchmark。只检查候选数量、关键词和流程，不证明完整语义正确率。",
+  "cases": [
+    { "id": "chat-intent", "input": "今天先陪我随便聊两句吧。", "expected": [] },
+    { "id": "current-action", "input": "我还在剪这段视频，没弄完。", "expected": [] },
+    { "id": "temporary-busy", "input": "这两天会议挤在一起，特别忙。", "expected": [] },
+    { "id": "temporary-mood", "input": "刚才没睡好，现在有点烦躁。", "expected": [] },
+    { "id": "recent-preference", "input": "我最近越来越喜欢吃越南菜。", "expected": [["越南菜"]] },
+    { "id": "music-preference", "input": "我偏爱蓝调音乐。", "expected": [["蓝调"]] },
+    { "id": "current-profession", "input": "我现在的职业是展陈设计师。", "expected": [["展陈", "设计"]] },
+    { "id": "ongoing-habit", "input": "我每周日一般会去游泳。", "expected": [["周日", "游泳"]] },
+    { "id": "address", "input": "以后请叫我阿宁。", "expected": [["阿宁"]] },
+    { "id": "negative-preference", "input": "我不喜欢甜饮料。", "expected": [["不", "甜"]] },
+    { "id": "multiple-subjects", "input": "我爱读历史书，我妹妹爱读侦探小说。", "expected": [["历史"], ["妹妹", "侦探"]] },
+    { "id": "explicit-temporary", "input": "请记住这件事：我这周在准备作品集。", "expected": [["作品集"]] },
+    { "id": "no-save", "input": "我一直喜欢下国际象棋，但这条不要保存。", "expected": [] },
+    { "id": "hypothetical", "input": "要是我会拉大提琴就好了。", "expected": [] }
+  ]
+}
